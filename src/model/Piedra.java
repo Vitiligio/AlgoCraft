@@ -15,10 +15,12 @@ public class Piedra extends Material {
 	public int fuerzaPico() {
 		return 4;
 	}
-	public int tipoDeDesgastaHacha() {
-		return 0;
+	public Desgaste tipoDeDesgastaHacha() {
+		DesgasteLineal desgaste = new DesgasteLineal(1);
+		return desgaste;
 	}
-	public int tipoDeDesgastePico() {
-		return 0;
+	public Desgaste tipoDeDesgastePico() {
+		DesgasteLineal desgaste = new DesgasteLineal(1.5);
+		return desgaste;
 	}
 }
