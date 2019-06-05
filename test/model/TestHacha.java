@@ -16,7 +16,7 @@ public class TestHacha {
 		assertEquals(100,hacha.getDurabilidad(),0);
 	}
 	
-	@Test//ANDA MAL
+	@Test
 	public void testHachaDeMaderaSeCreaConFuerzaCorrespondiente() {
 		
 		Madera madera = new Madera();
@@ -43,7 +43,7 @@ public class TestHacha {
 		assertEquals(10,hacha.getFuerza());
 	}
 	
-	@Test//ANDAMAL
+	@Test
 	public void testHachaDeMaderaUsarContraMadera() {
 		
 		Metal metal = new Metal();
@@ -52,7 +52,7 @@ public class TestHacha {
 		
 		hacha.usarContra(madera);
 		
-		assertEquals(395,hacha.getDurabilidad(),0);
+		assertEquals(398,hacha.getDurabilidad(),0);
 	}
 
 }

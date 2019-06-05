@@ -8,6 +8,7 @@ public class Personaje {
 	Material material;
 	
 	public void usarContra(Madera madera) {
+		
 	}
 	
 	public void usarContra(Piedra piedra){
