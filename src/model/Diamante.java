@@ -15,10 +15,10 @@ public class Diamante extends Material {
 	public int fuerzaPico() {
 		return 0;
 	}
-	public int tipoDeDesgastaHacha() {
-		return 0;
+	public Desgaste tipoDeDesgastaHacha() {
+		return null;
 	}
-	public int tipoDeDesgastePico() {
-		return 0;
+	public Desgaste tipoDeDesgastePico() {
+		return null;
 	}
 }

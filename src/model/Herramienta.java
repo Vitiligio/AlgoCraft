@@ -2,10 +2,10 @@ package model;
 
 public class Herramienta {
 
-	private float durabilidad;
-	private int fuerza;
-	private Desgaste tipoDesgaste;
-	private Material material;
+	protected float durabilidad;
+	protected int fuerza;
+	protected Desgaste tipoDesgaste;
+	protected Material material;
 		
 	public void usarContra(Madera madera) {
 			
