@@ -55,6 +55,10 @@ public class TP2Tests {
 	@Test
 	public void testMetalGolpeadoPorPicoMaderaNoReduceDurabilidad() {
 		Madera madera = Madera new;
+		Pico pico = new Pico;
+		int durabilidadPico = pico durabilidad;
+		Hacha usarContra(madera):
+		assertEquals(hacha durabilidad)
 	}
 
 }
