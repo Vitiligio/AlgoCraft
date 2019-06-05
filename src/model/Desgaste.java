@@ -1,5 +1,5 @@
 package model;
 
 public abstract class Desgaste {
-	abstract double calcularDesgaste(double fuerza);
+	abstract double calcularDesgaste(double n);
 }
