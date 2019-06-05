@@ -46,19 +46,29 @@ public class TP2Tests {
 	}
 	@Test
 	public void testMaderaGolpeadaPorHachaDeMaderaReduceDurabilidad() {
-		
+		Madera madera = Madera new;
+		Pico pico = new Pico(madera);
+		int durabilidadMadera = madera durabilidad;
+		pico usarContra(madera):
+		assertEquals(durabilidadMadera, durabilidadMadera-2);
 	}
 	@Test
 	public void	testPiedraGolpeadaPorHachaNoReduceDurabilidad() {
+		Piedra piedra = Piedra new;
+		Hacha hacha = new hacha(piedra);
+		int durabilidadPiedra = piedra durabilidad;
+		hacha usarContra(piedra):
+		assertEquals(durabilidadPiedra, durabilidadPiedra);
 		
 	}
 	@Test
 	public void testMetalGolpeadoPorPicoMaderaNoReduceDurabilidad() {
+		Metal metal = Metal new;
 		Madera madera = Madera new;
-		Pico pico = new Pico;
-		int durabilidadPico = pico durabilidad;
-		Hacha usarContra(madera):
-		assertEquals(hacha durabilidad)
+		Pico pico = new Pico(madera);
+		int durabilidadMetal = metal durabilidad;
+		pico usarContra(metal):
+		assertEquals(durabilidadMetal, durabilidadMetal);
 	}
 
 }
