@@ -1,7 +1,7 @@
 package model;
 
 public class DesgasteAbrupto extends Desgaste {
-	private int usos;
+	private int usos = 10;
 	@Override
 	int calcularDesgaste(int fuerza) {
 		usos--;
