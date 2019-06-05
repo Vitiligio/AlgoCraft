@@ -1,7 +1,13 @@
 package model;
 
 public class Madera extends Material {
-	private int durabilidad = 10;
+	private int durabilidad;
+
+	public Madera(){
+
+		durabilidad = 10;
+	}
+
 	public int durabilidadHacha() {
 		return 100;
 	}
