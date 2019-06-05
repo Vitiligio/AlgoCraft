@@ -20,7 +20,6 @@ public class TestMateriales {
 		int durabilidadPiedra = piedra.getDurabilidad();
 		hacha.usarContra(piedra);
 		assertEquals(durabilidadPiedra, durabilidadPiedra);
-		
 	}
 	@Test
 	public void testMetalGolpeadoPorPicoMaderaNoReduceDurabilidad() {
@@ -31,5 +30,4 @@ public class TestMateriales {
 		pico.usarContra(metal);
 		assertEquals(durabilidadMetal, durabilidadMetal);
 	}
-
 }
