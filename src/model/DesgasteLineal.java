@@ -1,12 +1,12 @@
 package model;
 
 public class DesgasteLineal extends Desgaste {
-	private int coeficiente;
-	public DesgasteLineal(int coef) {
+	private double coeficiente;
+	public DesgasteLineal(double coef) {
 		this.coeficiente = coef;
 	}
 	@Override
-	int calcularDesgaste(int fuerza) {
+	double calcularDesgaste(double fuerza) {
 		return fuerza/coeficiente;
 	}
 
