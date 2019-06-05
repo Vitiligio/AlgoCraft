@@ -1,7 +1,7 @@
 package model;
 
+import org.junit.*;
 import static org.junit.Assert.*;
-import org.junit.Test;
 /*
 Hacha se usa contra cada uno de los materiales y se reduce su durabilidad correspondiente al material del Hacha
  */
@@ -16,13 +16,13 @@ public class TestHacha {
 		assertEquals(100,hacha.getDurabilidad(),0);
 	}
 	
-	@Test
+	@Test//ANDA MAL
 	public void testHachaDeMaderaSeCreaConFuerzaCorrespondiente() {
 		
 		Madera madera = new Madera();
 		Hacha hacha = new Hacha(madera);
 		
-		assertEquals(100,hacha.getFuerza());
+		assertEquals(2,hacha.getFuerza());
 	}
 	
 	@Test
@@ -43,7 +43,7 @@ public class TestHacha {
 		assertEquals(10,hacha.getFuerza());
 	}
 	
-	@Test
+	@Test//ANDAMAL
 	public void testHachaDeMaderaUsarContraMadera() {
 		
 		Metal metal = new Metal();
