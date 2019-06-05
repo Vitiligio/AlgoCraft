@@ -5,55 +5,55 @@ import org.junit.jupiter.api.Test;
 public class TP2Tests {
 	
 	@Test
-	public void MaderaGolpeadaPorHachaDeMadera() {
+	public void testCrearHachaDeMadera() {
 		
 	}
 	@Test
-	public void () {
+	public void testCrearPicoMadera() {
 		
 	}
 	@Test
-	public void () {
+	public void testCrearHachaMetal() {
 		
 	}
 	@Test
-	public void () {
+	public void testCrearPicoMetal() {
 		
 	}
 	@Test
-	public void () {
+	public void testCrearPicoFino() {
 		
 	}
 	@Test
-	public void () {
+	public void testDurabilidadHacha() {
 		
 	}
 	@Test
-	public void () {
+	public void testDurabilidadPico() {
 		
 	}
 	@Test
-	public void () {
+	public void testPicoFinoContraDiamante() {
 		
 	}
 	@Test
-	public void () {
+	public void testPicoFinoContraTodosMenosDiamante() {
 		
 	}
 	@Test
-	public void () {
+	public void testCrearJugador() {
 		
 	}
 	@Test
-	public void () {
+	public void testMaderaGolpeadaPorHachaDeMaderaReduceDurabilidad() {
 		
 	}
 	@Test
-	public void () {
+	public void	testPiedraGolpeadaPorHachaNoReduceDurabilidad() {
 		
 	}
 	@Test
-	public void () {
+	public void testMetalGolpeadoPorPicoMaderaNoReduceDurabilidad() {
 		
 	}
 
