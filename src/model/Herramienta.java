@@ -1,32 +1,16 @@
 package model;
 
-public class Herramienta {
-
+public abstract class Herramienta {
 	protected float durabilidad;
 	protected int fuerza;
 	protected Desgaste tipoDesgaste;
 	protected Material material;
 		
-	public void usarContra(Madera madera) {
-			
-	}
-		
-	public void usarContra(Piedra piedra) {
-			
-	}
-		
-	public void usarContra(Metal metal) {
-			
-	}
-		
-	public void usarContra(Diamante diamante) {
-			
-	}
-		
-	protected void desgastar() {
-			
-	}
-	
+	abstract public void usarContra(Madera madera);
+	abstract public void usarContra(Piedra piedra);
+	abstract public void usarContra(Metal metal);
+	abstract public void usarContra(Diamante diamante);	
+	abstract protected void desgastar();
 	//getters y setters para hacer las pruebas
 	public float getDurabilidad() {
 		return durabilidad;
