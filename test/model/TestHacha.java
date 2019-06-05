@@ -52,7 +52,7 @@ public class TestHacha {
 		
 		hacha.usarContra(madera);
 		
-		assertEquals(398,hacha.getDurabilidad(),0);
+		assertEquals(98,hacha.getDurabilidad(),0);
 	}
 
 }

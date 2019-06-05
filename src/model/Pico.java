@@ -6,6 +6,9 @@ public class Pico extends Herramienta {
     public Pico(Material material){
 
         this.material = material;
+        this.durabilidad = this.material.durabilidadPico();
+		this.fuerza = this.material.fuerzaPico();
+		this.tipoDesgaste = this.material.tipoDeDesgastePico();
     }
     
     protected void desgastar() {
