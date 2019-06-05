@@ -6,6 +6,6 @@ public abstract class Material {
 	abstract int durabilidadPico();
 	abstract int fuerzaHacha();
 	abstract int fuerzaPico();
-	abstract int tipoDeDesgastaHacha();
-	abstract int tipoDeDesgastePico();
+	abstract Desgaste tipoDeDesgastaHacha();
+	abstract Desgaste tipoDeDesgastePico();
 }
