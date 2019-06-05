@@ -11,6 +11,7 @@ public abstract class Herramienta {
 	abstract public void usarContra(Metal metal);
 	abstract public void usarContra(Diamante diamante);	
 	abstract protected void desgastar();
+	
 	//getters y setters para hacer las pruebas
 	public float getDurabilidad() {
 		return durabilidad;
