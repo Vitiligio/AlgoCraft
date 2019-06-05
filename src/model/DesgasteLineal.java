@@ -3,8 +3,8 @@ package model;
 public class DesgasteLineal extends Desgaste {
 	private int coeficiente;
 	@Override
-	int calcularDesgaste() {
-		return coeficiente;
+	int calcularDesgaste(int durabilidadActual, int fuerza) {
+		return durabilidadActual -= (fuerza/coeficiente);
 	}
 
 }
