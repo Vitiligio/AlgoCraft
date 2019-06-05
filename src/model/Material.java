@@ -8,4 +8,7 @@ public abstract class Material {
 	abstract int fuerzaPico();
 	abstract Desgaste tipoDeDesgastaHacha();
 	abstract Desgaste tipoDeDesgastePico();
+	public int getDurabilidad() {
+		return durabilidad;
+	}
 }
