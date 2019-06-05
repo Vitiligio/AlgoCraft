@@ -54,6 +54,5 @@ public class TestHacha {
 		
 		assertEquals(395,hacha.getDurabilidad(),0);
 	}
-	//CAMBIO CAMBIO
 
 }

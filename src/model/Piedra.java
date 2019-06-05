@@ -2,6 +2,7 @@ package model;
 
 public class Piedra extends Material {
 	private int durabilidad = 30;
+	
 	public int durabilidadHacha() {
 		return 200;
 	}
