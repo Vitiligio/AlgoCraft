@@ -49,15 +49,15 @@ public class TP2Tests {
 		Madera madera = new Madera();
 		Pico pico = new Pico(madera);
 		int durabilidadMadera = madera.getDurabilidad();
-		pico.usarContra(madera):
+		pico.usarContra(madera);
 		assertEquals(durabilidadMadera, durabilidadMadera-2);
 	}
 	@Test
 	public void	testPiedraGolpeadaPorHachaNoReduceDurabilidad() {
 		Piedra piedra = new Piedra();
 		Hacha hacha = new Hacha(piedra);
-		int durabilidadPiedra = piedra getDurabilidad();
-		hacha usarContra(piedra):
+		int durabilidadPiedra = piedra.getDurabilidad();
+		hacha.usarContra(piedra);
 		assertEquals(durabilidadPiedra, durabilidadPiedra);
 		
 	}
@@ -66,8 +66,8 @@ public class TP2Tests {
 		Metal metal = new Metal();
 		Madera madera = new Madera();
 		Pico pico = new Pico(madera);
-		int durabilidadMetal = metal getDurabilidad();
-		pico usarContra(metal):
+		int durabilidadMetal = metal.getDurabilidad();
+		pico.usarContra(metal);
 		assertEquals(durabilidadMetal, durabilidadMetal);
 	}
 
