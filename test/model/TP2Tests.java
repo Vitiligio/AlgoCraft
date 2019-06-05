@@ -54,7 +54,7 @@ public class TP2Tests {
 	}
 	@Test
 	public void testMetalGolpeadoPorPicoMaderaNoReduceDurabilidad() {
-		
+		Madera madera = Madera new;
 	}
 
 }
