@@ -15,10 +15,12 @@ public class Metal extends Material {
 	public int fuerzaPico() {
 		return 12;
 	}
-	public int tipoDeDesgastaHacha() {
-		return 0;
+	public Desgaste tipoDeDesgastaHacha() {
+		DesgasteLineal desgaste = new DesgasteLineal(2);
+		return desgaste;
 	}
-	public int tipoDeDesgastePico() {
-		return 0;
+	public Desgaste tipoDeDesgastePico() {
+		DesgasteAbrupto desgaste = new DesgasteAbrupto();
+		return desgaste;
 	}
 }
