@@ -10,7 +10,7 @@ class TestPersonaje {
 	void testPersonajeSeInicializaConHachaDeMadera() {
 		
 		Personaje personaje = new Personaje();		
-		ObjetoDeInventario objetoEquipado = personaje.getObjetoEquipado();
+		Herramienta objetoEquipado = personaje.getObjetoEquipado();
 		
 		assertEquals(objetoEquipado.getClass(),Hacha.class);
 		assertEquals(objetoEquipado.getMaterial(),Madera.class);

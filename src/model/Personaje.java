@@ -3,20 +3,20 @@ package model;
 public class Personaje {
 	
 
-	ObjetoDeInventario inventario[];
-	ObjetoDeInventario objetoEquipado;
+	Herramienta inventario[];
+	Herramienta objetoEquipado;
 	
 	public Personaje() {
 		
 		Madera madera = new Madera();
-		ObjetoDeInventario hachaDeMadera = new Hacha(madera);
+		Herramienta hachaDeMadera = new Hacha(madera);
 		
 		this.inventario[0] = hachaDeMadera;
 		this.objetoEquipado = hachaDeMadera;
 		
 	}
 	
-	public ObjetoDeInventario getObjetoEquipado() {
+	public Herramienta getObjetoEquipado() {
 		return objetoEquipado;
 	}
 	

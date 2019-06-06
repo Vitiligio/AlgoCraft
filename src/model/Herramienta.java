@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Herramienta implements ObjetoDeInventario{
+public abstract class Herramienta {
 	
 	protected float durabilidad;
 	protected int fuerza;
@@ -18,6 +18,10 @@ public abstract class Herramienta implements ObjetoDeInventario{
 		return durabilidad;
 	}
 
+	public Material getMaterial() {
+		return this.material;
+	}
+	
 	public int getFuerza() {
 		return fuerza;
 	}

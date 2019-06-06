@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Material implements ObjetoDeInventario{
+public abstract class Material {
 	private int durabilidad;
 	abstract int durabilidadHacha();
 	abstract int durabilidadPico();
