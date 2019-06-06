@@ -12,6 +12,8 @@ public class TestMateriales {
 		int durabilidadMadera = madera.getDurabilidad();
 		hacha.usarContra(madera);
 		assertEquals(durabilidadMadera, durabilidadMadera-2);
+		assertEquals(madera.getDurabilidad(), durabilidadMadera - 2);
+
 	}
 	
 	@Test
@@ -20,7 +22,7 @@ public class TestMateriales {
 		Hacha hacha = new Hacha(piedra);
 		int durabilidadPiedra = piedra.getDurabilidad();
 		hacha.usarContra(piedra);
-		assertEquals(durabilidadPiedra, durabilidadPiedra);
+		assertEquals(piedra.getDurabilidad(), durabilidadPiedra);
 	}
 	
 	@Test
@@ -30,6 +32,6 @@ public class TestMateriales {
 		Pico pico = new Pico(madera);
 		int durabilidadMetal = metal.getDurabilidad();
 		pico.usarContra(metal);
-		assertEquals(durabilidadMetal, durabilidadMetal);
+		assertEquals(metal.getDurabilidad(), durabilidadMetal);
 	}
 }

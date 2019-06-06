@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Herramienta {
+public abstract class Herramienta implements ObjetoDeInventario{
 	
 	protected float durabilidad;
 	protected int fuerza;

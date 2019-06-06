@@ -2,16 +2,22 @@ package model;
 
 public class Personaje {
 	
-	float durabilidad;
-	int fuerza;
-	Desgaste desgaste;
-	Material material;
+
+	ObjetoDeInventario inventario[];
+	ObjetoDeInventario objetoEquipado;
 	
-	public void usarContra(Madera madera) {
+	public Personaje() {
+		
+		Madera madera = new Madera();
+		ObjetoDeInventario hachaDeMadera = new Hacha(madera);
+		
+		this.inventario[0] = hachaDeMadera;
+		this.objetoEquipado = hachaDeMadera;
 		
 	}
 	
-	public void usarContra(Piedra piedra){
-
+	public ObjetoDeInventario getObjetoEquipado() {
+		return objetoEquipado;
 	}
+	
 }
