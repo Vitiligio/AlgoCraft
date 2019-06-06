@@ -1,1 +1,10 @@
 /bin/
+
+# Compiled class file
+*.class
+
+# log file
+*.log
+
+# BlueJ files
+*.ctxt
