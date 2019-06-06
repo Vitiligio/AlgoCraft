@@ -1,7 +1,7 @@
 package model;
 
 public abstract class Material {
-	private int durabilidad;
+	protected int durabilidad;
 	abstract int durabilidadHacha();
 	abstract int durabilidadPico();
 	abstract int fuerzaHacha();

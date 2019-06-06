@@ -1,17 +1,20 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Personaje {
 	
 
-	Herramienta inventario[];
-	Herramienta objetoEquipado;
+	private ArrayList<Herramienta> inventario;
+	private Herramienta objetoEquipado;
 	
 	public Personaje() {
 		
 		Madera madera = new Madera();
 		Herramienta hachaDeMadera = new Hacha(madera);
+		inventario = new ArrayList<Herramienta>();
 		
-		this.inventario[0] = hachaDeMadera;
+		inventario.add(hachaDeMadera);
 		this.objetoEquipado = hachaDeMadera;
 		
 	}

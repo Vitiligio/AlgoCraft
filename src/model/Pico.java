@@ -23,12 +23,20 @@ public class Pico extends Herramienta {
     	
     }
 	public void usarContra(Piedra piedra) {
+
+    	piedra.reducirDurabilidad(this.fuerza);
+    	this.desgastar();
 		
 	}
 	public void usarContra(Metal metal) {
-		
+
+    	if(material.getClass() != Madera.class)
+			metal.reducirDurabilidad(this.fuerza);
+
+		this.desgastar();
 	}
 	public void usarContra(Diamante diamante) {
-		
+
+    	this.desgastar();
 	}
 }
