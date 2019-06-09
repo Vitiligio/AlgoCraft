@@ -11,7 +11,8 @@ public class Inventario {
 	public Inventario() {
 		
 		Madera madera = new Madera();
-		Herramienta hachaDeMadera = new Hacha(madera);
+		Desgaste tipoDesgaste = new DesgasteLineal(1);
+		Herramienta hachaDeMadera = new Hacha(madera,100,2,tipoDesgaste);
 		
 		herramientas = new ArrayList<Herramienta>();
 		herramientas.add(hachaDeMadera);

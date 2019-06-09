@@ -8,7 +8,7 @@ public class Hacha extends Herramienta {
 		
 	}
 	
-protected void desgastar() {
+	protected void desgastar() {
 		
 		this.durabilidad -= this.tipoDesgaste.calcularDesgaste(this.fuerza);
 		
@@ -21,20 +21,6 @@ protected void desgastar() {
 		
 	}
 	//asumimos que el hacha no puede desgastar los siguientes materiales, pero el hacha si se desgasta al ser usada contra ellos
-	public void usarContra(Piedra piedra) {
-		
-		this.desgastar();
-		
-	}
-	
-	public void usarContra(Metal metal) {
-		
-		this.desgastar();
-	}
-	
-	public void usarContra(Diamante diamante) {
-		
-		this.desgastar();
-	}
+
 	
 }

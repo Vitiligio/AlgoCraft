@@ -11,7 +11,8 @@ public class TestHacha {
 	public void testHachaDeMaderaSeCreaConDurabilidadCorrespondiente() {
 		
 		Madera madera = new Madera();
-		Hacha hacha = new Hacha(madera);
+		DesgasteLineal tipoDesgaste = new DesgasteLineal(1);
+		Hacha hacha = new Hacha(madera,100,2,tipoDesgaste);
 		
 		assertEquals(100,hacha.getDurabilidad(),0);
 	}
@@ -20,7 +21,8 @@ public class TestHacha {
 	public void testHachaDeMaderaSeCreaConFuerzaCorrespondiente() {
 		
 		Madera madera = new Madera();
-		Hacha hacha = new Hacha(madera);
+		DesgasteLineal tipoDesgaste = new DesgasteLineal(1);
+		Hacha hacha = new Hacha(madera,100,2,tipoDesgaste);
 		
 		assertEquals(2,hacha.getFuerza());
 	}
@@ -29,7 +31,8 @@ public class TestHacha {
 	public void testHachaDeMetalSeCreaConDurabilidadCorrespondiente() {
 		
 		Metal metal = new Metal();
-		Hacha hacha = new Hacha(metal);
+		Desgaste tipoDesgaste = new DesgasteLineal(2);
+		Hacha hacha = new Hacha(metal,400,10,tipoDesgaste);
 		
 		assertEquals(400,hacha.getDurabilidad(),0);
 	}
@@ -38,7 +41,8 @@ public class TestHacha {
 	public void testHachaDeMetalSeCreaConFuerzaCorrespondiente() {
 		
 		Metal metal = new Metal();
-		Hacha hacha = new Hacha(metal);
+		Desgaste tipoDesgaste = new DesgasteLineal(2);
+		Hacha hacha = new Hacha(metal,400,10,tipoDesgaste);
 		
 		assertEquals(10,hacha.getFuerza());
 	}
@@ -46,9 +50,9 @@ public class TestHacha {
 	@Test
 	public void testHachaDeMaderaUsarContraMadera() {
 		
-		Metal metal = new Metal();
 		Madera madera = new Madera();
-		Hacha hacha = new Hacha(madera);
+		DesgasteLineal tipoDesgaste = new DesgasteLineal(1);
+		Hacha hacha = new Hacha(madera,100,2,tipoDesgaste);
 		
 		hacha.usarContra(madera);
 		

@@ -6,11 +6,7 @@ public abstract class Herramienta {
 	protected float durabilidad;
 	protected int fuerza;
 	protected Desgaste tipoDesgaste;
-		
-	abstract public void usarContra(Madera madera);
-	abstract public void usarContra(Piedra piedra);
-	abstract public void usarContra(Metal metal);
-	abstract public void usarContra(Diamante diamante);	
+
 	abstract protected void desgastar();
 	
 	public Herramienta(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste) {
