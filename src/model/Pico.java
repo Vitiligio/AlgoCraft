@@ -3,13 +3,11 @@ package model;
 public class Pico extends Herramienta {
 
 
-    public Pico(Material material){
-
-        this.material = material;
-        this.durabilidad = this.material.durabilidadPico();
-		this.fuerza = this.material.fuerzaPico();
-		this.tipoDesgaste = this.material.tipoDeDesgastePico();
-    }
+	public Pico(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste) {
+		
+		super(material,durabilidad,fuerza,tipoDesgaste);
+		
+	}
     
     protected void desgastar() {
 		

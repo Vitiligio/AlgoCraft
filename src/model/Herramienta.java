@@ -13,15 +13,20 @@ public abstract class Herramienta {
 	abstract public void usarContra(Diamante diamante);	
 	abstract protected void desgastar();
 	
-	/*Me tira error en las otras herramientas dejar esto como el constructor, como si lo tuviese que volver a implementar en todas las herramientas
-	 public Herramienta(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste) {
+	public Herramienta(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste) {
 		
 		this.material = material;
 		this.durabilidad = durabilidad;
 		this.fuerza = fuerza;
-		this.tipoDesgaste = fuerza;
+		this.tipoDesgaste = tipoDesgaste;
 		
-	}*/
+	}
+	
+	public void usarContra(Material material) {
+		
+		this.desgastar();
+		
+	}
 
 	//getters para hacer las pruebas
 	public float getDurabilidad() {

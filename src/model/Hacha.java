@@ -2,12 +2,9 @@ package model;
 
 public class Hacha extends Herramienta {
 	
-	public Hacha(Material material) {
+	public Hacha(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste) {
 		
-		this.durabilidad = material.durabilidadHacha();
-		this.fuerza = material.fuerzaHacha();
-		this.tipoDesgaste = material.tipoDeDesgastaHacha();
-		this.material = material;
+		super(material,durabilidad,fuerza,tipoDesgaste);
 		
 	}
 	
