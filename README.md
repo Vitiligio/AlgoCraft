@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Vitiligio/AlgoCraft.svg?branch=master)](https://travis-ci.org/Vitiligio/AlgoCraft)
 - [Informe](https://github.com/Vitiligio/AlgoCraft/blob/master/Informe.pdf)
 
 Ejemplo                                                                                                                                                                 
