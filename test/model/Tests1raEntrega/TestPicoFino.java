@@ -54,12 +54,13 @@ public class TestPicoFino {
 	@Test 
 	public void testPicoFinoSeDesgasteBien() {
 
+		Diamante diamante = new Diamante();
 		PicoFino picoFino = new PicoFino(1000, 20, new DesgasteFino());
 		
-		picoFino.desgastar();
+		picoFino.usarContra(diamante);
 		assertEquals(900, picoFino.getDurabilidad(), 0);
 		
-		picoFino.desgastar();
+		picoFino.usarContra(diamante);
 		assertEquals(810, picoFino.getDurabilidad(), 0);
 	}
 }

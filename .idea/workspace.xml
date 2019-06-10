@@ -3,17 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0c033a04-18fa-4058-a71f-3e50a83e3c43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Hacha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Hacha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Herramienta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Herramienta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Pico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Pico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/PicoFino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PicoFino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/TestHacha.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/Tests1raEntrega/TestHacha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/TestMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/Tests1raEntrega/TestMadera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/TestMetal.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/Tests1raEntrega/TestMetal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/TestPersonaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/Tests1raEntrega/TestPersonaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/TestPico.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/Tests1raEntrega/TestPico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/TestPicoFino.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/Tests1raEntrega/TestPicoFino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/TestPiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/Tests1raEntrega/TestPiedra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/model/Hacha.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/model/Hacha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/model/Herramienta.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/model/Herramienta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/model/Personaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/model/Personaje.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/model/Pico.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/model/Pico.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/model/PicoFino.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/model/PicoFino.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tests/model/TestHacha.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tests/model/TestMateriales.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tests/model/TestPersonaje.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tests/model/TestPico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tests/model/TestPicoFino.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/Tests1raEntrega/TestPico.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -24,8 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -44,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestHacha.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="90">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -74,7 +73,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPersonaje.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
+            <state relative-caret-position="60">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -86,20 +85,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Herramienta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="460">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPico.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/PicoFino.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -122,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestCreacionPico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,8 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,12 +208,21 @@
               <item name="AlgoCraft" type="b2602c69:ProjectViewProjectNode" />
               <item name="AlgoCraft" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlgoCraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgoCraft" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="Tests1raEntrega" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,7 +352,8 @@
       <updated>1559767919831</updated>
       <workItem from="1559767925786" duration="17064000" />
       <workItem from="1560129801291" duration="176000" />
-      <workItem from="1560130054127" duration="272000" />
+      <workItem from="1560130054127" duration="585000" />
+      <workItem from="1560130694912" duration="308000" />
     </task>
     <servers />
   </component>
@@ -386,7 +390,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17512000" />
+    <option name="totallyTimeSpent" value="18133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="77" y="47" width="1279" height="701" extended-state="0" />
@@ -397,7 +401,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25790754" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.26196268" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -521,40 +525,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestHacha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPersonaje.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPicoUsoContraMateriales.java">
+    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPicoFino.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestHacha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -572,6 +559,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPersonaje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPicoUsoContraMateriales.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPiedra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -579,10 +593,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPicoFino.java">
+    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestCreacionPico.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -591,18 +605,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Herramienta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="460">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestCreacionPico.java">
+    <entry file="file://$PROJECT_DIR$/src/model/PicoFino.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
         </state>
       </provider>
     </entry>
