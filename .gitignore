@@ -4,6 +4,11 @@
 *.war
 *.ear
 
+#test
+
+.*
+!/.gitignore
+
 # Eclipse
 .project
 .classpath

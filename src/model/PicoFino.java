@@ -2,9 +2,9 @@ package model;
 
 public class PicoFino extends Herramienta {
 
-	public PicoFino(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste) {
+	public PicoFino(float durabilidad, int fuerza, Desgaste tipoDesgaste) {
 		
-		super(material,durabilidad,fuerza,tipoDesgaste);
+		super(durabilidad,fuerza,tipoDesgaste);
 		
 	}
 	
