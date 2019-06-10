@@ -9,6 +9,10 @@
 .classpath
 .settings
 
+#
+.*
+!/.gitignore
+
 # Idea
 .idea
 *.iml
