@@ -1,5 +1,5 @@
 
-[Informe](https://github.com/Vitiligio/AlgoCraft/blob/master/Informe.pdf)
+- [Informe](https://github.com/Vitiligio/AlgoCraft/blob/master/Informe.pdf)
 
 Ejemplo                                                                                                                                                                 
 ==========
