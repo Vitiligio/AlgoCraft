@@ -10,7 +10,7 @@ import org.junit.Test;
 public class TestMadera {
 	@Test
 	public void testMaderaGolpeadaPorHachaDeMaderaReduceDurabilidad() {
-
+		
 		Madera madera = new Madera();
 		DesgasteLineal desgaste = new DesgasteLineal(1);
 		Hacha hacha = new Hacha(madera, 100, 2, desgaste);
@@ -20,6 +20,5 @@ public class TestMadera {
 
 		hacha.usarContra(madera);
 		assertEquals(madera.getDurabilidad(), durabilidadMadera - 2);
-
 	}
 }
