@@ -9,7 +9,8 @@ public class TestMateriales {
 	public void testMaderaGolpeadaPorHachaDeMaderaReduceDurabilidad() {
 
 		Madera madera = new Madera();
-		Hacha hacha = new Hacha(madera);
+		DesgasteLineal desgaste = new DesgasteLineal(1);
+		Hacha hacha = new Hacha(madera, 100, 2, desgaste);
 
 		int durabilidadMadera = madera.getDurabilidad();
 		assertEquals(10, durabilidadMadera);
@@ -22,7 +23,8 @@ public class TestMateriales {
 	@Test
 	public void	testPiedraGolpeadaPorHachaNoReduceDurabilidad() {
 		Piedra piedra = new Piedra();
-		Hacha hacha = new Hacha(piedra);
+		DesgasteLineal desgaste = new DesgasteLineal(1);
+		Hacha hacha = new Hacha(piedra, 200, 5, desgaste);
 
 		int durabilidadPiedra = piedra.getDurabilidad();
 		assertEquals(30,durabilidadPiedra);
@@ -35,7 +37,8 @@ public class TestMateriales {
 	public void testMetalGolpeadoPorPicoMaderaNoReduceDurabilidad() {
 		Metal metal = new Metal();
 		Madera madera = new Madera();
-		Pico pico = new Pico(madera);
+		DesgasteLineal desgaste = new DesgasteLineal(1);
+		Pico pico = new Pico(madera, 100, 2, desgaste);
 
 		int durabilidadMetal = metal.getDurabilidad();
 
