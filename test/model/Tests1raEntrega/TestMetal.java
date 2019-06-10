@@ -1,7 +1,11 @@
-package model;
+package model.Tests1raEntrega;
 
 import static org.junit.Assert.assertEquals;
 
+import model.DesgasteLineal;
+import model.Madera;
+import model.Metal;
+import model.Pico;
 import org.junit.Test;
 
 public class TestMetal {

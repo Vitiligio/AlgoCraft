@@ -1,5 +1,6 @@
-package model;
+package model.Tests1raEntrega;
 
+import model.*;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

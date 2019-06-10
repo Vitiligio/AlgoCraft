@@ -12,9 +12,14 @@ public class Pico extends Herramienta {
     protected void desgastar() {
 		
 		this.durabilidad -= this.tipoDesgaste.calcularDesgaste(this.fuerza);
-		
 	}
     
+
+    public void usarContra(Madera madera) {
+    	
+    	this.desgastar();
+    }
+
 	public void usarContra(Piedra piedra) {
 
     	piedra.reducirDurabilidad(this.fuerza);

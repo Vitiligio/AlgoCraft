@@ -1,7 +1,10 @@
-package model;
+package model.Tests1raEntrega;
 
 import static org.junit.Assert.assertEquals;
 
+import model.DesgasteLineal;
+import model.Hacha;
+import model.Piedra;
 import org.junit.Test;
 
 public class TestPiedra {
