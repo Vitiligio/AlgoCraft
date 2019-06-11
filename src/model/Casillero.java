@@ -2,7 +2,7 @@ package model;
 
 public class Casillero {
 	
-	EstadoCasillero estado;
+	ObjetoDelMapa estado;
 	
 	public ObjetoDelMapa obtenerContenido() {
 		
