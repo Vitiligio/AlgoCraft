@@ -7,11 +7,7 @@ import org.junit.*;
 public class TestJuego {
 	
 	@Test
-	public void testInicializarJugador() {
-	}
-	
-	@Test
-	public void testMoverJugador() {
+	public void testJuegoSeIniciaConTerrenoYJugador() {
 		
 	}
 }
