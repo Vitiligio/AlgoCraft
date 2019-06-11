@@ -7,11 +7,16 @@ import org.junit.*;
 public class TestMapa {
 	
 	@Test
-	public void testInicializarJugador() {
+	public void testOcuparCasilleroVacioSePuede() {
 	}
 	
 	@Test
-	public void testMoverJugador() {
+	public void testOcuparCasilleroOcupadoNoSePuede() {
+		
+	}
+	
+	@Test
+	public void testOcuparCasilleroPorMaterialOPersonajeSePuede() {
 		
 	}
 }
