@@ -1,7 +1,7 @@
 package model;
 
 public class Mapa {
-
+	
 	Casillero[][] terreno = new Casillero[8][8];
 	int[] posicionJugador = new int[2];
 	
@@ -12,7 +12,6 @@ public class Mapa {
 		this.posicionJugador = posicionJugador;
 		
 	}
-	
-	
-	
+
 }
+
