@@ -122,4 +122,150 @@ public class TestConstruccionDeHerramientas {
         assertEquals(1000, herramienta.getDurabilidad(), 0);
         assertEquals(20, herramienta.getFuerza());
     }
+
+    @Test
+    public void TestInsertoMaterialesCorrectamenteEnLaTablaYObtengoPicoDeMadera(){
+
+        MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
+        RecetasDeConstruccion recetas = new RecetasDeConstruccion();
+
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 2);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        String codigo = mesaDeCrafteo.generarCodigo();
+
+        Herramienta herramienta = recetas.obtenerHerramienta(codigo);
+        Material material = herramienta.getMaterial();
+
+        assertEquals(100, herramienta.getDurabilidad(), 0);
+        assertEquals(2, herramienta.getFuerza());
+        assertEquals(10, material.getDurabilidad());
+    }
+
+    @Test
+    public void TestInsertoMaterialesCorrectamenteEnLaTablaYObtengoPicoDePiedra(){
+
+        MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
+        RecetasDeConstruccion recetas = new RecetasDeConstruccion();
+
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 0, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 0, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 0, 2);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        String codigo = mesaDeCrafteo.generarCodigo();
+
+        Herramienta herramienta = recetas.obtenerHerramienta(codigo);
+        Material material = herramienta.getMaterial();
+
+        assertEquals(200, herramienta.getDurabilidad(), 0);
+        assertEquals(4, herramienta.getFuerza());
+        assertEquals(30, material.getDurabilidad());
+    }
+
+    @Test
+    public void TestInsertoMaterialesCorrectamenteEnLaTablaYObtengoPicoDeMetal(){
+
+        MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
+        RecetasDeConstruccion recetas = new RecetasDeConstruccion();
+
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 2);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        String codigo = mesaDeCrafteo.generarCodigo();
+
+        Herramienta herramienta = recetas.obtenerHerramienta(codigo);
+        Material material = herramienta.getMaterial();
+
+        assertEquals(400, herramienta.getDurabilidad(), 0);
+        assertEquals(12, herramienta.getFuerza());
+        assertEquals(50, material.getDurabilidad());
+    }
+
+    @Test
+    public void TestInsertoMaterialesCorrectamenteEnLaTablaYObtengoHachaDeMadera(){
+
+        MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
+        RecetasDeConstruccion recetas = new RecetasDeConstruccion();
+
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        String codigo = mesaDeCrafteo.generarCodigo();
+
+        Herramienta herramienta = recetas.obtenerHerramienta(codigo);
+        Material material = herramienta.getMaterial();
+
+        assertEquals(100, herramienta.getDurabilidad(), 0);
+        assertEquals(2, herramienta.getFuerza());
+        assertEquals(10, material.getDurabilidad());
+    }
+
+    @Test
+    public void TestInsertoMaterialesCorrectamenteEnLaTablaYObtengoHachaDePiedra(){
+
+        MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
+        RecetasDeConstruccion recetas = new RecetasDeConstruccion();
+
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 0, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 0, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 1, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        String codigo = mesaDeCrafteo.generarCodigo();
+
+        Herramienta herramienta = recetas.obtenerHerramienta(codigo);
+        Material material = herramienta.getMaterial();
+
+        assertEquals(200, herramienta.getDurabilidad(), 0);
+        assertEquals(5, herramienta.getFuerza());
+        assertEquals(30, material.getDurabilidad());
+    }
+
+    @Test
+    public void TestInsertoMaterialesCorrectamenteEnLaTablaYObtengoHachaDeMetal(){
+
+        MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
+        RecetasDeConstruccion recetas = new RecetasDeConstruccion();
+
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 1, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        String codigo = mesaDeCrafteo.generarCodigo();
+
+        Herramienta herramienta = recetas.obtenerHerramienta(codigo);
+        Material material = herramienta.getMaterial();
+
+        assertEquals(400, herramienta.getDurabilidad(), 0);
+        assertEquals(10, herramienta.getFuerza());
+        assertEquals(50, material.getDurabilidad());
+    }
+
+    @Test
+    public void TestInsertoMaterialesCorrectamenteEnLaTablaYObtengoPicoFino(){
+
+        MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
+        RecetasDeConstruccion recetas = new RecetasDeConstruccion();
+
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 2);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 1, 0);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
+        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        String codigo = mesaDeCrafteo.generarCodigo();
+
+        Herramienta herramienta = recetas.obtenerHerramienta(codigo);
+
+        assertEquals(1000, herramienta.getDurabilidad(), 0);
+        assertEquals(20, herramienta.getFuerza());
+    }
 }
