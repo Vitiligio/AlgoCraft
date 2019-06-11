@@ -1,7 +1,7 @@
 package model;
 
 
-public class Personaje {
+public class Personaje extends ObjetoDelMapa{
 	
 	private Inventario inventario;
 	
@@ -12,7 +12,9 @@ public class Personaje {
 	}
 	
 	public Herramienta getObjetoEquipado() {
+		
 		return this.inventario.getObjetoEquipado();
+	
 	}
 	
 }
