@@ -4,28 +4,19 @@ public class Metal extends Material {
 
 
 	public Metal(){
+
 		durabilidad = 50;
+		ID = 3;
 	}
 
-	public int durabilidadHacha() {
-		return 400;
+	public void golpeadoPor(Material material, int fuerza) {
+
+		material.dañarMetal(this, fuerza);		//patron double dispatch
 	}
-	public int durabilidadPico() {
-		return 400;
-	}
-	
-	public int fuerzaHacha() {
-		return 10;
-	}
-	public int fuerzaPico() {
-		return 12;
-	}
-	public Desgaste tipoDeDesgastaHacha() {
-		DesgasteLineal desgaste = new DesgasteLineal(2);
-		return desgaste;
-	}
-	public Desgaste tipoDeDesgastePico() {
-		DesgasteAbrupto desgaste = new DesgasteAbrupto();
-		return desgaste;
+
+	@Override
+	protected void dañarMetal(Metal metal, int fuerza) {
+
+		metal.reducirDurabilidad(fuerza);
 	}
 }

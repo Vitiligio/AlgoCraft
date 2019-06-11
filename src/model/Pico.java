@@ -26,11 +26,10 @@ public class Pico extends Herramienta {
     	this.desgastar();
 		
 	}
+
 	public void usarContra(Metal metal) {
 
-    	if(material.getClass() != Madera.class)
-			metal.reducirDurabilidad(this.fuerza);
-
+    	metal.golpeadoPor(this.material, this.fuerza);
 		this.desgastar();
 	}
 

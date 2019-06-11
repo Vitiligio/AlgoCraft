@@ -18,7 +18,7 @@ public class TestPicoUsoContraMateriales {
         float durabilidadPico = pico.getDurabilidad();
         Madera otraMadera = new Madera();
 
-        pico.usarContra(madera);
+        pico.usarContra(otraMadera);
         assertEquals(pico.getDurabilidad(), durabilidadPico - 2, 0);
     }
 

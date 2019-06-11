@@ -1,19 +1,19 @@
 package model;
 
 public abstract class Material {
+
 	protected int durabilidad;
-	abstract int durabilidadHacha();
-	abstract int durabilidadPico();
-	abstract int fuerzaHacha();
-	abstract int fuerzaPico();
-	abstract Desgaste tipoDeDesgastaHacha();
-	abstract Desgaste tipoDeDesgastePico();
-	
+	protected int ID;
 	
 	public void reducirDurabilidad(int cantidad) {
 		durabilidad -= cantidad;
 	}
+
 	public int getDurabilidad() {
 		return durabilidad;
 	}
+
+    public int getID() { return ID; }
+
+    protected abstract void dañarMetal(Metal metal, int fuerza);
 }
