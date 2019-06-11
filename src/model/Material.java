@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Material {
+public abstract class Material extends ObjetoDelMapa {
 
 	protected int durabilidad;
 	protected int ID;
