@@ -8,13 +8,13 @@ public class GeneradorDeMapa {
 			casilleros[i][j] = new Casillero();
 		}
 		Madera madera = new Madera();
-		casilleros[0][8].ocupar(madera);
+		casilleros[0][7].ocupar(madera);
 		Piedra piedra = new Piedra();
-		casilleros[1][8].ocupar(piedra);
+		casilleros[1][7].ocupar(piedra);
 		Metal metal = new Metal();
-		casilleros[2][8].ocupar(metal);
+		casilleros[2][7].ocupar(metal);
 		Diamante diamante = new Diamante();
-		casilleros[3][8].ocupar(diamante);
+		casilleros[3][7].ocupar(diamante);
 		return casilleros;
 	}
 }
