@@ -1,6 +1,6 @@
 package model;
 
-public class EstadoLibre {
+public class EstadoLibre extends EstadoCasillero {
 	
 	public EstadoCasillero ocupar(ObjetoDelMapa objeto) {
 		
