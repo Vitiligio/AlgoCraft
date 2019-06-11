@@ -8,6 +8,7 @@ public class TestJugador {
 	
 	@Test
 	public void testSeInicializaJugadorEnElMapaCorrectamente() {
+		
 	}
 	
 	@Test
