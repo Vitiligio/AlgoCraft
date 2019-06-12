@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/Vitiligio/AlgoCraft.svg?branch=master)](https://travis-ci.org/Vitiligio/AlgoCraft)
-- [Informe](https://github.com/Vitiligio/AlgoCraft/blob/master/Informe.pdf)
+- [Informe](https://www.overleaf.com/project/5cf95e83a44ebc0525e97497)
 
 Ejemplo                                                                                                                                                                 
 ==========
