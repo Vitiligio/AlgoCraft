@@ -20,5 +20,9 @@ public class EstadoOcupado extends EstadoCasillero {
 		return this;
 		
 	}
+	
+	protected boolean puedeOcupar() {
+		return false;
+	}
 
 }

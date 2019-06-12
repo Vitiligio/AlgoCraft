@@ -17,10 +17,12 @@ public class Casillero {
 		
 	}
 	
-	public void ocupar(ObjetoDelMapa objeto) {
+	public boolean ocupar(ObjetoDelMapa objeto) {
 		
+		boolean puede_ocupar = estado.puedeOcupar();
 		EstadoCasillero nuevoEstado = this.estado.ocupar(objeto);
 		this.estado = nuevoEstado;
+		return puede_ocupar;
 		
 	}
 

@@ -32,9 +32,8 @@ public class Mapa {
 		if (nueva_posicion[1] > 7)
 			return false;
 		Casillero nuevo_casillero = terreno[nueva_posicion[0]][nueva_posicion[1]];
-		if (nuevo_casillero.obtenerContenido() != null)
+		if (!nuevo_casillero.ocupar(jugador))
 			return false;
-		nuevo_casillero.ocupar(jugador);
 		posicionJugador = nueva_posicion;
 		return true;
 	}

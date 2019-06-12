@@ -14,5 +14,9 @@ public class EstadoLibre extends EstadoCasillero {
 		return null;
 		
 	}
+	
+	protected boolean puedeOcupar() {
+		return true;
+	}
 
 }
