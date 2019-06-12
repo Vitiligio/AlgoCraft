@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.*;
 
-public class TestJugador {
+public class TestInicializarJugador {
 	
 	@Test
 	public void testSeInicializaJugadorEnElMapaCorrectamente() {
