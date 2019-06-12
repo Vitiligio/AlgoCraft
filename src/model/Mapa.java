@@ -35,6 +35,8 @@ public class Mapa {
 		Casillero nuevo_casillero = terreno[nueva_posicion[0]][nueva_posicion[1]];
 		if (!nuevo_casillero.ocupar(jugador))
 			return false;
+		Casillero viejo_casillero = terreno[posicionJugador[0]][posicionJugador[1]];
+		viejo_casillero.desocupar();
 		posicionJugador = nueva_posicion;
 		return true;
 	}
