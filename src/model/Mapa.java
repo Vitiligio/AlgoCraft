@@ -35,6 +35,7 @@ public class Mapa {
 		if (nuevo_casillero.obtenerContenido() != null)
 			return false;
 		nuevo_casillero.ocupar(jugador);
+		posicionJugador = nueva_posicion;
 		return true;
 	}
 	
