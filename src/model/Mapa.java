@@ -20,5 +20,7 @@ public class Mapa {
 	public Casillero verPosicion(int[] posicion) {
 		return terreno[posicion[0]][posicion[1]];
 	}
+	
+	
 
 }
