@@ -9,5 +9,5 @@ public class Diamante extends Material {
 	}
 
 	@Override
-	protected void dañarMetal(Metal metal, int fuerza) { }
+	protected void daniarMetal(Metal metal, int fuerza) { }
 }

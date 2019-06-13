@@ -14,6 +14,6 @@ public abstract class Material extends ObjetoDelMapa {
 
     public int getID() { return ID; }
 
-    protected abstract void dañarMetal(Metal metal, int fuerza);
+    protected abstract void daniarMetal(Metal metal, int fuerza);
     
 }
