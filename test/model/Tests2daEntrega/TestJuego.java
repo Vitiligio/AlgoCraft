@@ -9,5 +9,6 @@ public class TestJuego {
 	@Test
 	public void testJuegoSeIniciaConTerrenoYJugador() {
 		
+		Juego juego = new Juego();
 	}
 }
