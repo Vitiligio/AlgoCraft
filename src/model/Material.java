@@ -3,7 +3,6 @@ package model;
 public abstract class Material extends ObjetoDelMapa {
 
 	protected int durabilidad;
-	protected int ID;
 	
 	public void reducirDurabilidad(int cantidad) {
 		durabilidad -= cantidad;
@@ -15,6 +14,6 @@ public abstract class Material extends ObjetoDelMapa {
 
     public int getID() { return ID; }
 
-    protected abstract void daÃ±arMetal(Metal metal, int fuerza);
+    protected abstract void dañarMetal(Metal metal, int fuerza);
     
 }

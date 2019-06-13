@@ -11,11 +11,11 @@ public class Metal extends Material {
 
 	public void golpeadoPor(Material material, int fuerza) {
 
-		material.daÃ±arMetal(this, fuerza);		//patron double dispatch
+		material.dañarMetal(this, fuerza);		//patron double dispatch
 	}
 
 	@Override
-	protected void daÃ±arMetal(Metal metal, int fuerza) {
+	protected void dañarMetal(Metal metal, int fuerza) {
 
 		metal.reducirDurabilidad(fuerza);
 	}

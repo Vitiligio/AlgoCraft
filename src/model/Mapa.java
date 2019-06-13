@@ -4,7 +4,7 @@ public class Mapa {
 	
 	Casillero[][] terreno = new Casillero[8][8];
 	int[] posicionJugador = new int[2];
-	Personaje jugador = new Personaje();
+	public Personaje jugador = new Personaje();
 	
 	public Mapa(Casillero[][] terreno, int[] posicionJugador) {
 	

@@ -8,6 +8,7 @@ public class Personaje extends ObjetoDelMapa{
 	public Personaje() {
 		
 		inventario = new Inventario();
+		this.ID = 0;
 	
 	}
 	

@@ -10,5 +10,5 @@ public class Madera extends Material {
 	}
 
 	@Override
-	protected void daÃ±arMetal(Metal metal, int fuerza) { }
+	protected void dañarMetal(Metal metal, int fuerza) { }
 }
