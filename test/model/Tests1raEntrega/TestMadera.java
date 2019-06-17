@@ -13,7 +13,7 @@ public class TestMadera {
 		
 		Madera madera = new Madera();
 		DesgasteLineal desgaste = new DesgasteLineal(1);
-		Hacha hacha = new Hacha(madera, 100, 2, desgaste);
+		Hacha hacha = new Hacha(madera, 100, 2, desgaste, 5);
 
 		int durabilidadMadera = madera.getDurabilidad();
 		assertEquals(10, durabilidadMadera);

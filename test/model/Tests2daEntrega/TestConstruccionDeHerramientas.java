@@ -2,7 +2,9 @@ package model.Tests2daEntrega;
 
 import model.*;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.*;
 
@@ -267,5 +269,18 @@ public class TestConstruccionDeHerramientas {
 
         assertEquals(1000, herramienta.getDurabilidad(), 0);
         assertEquals(20, herramienta.getFuerza());
+    }
+
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+
+    @Test
+    public void TestCodigoInvalidoLanzaExcepcion(){
+
+        RecetasDeConstruccion recetas = new RecetasDeConstruccion();
+        String codigo = "123123123";
+
+        thrown.expect(CodigoDeHerramientaInvalidoError.class);
+        recetas.obtenerHerramienta(codigo);
     }
 }

@@ -13,7 +13,7 @@ public class TestCreacionPico {
 
         Madera madera = new Madera();
         Desgaste desgaste = new DesgasteLineal(1);
-        Pico pico = new Pico(madera, 100, 2, desgaste);
+        Pico pico = new Pico(madera, 100, 2, desgaste, 8);
 
         assertNotEquals(null, pico);
 
@@ -24,7 +24,7 @@ public class TestCreacionPico {
 
         Madera madera = new Madera();
         Desgaste desgaste = new DesgasteLineal(1);
-        Pico pico = new Pico(madera, 100, 2, desgaste);
+        Pico pico = new Pico(madera, 100, 2, desgaste, 8);
 
         assertEquals(100, pico.getDurabilidad(), 0);
         assertEquals(2, pico.getFuerza());
@@ -36,7 +36,7 @@ public class TestCreacionPico {
 
         Piedra piedra = new Piedra();
         Desgaste desgaste = new DesgasteLineal(1.5);
-        Pico pico = new Pico(piedra, 200, 4, desgaste);
+        Pico pico = new Pico(piedra, 200, 4, desgaste, 9);
 
         assertNotEquals(null, pico);
     }
@@ -46,7 +46,7 @@ public class TestCreacionPico {
 
         Piedra piedra = new Piedra();
         Desgaste desgaste = new DesgasteLineal(1.5);
-        Pico pico = new Pico(piedra, 200, 4, desgaste);
+        Pico pico = new Pico(piedra, 200, 4, desgaste, 9);
 
         assertEquals(200, pico.getDurabilidad(), 0);
         assertEquals(4, pico.getFuerza());
@@ -58,7 +58,7 @@ public class TestCreacionPico {
 
         Metal metal = new Metal();
         Desgaste desgaste = new DesgasteAbrupto();
-        Pico pico = new Pico(metal, 400, 12, desgaste);
+        Pico pico = new Pico(metal, 400, 12, desgaste, 10);
 
         assertNotEquals(null, pico);
     }
@@ -68,7 +68,7 @@ public class TestCreacionPico {
 
         Metal metal = new Metal();
         Desgaste desgaste = new DesgasteAbrupto();
-        Pico pico = new Pico(metal, 400, 12, desgaste);
+        Pico pico = new Pico(metal, 400, 12, desgaste, 10);
 
         assertEquals(400, pico.getDurabilidad(), 0);
         assertEquals(12, pico.getFuerza());

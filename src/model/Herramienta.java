@@ -1,11 +1,13 @@
 package model;
 
-public abstract class Herramienta {
+public abstract class Herramienta implements AgregableAlInventario{
 	
 	protected Material material;
 	protected float durabilidad;
 	protected int fuerza;
 	protected Desgaste tipoDesgaste;
+	protected int cantidad;
+	protected int ID;
 
 	public Herramienta(float durabilidad, int fuerza, Desgaste tipoDesgaste) {
 
@@ -13,14 +15,18 @@ public abstract class Herramienta {
 		this.durabilidad = durabilidad;
 		this.fuerza = fuerza;
 		this.tipoDesgaste = tipoDesgaste;
+		this.cantidad = 1;
+		this.ID = 11;
 	}
 
-	public Herramienta(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste) {
+	public Herramienta(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste, int ID) {
 
 		this.material = material;
 		this.durabilidad = durabilidad;
 		this.fuerza = fuerza;
 		this.tipoDesgaste = tipoDesgaste;
+		this.cantidad = 1;
+		this.ID = ID;
 	}
 
 	abstract protected void desgastar();
@@ -29,6 +35,16 @@ public abstract class Herramienta {
 		
 		this.desgastar();
 		
+	}
+
+	public void aumentarCantidad(AgregableAlInventario objeto){
+
+		this.cantidad = this.cantidad + objeto.getCantidad();
+	}
+
+	public void disminuirCantidad(){
+
+		this.cantidad--;
 	}
 
 	//getters para hacer las pruebas
@@ -43,4 +59,8 @@ public abstract class Herramienta {
 	public int getFuerza() {
 		return fuerza;
 	}
+
+	public int getID() { return ID; }
+
+	public int getCantidad() { return cantidad; }
 }

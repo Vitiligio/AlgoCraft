@@ -3,9 +3,9 @@ package model;
 public class Pico extends Herramienta {
 
 
-	public Pico(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste) {
+	public Pico(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste, int ID) {
 		
-		super(material,durabilidad,fuerza,tipoDesgaste);
+		super(material,durabilidad,fuerza,tipoDesgaste, ID);
 		
 	}
     

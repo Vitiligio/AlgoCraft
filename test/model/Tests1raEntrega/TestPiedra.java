@@ -12,7 +12,7 @@ public class TestPiedra {
 	public void	testPiedraGolpeadaPorHachaNoReduceDurabilidad() {
 		Piedra piedra = new Piedra();
 		DesgasteLineal desgaste = new DesgasteLineal(1);
-		Hacha hacha = new Hacha(piedra, 200, 5, desgaste);
+		Hacha hacha = new Hacha(piedra, 200, 5, desgaste, 7);
 
 		int durabilidadPiedra = piedra.getDurabilidad();
 		assertEquals(30,durabilidadPiedra);

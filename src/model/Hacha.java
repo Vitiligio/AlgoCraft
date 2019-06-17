@@ -2,9 +2,9 @@ package model;
 
 public class Hacha extends Herramienta {
 
-	public Hacha(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste) {
+	public Hacha(Material material, float durabilidad, int fuerza, Desgaste tipoDesgaste, int ID) {
 
-		super(material, durabilidad, fuerza, tipoDesgaste);
+		super(material, durabilidad, fuerza, tipoDesgaste, ID);
 	}
 
 	protected void desgastar() {

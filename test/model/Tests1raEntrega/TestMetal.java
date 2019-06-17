@@ -14,7 +14,7 @@ public class TestMetal {
 		Metal metal = new Metal();
 		Madera madera = new Madera();
 		DesgasteLineal desgaste = new DesgasteLineal(1);
-		Pico pico = new Pico(madera, 100, 2, desgaste);
+		Pico pico = new Pico(madera, 100, 2, desgaste, 8);
 
 		int durabilidadMetal = metal.getDurabilidad();
 

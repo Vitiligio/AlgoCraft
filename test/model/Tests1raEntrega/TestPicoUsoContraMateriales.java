@@ -14,7 +14,7 @@ public class TestPicoUsoContraMateriales {
 
         Madera madera = new Madera();
         Desgaste desgaste = new DesgasteLineal(1);
-        Pico pico = new Pico(madera, 100, 2, desgaste);
+        Pico pico = new Pico(madera, 100, 2, desgaste, 8);
         float durabilidadPico = pico.getDurabilidad();
         Madera otraMadera = new Madera();
 
@@ -27,7 +27,7 @@ public class TestPicoUsoContraMateriales {
 
         Madera madera = new Madera();
         Desgaste desgaste = new DesgasteLineal(1);
-        Pico pico = new Pico(madera, 100, 2, desgaste);
+        Pico pico = new Pico(madera, 100, 2, desgaste, 8);
         float durabilidadPico = pico.getDurabilidad();
         Piedra piedra = new Piedra();
 
@@ -40,7 +40,7 @@ public class TestPicoUsoContraMateriales {
 
         Madera madera = new Madera();
         Desgaste desgaste = new DesgasteLineal(1);
-        Pico pico = new Pico(madera, 100, 2, desgaste);
+        Pico pico = new Pico(madera, 100, 2, desgaste, 8);
         float durabilidadPico = pico.getDurabilidad();
         Metal metal = new Metal();
 
@@ -53,7 +53,7 @@ public class TestPicoUsoContraMateriales {
 
         Madera madera = new Madera();
         Desgaste desgaste = new DesgasteLineal(1);
-        Pico pico = new Pico(madera, 100, 2, desgaste);
+        Pico pico = new Pico(madera, 100, 2, desgaste, 8);
         float durabilidadPico = pico.getDurabilidad();
         Diamante diamante = new Diamante();
 
@@ -65,7 +65,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDePiedraSeUsaContraMaderaYReduceSuDurabilidadSegunDesgaste() {
 
         Desgaste desgaste = new DesgasteLineal(1.5);
-        Pico pico = new Pico(new Piedra(), 200, 4, desgaste);
+        Pico pico = new Pico(new Piedra(), 200, 4, desgaste, 9);
         float durabilidadPico = pico.getDurabilidad();
         Madera madera = new Madera();
 
@@ -80,7 +80,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDePiedraSeUsaContraPiedraYReduceSuDurabilidadSegunDesgaste() {
 
         Desgaste desgaste = new DesgasteLineal(1.5);
-        Pico pico = new Pico(new Piedra(), 200, 4, desgaste);
+        Pico pico = new Pico(new Piedra(), 200, 4, desgaste, 9);
         float durabilidadPico = pico.getDurabilidad();
         Piedra piedra = new Piedra();
 
@@ -95,7 +95,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDePiedraSeUsaContraMetalYReduceSuDurabilidadSegunDesgaste() {
 
         Desgaste desgaste = new DesgasteLineal(1.5);
-        Pico pico = new Pico(new Piedra(), 200, 4, desgaste);
+        Pico pico = new Pico(new Piedra(), 200, 4, desgaste, 9);
         float durabilidadPico = pico.getDurabilidad();
         Metal metal = new Metal();
 
@@ -110,7 +110,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDePiedraSeUsaContraDiamanteYReduceSuDurabilidadSegunDesgaste() {
 
         Desgaste desgaste = new DesgasteLineal(1.5);
-        Pico pico = new Pico(new Piedra(), 200, 4, desgaste);
+        Pico pico = new Pico(new Piedra(), 200, 4, desgaste, 9);
         float durabilidadPico = pico.getDurabilidad();
         Diamante diamante = new Diamante();
 
@@ -125,7 +125,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDeMetalSeUsaContraMaderaYNoReduceSuDurabilidad() {
 
         Desgaste desgaste = new DesgasteAbrupto();
-        Pico pico = new Pico(new Metal(), 400, 12, desgaste);
+        Pico pico = new Pico(new Metal(), 400, 12, desgaste, 10);
         float durabilidadPico = pico.getDurabilidad();
         Madera madera = new Madera();
 
@@ -137,7 +137,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDeMetalSeUsaContraPiedraYNoReduceSuDurabilidad() {
 
         Desgaste desgaste = new DesgasteAbrupto();
-        Pico pico = new Pico(new Metal(), 400, 12, desgaste);
+        Pico pico = new Pico(new Metal(), 400, 12, desgaste, 10);
         float durabilidadPico = pico.getDurabilidad();
         Piedra piedra = new Piedra();
 
@@ -149,7 +149,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDeMetalSeUsaContraMetalYNoReduceSuDurabilidad() {
 
         Desgaste desgaste = new DesgasteAbrupto();
-        Pico pico = new Pico(new Metal(), 400, 12, desgaste);
+        Pico pico = new Pico(new Metal(), 400, 12, desgaste, 10);
         float durabilidadPico = pico.getDurabilidad();
         Metal metal = new Metal();
 
@@ -161,7 +161,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDeMetalSeUsaContraDiamanteYNoReduceSuDurabilidad() {
 
         Desgaste desgaste = new DesgasteAbrupto();
-        Pico pico = new Pico(new Metal(), 400, 12, desgaste);
+        Pico pico = new Pico(new Metal(), 400, 12, desgaste, 10);
         float durabilidadPico = pico.getDurabilidad();
         Diamante diamante = new Diamante();
 
@@ -173,7 +173,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDeMetalSeUsaDiezVecesContraPiedraYReduceSuDurabilidadACero() {
 
         Desgaste desgaste = new DesgasteAbrupto();
-        Pico pico = new Pico(new Metal(), 400, 12, desgaste);
+        Pico pico = new Pico(new Metal(), 400, 12, desgaste, 10);
         Piedra piedra = new Piedra();
 
         assertEquals(400, pico.getDurabilidad(), 0);
@@ -189,7 +189,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDeMetalSeUsaDiezVecesContraMaderaYReduceSuDurabilidadACero() {
 
         Desgaste desgaste = new DesgasteAbrupto();
-        Pico pico = new Pico(new Metal(), 400, 12, desgaste);
+        Pico pico = new Pico(new Metal(), 400, 12, desgaste, 10);
         Madera madera = new Madera();
 
         assertEquals(400, pico.getDurabilidad(), 0);
@@ -205,7 +205,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDeMetalSeUsaDiezVecesContraMetalYReduceSuDurabilidadACero() {
 
         Desgaste desgaste = new DesgasteAbrupto();
-        Pico pico = new Pico(new Metal(), 400, 12, desgaste);
+        Pico pico = new Pico(new Metal(), 400, 12, desgaste, 10);
         Metal metal = new Metal();
 
         assertEquals(400, pico.getDurabilidad(), 0);
@@ -221,7 +221,7 @@ public class TestPicoUsoContraMateriales {
     public void TestPicoDeMetalSeUsaDiezVecesContraDiamanteYReduceSuDurabilidadACero() {
 
         Desgaste desgaste = new DesgasteAbrupto();
-        Pico pico = new Pico(new Metal(), 400, 12, desgaste);
+        Pico pico = new Pico(new Metal(), 400, 12, desgaste, 10);
         Diamante diamante = new Diamante();
 
         assertEquals(400, pico.getDurabilidad(), 0);
