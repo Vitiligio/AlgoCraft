@@ -15,6 +15,11 @@ public class RecetasDeConstruccion {
 
     public RecetasDeConstruccion(){
 
+        generarTabla();
+    }
+
+    public void generarTabla(){
+
         recetas = new HashMap<String, Herramienta>();
 
         recetas.put(PATRON_HACHA_MADERA, new Hacha(new Madera(), 100, 2, new DesgasteLineal(1), 5));
@@ -34,6 +39,8 @@ public class RecetasDeConstruccion {
         if (herramienta == null)
             throw new CodigoDeHerramientaInvalidoError();
 
+        generarTabla();
         return herramienta;
     }
+
 }

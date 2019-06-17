@@ -281,6 +281,20 @@ public class TestConstruccionDeHerramientas {
         String codigo = "123123123";
 
         thrown.expect(CodigoDeHerramientaInvalidoError.class);
-        recetas.obtenerHerramienta(codigo);
+        Herramienta herramienta = recetas.obtenerHerramienta(codigo);
+    }
+
+    @Test
+    public void TestCreoDosHachasDeMaderaSeguidasYNoSonLaMisma(){
+
+        RecetasDeConstruccion recetas = new RecetasDeConstruccion();
+        String codigo = "110110010";
+
+        Herramienta hacha1 = recetas.obtenerHerramienta(codigo);
+        Herramienta hacha2 = recetas.obtenerHerramienta(codigo);
+
+        hacha1.usarContra(new Madera());
+        assertEquals(98, hacha1.getDurabilidad(), 0);
+        assertEquals(100, hacha2.getDurabilidad(), 0);
     }
 }
