@@ -1,47 +1,59 @@
 package model;
 
-import java.util.ArrayList;
-
 public class Inventario {
-	
-	private ArrayList<AgregableAlInventario> inventario;
+
+	private CasilleroDeObjetos[] inventario;
 	private Herramienta objetoEquipado;
-	
+
 	public Inventario() {
-		
+
 		Madera madera = new Madera();
 		Desgaste tipoDesgaste = new DesgasteLineal(1);
 		Herramienta hachaDeMadera = new Hacha(madera,100,2,tipoDesgaste, 5);
-		
-		inventario = new ArrayList<>();
-		inventario.add(hachaDeMadera);
+
+		inventario = new CasilleroDeObjetos[10];
+		inicializarInventario();
+		agregarAlInventario(hachaDeMadera);
 		objetoEquipado = hachaDeMadera;
-		
+
 	}
-	
+
+	private void inicializarInventario(){
+		for(int i = 0; i < 10; i++){
+			inventario[i] = new CasilleroDeObjetos();
+		}
+	}
+
 	public Herramienta getObjetoEquipado() {
-		
+
 		return this.objetoEquipado;
-		
+
 	}
 
 	public void agregarAlInventario(AgregableAlInventario objeto){
 
-		for(int i = 0; i < inventario.size(); i++){
-			if(objeto.getID() == inventario.get(i).getID()){
-				inventario.get(i).aumentarCantidad(objeto);
+		for(int i = 0; i < inventario.length; i++){
+
+			if(objeto.getID() == inventario[i].getIDObjeto()){
+				inventario[i].aumentarCantidad();
 				return;
 			}
-		}
 
-		inventario.add(objeto);
+			else{
+
+				if(inventario[i].getIDObjeto() == 0){
+					inventario[i].asignarObjeto(objeto);
+					return;
+				}
+			}
+		}
 	}
 
 	public int getCantidad(AgregableAlInventario objeto){
 
-		for(int i = 0; i < inventario.size(); i++) {
-			if (objeto.getID() == inventario.get(i).getID()) {
-				return inventario.get(i).getCantidad();
+		for(int i = 0; i < inventario.length; i++) {
+			if (objeto.getID() == inventario[i].getIDObjeto()) {
+				return inventario[i].getCantidadObjeto();
 			}
 		}
 
@@ -50,17 +62,11 @@ public class Inventario {
 
 	public void sacarDelInventario(AgregableAlInventario objeto) {
 
-		for(int i = 0; i < inventario.size(); i++) {
+		for(int i = 0; i < inventario.length; i++) {
 
-			//si encuentra el objeto a sacar y su cantidad es mayor a uno
-			if (objeto.getID() == inventario.get(i).getID() && inventario.get(i).getCantidad() > 1) {
-				inventario.get(i).disminuirCantidad();
+			if (objeto.getID() == inventario[i].getIDObjeto()) {
+				inventario[i].disminuirCantidad();
 			}
-
-			//si encuentra el objeto a sacar y su cantidad es uno
-			else
-				if(objeto.getID() == inventario.get(i).getID())
-					inventario.remove(objeto);
 		}
 	}
 }

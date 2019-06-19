@@ -20,7 +20,7 @@ public class RecetasDeConstruccion {
 
     public void generarTabla(){
 
-        recetas = new HashMap<String, Herramienta>();
+        recetas = new HashMap<>();
 
         recetas.put(PATRON_HACHA_MADERA, new Hacha(new Madera(), 100, 2, new DesgasteLineal(1), 5));
         recetas.put(PATRON_HACHA_PIEDRA, new Hacha(new Piedra(), 200, 5, new DesgasteLineal(1), 6));

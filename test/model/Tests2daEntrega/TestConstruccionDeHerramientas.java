@@ -131,11 +131,11 @@ public class TestConstruccionDeHerramientas {
         MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
         RecetasDeConstruccion recetas = new RecetasDeConstruccion();
 
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 2);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 0, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 0, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 0, 2);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 1, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 2, 1);
         String codigo = mesaDeCrafteo.generarCodigo();
 
         Herramienta herramienta = recetas.obtenerHerramienta(codigo);
@@ -152,11 +152,11 @@ public class TestConstruccionDeHerramientas {
         MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
         RecetasDeConstruccion recetas = new RecetasDeConstruccion();
 
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 0, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 0, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 0, 2);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Piedra(), 0, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Piedra(), 0, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Piedra(), 0, 2);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 1, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 2, 1);
         String codigo = mesaDeCrafteo.generarCodigo();
 
         Herramienta herramienta = recetas.obtenerHerramienta(codigo);
@@ -173,11 +173,11 @@ public class TestConstruccionDeHerramientas {
         MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
         RecetasDeConstruccion recetas = new RecetasDeConstruccion();
 
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 2);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 0, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 0, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 0, 2);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 1, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 2, 1);
         String codigo = mesaDeCrafteo.generarCodigo();
 
         Herramienta herramienta = recetas.obtenerHerramienta(codigo);
@@ -194,11 +194,11 @@ public class TestConstruccionDeHerramientas {
         MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
         RecetasDeConstruccion recetas = new RecetasDeConstruccion();
 
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 0, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 0, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 1, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 1, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 2, 1);
         String codigo = mesaDeCrafteo.generarCodigo();
 
         Herramienta herramienta = recetas.obtenerHerramienta(codigo);
@@ -215,11 +215,11 @@ public class TestConstruccionDeHerramientas {
         MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
         RecetasDeConstruccion recetas = new RecetasDeConstruccion();
 
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 0, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 0, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 1, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Piedra(), 0, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Piedra(), 0, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Piedra(), 1, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 1, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 2, 1);
         String codigo = mesaDeCrafteo.generarCodigo();
 
         Herramienta herramienta = recetas.obtenerHerramienta(codigo);
@@ -236,11 +236,11 @@ public class TestConstruccionDeHerramientas {
         MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
         RecetasDeConstruccion recetas = new RecetasDeConstruccion();
 
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 1, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 0, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 0, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 1, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 1, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 2, 1);
         String codigo = mesaDeCrafteo.generarCodigo();
 
         Herramienta herramienta = recetas.obtenerHerramienta(codigo);
@@ -257,12 +257,12 @@ public class TestConstruccionDeHerramientas {
         MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
         RecetasDeConstruccion recetas = new RecetasDeConstruccion();
 
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 0, 2);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 1, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 1, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 2, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 0, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 0, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 0, 2);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Piedra(), 1, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 1, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 2, 1);
         String codigo = mesaDeCrafteo.generarCodigo();
 
         Herramienta herramienta = recetas.obtenerHerramienta(codigo);
@@ -296,5 +296,68 @@ public class TestConstruccionDeHerramientas {
         hacha1.usarContra(new Madera());
         assertEquals(98, hacha1.getDurabilidad(), 0);
         assertEquals(100, hacha2.getDurabilidad(), 0);
+    }
+
+    @Test
+    public void TestConstruyoHerramientaYDisminuyenLosMateriales(){
+
+        Personaje personaje = new Personaje();
+        Inventario inventario = personaje.obtenerInventario();
+        MesaDeCrafteo mesaDeCrafteo = personaje.obtenerMesaDeCrafteo();
+        Pico pico = new Pico(new Madera(), 100, 2, new DesgasteLineal(1), 8);
+
+        Madera madera = new Madera();
+        personaje.agregarAlInventario(madera);
+        personaje.agregarAlInventario(madera);
+        personaje.agregarAlInventario(madera);
+        personaje.agregarAlInventario(madera);
+        personaje.agregarAlInventario(madera);
+        assertEquals(0, mesaDeCrafteo.cantidadTotal());
+        assertEquals(5, inventario.getCantidad(madera));
+
+        personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(new Madera(), 0, 0);
+        personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(new Madera(), 0, 1);
+        personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(new Madera(), 0, 2);
+        personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(new Madera(), 1, 1);
+        personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(new Madera(), 2, 1);
+
+        assertEquals(0, inventario.getCantidad(madera));
+        assertEquals(5, mesaDeCrafteo.cantidadTotal());
+
+        personaje.construirHerramienta();
+        assertEquals(0, mesaDeCrafteo.cantidadTotal());
+        assertEquals(1, inventario.getCantidad(pico));
+    }
+
+    @Test
+    public void TestNoConstruyoHerramientaYNoDisminuyenLosMateriales(){
+
+        Personaje personaje = new Personaje();
+        Inventario inventario = personaje.obtenerInventario();
+        MesaDeCrafteo mesaDeCrafteo = personaje.obtenerMesaDeCrafteo();
+        Pico pico = new Pico(new Madera(), 100, 2, new DesgasteLineal(1), 8);
+
+        Madera madera = new Madera();
+        personaje.agregarAlInventario(madera);
+        personaje.agregarAlInventario(madera);
+        personaje.agregarAlInventario(madera);
+        personaje.agregarAlInventario(madera);
+        personaje.agregarAlInventario(madera);
+        assertEquals(0, mesaDeCrafteo.cantidadTotal());
+        assertEquals(5, inventario.getCantidad(madera));
+
+        //esto genera un codigo invalido, no voy a poder construir el pico
+        personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(new Madera(), 0, 0);
+        personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(new Madera(), 0, 1);
+        personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(new Madera(), 0, 2);
+        personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(new Madera(), 1, 1);
+        personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(new Madera(), 2, 2);
+
+        assertEquals(0, inventario.getCantidad(madera));
+        assertEquals(5, mesaDeCrafteo.cantidadTotal());
+
+        personaje.construirHerramienta();
+        assertEquals(5, mesaDeCrafteo.cantidadTotal());
+        assertEquals(0, inventario.getCantidad(pico));
     }
 }

@@ -45,15 +45,15 @@ public class MesaDeCrafteoTest {
 
         MesaDeCrafteo mesaDeCrafteo = new MesaDeCrafteo();
 
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(1, 0, 2);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 1, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 1, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(2, 1, 2);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 2, 0);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 2, 1);
-        mesaDeCrafteo.insertarIDMaterialEnPosicion(3, 2, 2);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 0, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 0, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Madera(), 0, 2);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Piedra(), 1, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Piedra(), 1, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Piedra(), 1, 2);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 2, 0);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 2, 1);
+        mesaDeCrafteo.insertarMaterialEnPosicion(new Metal(), 2, 2);
 
         String codigo = mesaDeCrafteo.generarCodigo();
 

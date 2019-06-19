@@ -109,5 +109,24 @@ public class TestInventario {
 
         assertEquals(3, inventario.getCantidad(piedra0));
         assertEquals(3, inventario.getCantidad(piedra2));
+
+        inventario.sacarDelInventario(piedra2);
+        inventario.sacarDelInventario(piedra1);
+        inventario.sacarDelInventario(piedra0);
+
+        assertEquals(0, inventario.getCantidad(piedra0));
+    }
+
+    @Test
+    public void TestSacoDelInventarioYPuedoVolverAAgregar(){
+
+        Inventario inventario = new Inventario();
+        Herramienta herramienta = inventario.getObjetoEquipado();
+
+        inventario.sacarDelInventario(herramienta);
+        assertEquals(0, inventario.getCantidad(herramienta));
+
+        inventario.agregarAlInventario(herramienta);
+        assertEquals(1, inventario.getCantidad(herramienta));
     }
 }

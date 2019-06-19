@@ -25,7 +25,6 @@ public abstract class Herramienta implements AgregableAlInventario{
 		this.durabilidad = durabilidad;
 		this.fuerza = fuerza;
 		this.tipoDesgaste = tipoDesgaste;
-		this.cantidad = 1;
 		this.ID = ID;
 	}
 
@@ -35,16 +34,6 @@ public abstract class Herramienta implements AgregableAlInventario{
 		
 		this.desgastar();
 		
-	}
-
-	public void aumentarCantidad(AgregableAlInventario objeto){
-
-		this.cantidad = this.cantidad + objeto.getCantidad();
-	}
-
-	public void disminuirCantidad(){
-
-		this.cantidad--;
 	}
 
 	//getters para hacer las pruebas
@@ -62,5 +51,4 @@ public abstract class Herramienta implements AgregableAlInventario{
 
 	public int getID() { return ID; }
 
-	public int getCantidad() { return cantidad; }
 }
