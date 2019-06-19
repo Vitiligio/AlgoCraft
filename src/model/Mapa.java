@@ -11,6 +11,7 @@ public class Mapa {
 		super();
 		this.terreno = terreno;
 		this.posicionJugador = posicionJugador;
+		terreno[posicionJugador[0]][posicionJugador[1]].ocupar(jugador);
 		
 	}
 	
