@@ -1,4 +1,5 @@
 package model;
+import Excepciones.*;
 
 public class Casillero {
 	
@@ -17,13 +18,18 @@ public class Casillero {
 		
 	}
 	
-	public boolean ocupar(ObjetoDelMapa objeto) {
+	public void ocupar(ObjetoDelMapa objeto) {
 		
-		boolean puede_ocupar = estado.puedeOcupar();
-		EstadoCasillero nuevoEstado = this.estado.ocupar(objeto);
-		this.estado = nuevoEstado;
-		return puede_ocupar;
+		try {
 		
+			EstadoCasillero nuevoEstado = this.estado.ocupar(objeto);
+			this.estado = nuevoEstado;
+		
+		}catch(NoSePuedeOcuparExcepcion excepcion) {
+		
+			return;
+		
+		}
 	}
 	
 	public void desocupar() {

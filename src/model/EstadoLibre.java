@@ -1,10 +1,10 @@
 package model;
 
-public class EstadoLibre extends EstadoCasillero {
+public class EstadoLibre implements EstadoCasillero {
 	
-	public EstadoCasillero ocupar(ObjetoDelMapa objeto) {
+	public EstadoOcupado ocupar(ObjetoDelMapa objeto) {
 		
-		EstadoCasillero nuevoEstado = new EstadoOcupado(objeto);
+		EstadoOcupado nuevoEstado = new EstadoOcupado(objeto);
 		return nuevoEstado;
 		
 	}
