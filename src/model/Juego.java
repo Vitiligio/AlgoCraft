@@ -7,7 +7,7 @@ public class Juego {
 
 	public void iniciar(){
 		
-		int posicionJugador[] = {0,0};
+		Posicion posicionJugador = new Posicion(0,0);
 		mapa = new Mapa(generador.generarMapa(), posicionJugador);
 	}
 	
