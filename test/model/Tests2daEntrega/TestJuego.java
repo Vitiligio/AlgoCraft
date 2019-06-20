@@ -22,17 +22,18 @@ public class TestJuego {
 		int j = 1;
 		boolean hayCasilleroOcupado = false;
 		Casillero terreno;
-		int[] coordenada = new int[2]; 
 		Madera madera = new Madera();
 		
 		while ((i < 8) && (!hayCasilleroOcupado)) {
 			while (j < 8) {
 				
-				coordenada[0] = i;
-				coordenada[1] = j;
+				Posicion coordenada = new Posicion(i,j);
 				terreno = mapa.verPosicion(coordenada);
 				
-				if (!terreno.ocupar(madera)) {
+				try {
+					terreno.ocupar(madera);
+				}
+				catch (Exception NoSePuedeOcuparExcepcion) {
 					hayCasilleroOcupado = true;
 				} 
 				
@@ -53,9 +54,7 @@ public class TestJuego {
 		juego.iniciar();
 		Mapa mapa = juego.obtenerMapa();
 		
-		int[] coordenada = new int[2];
-		coordenada[0] = 1;
-		coordenada[1] = 0;
+		Posicion coordenada = new Posicion(1,0);
 		
 		Casillero terreno = mapa.verPosicion(coordenada);
 		ObjetoDelMapa material = terreno.obtenerContenido();
@@ -71,9 +70,7 @@ public class TestJuego {
 		juego.iniciar();
 		Mapa mapa = juego.obtenerMapa();
 		
-		int[] coordenada = new int[2];
-		coordenada[0] = 1;
-		coordenada[1] = 7;
+		Posicion coordenada = new Posicion(1,7);
 		
 		Casillero terreno = mapa.verPosicion(coordenada);
 		ObjetoDelMapa material = terreno.obtenerContenido();
@@ -89,9 +86,7 @@ public class TestJuego {
 		juego.iniciar();
 		Mapa mapa = juego.obtenerMapa();
 		
-		int[] coordenada = new int[2];
-		coordenada[0] = 2;
-		coordenada[1] = 7;
+		Posicion coordenada = new Posicion(2,7);
 		
 		Casillero terreno = mapa.verPosicion(coordenada);
 		ObjetoDelMapa material = terreno.obtenerContenido();
@@ -106,9 +101,7 @@ public class TestJuego {
 		juego.iniciar();
 		Mapa mapa = juego.obtenerMapa();
 		
-		int[] coordenada = new int[2];
-		coordenada[0] = 3;
-		coordenada[1] = 7;
+		Posicion coordenada = new Posicion(3,7);
 		
 		Casillero terreno = mapa.verPosicion(coordenada);
 		ObjetoDelMapa material = terreno.obtenerContenido();
