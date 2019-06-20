@@ -42,32 +42,32 @@ public class MapaFx extends Application {
 		mapaContenedor.setAlignment(Pos.CENTER);
 		
 		Button izq = new Button();
-		izq.setText("Iz");
+		izq.setText("←");
 		BotonIzquierdaEventHandler izq_event = new BotonIzquierdaEventHandler(mapa, mapaContenedor);
 		izq.setOnAction(izq_event);
 		
 		Button arriba = new Button();
 		BotonArribaEventHandler arr_event = new BotonArribaEventHandler(mapa, mapaContenedor);
 		arriba.setOnAction(arr_event);
-		arriba.setText("Ar");
+		arriba.setText("↑");
 		
 		Button derecha = new Button();
 		BotonDerechaEventHandler der_event = new BotonDerechaEventHandler(mapa, mapaContenedor);
 		derecha.setOnAction(der_event);
-		derecha.setText("De");
+		derecha.setText("→");
 		
 		Button abajo = new Button();
 		BotonAbajoEventHandler abj_event = new BotonAbajoEventHandler(mapa, mapaContenedor);
 		abajo.setOnAction(abj_event);
-		abajo.setText("Ab");
+		abajo.setText("↓");
 
-		VBox primerBoton = new VBox(arriba);
+		HBox primerBoton = new HBox(arriba);
 		primerBoton.setAlignment(Pos.CENTER);
 		primerBoton.setSpacing(10);
 		HBox segundoBoton = new HBox(izq, derecha);
 		segundoBoton.setAlignment(Pos.CENTER);
 		segundoBoton.setSpacing(10);
-		VBox tercerBoton = new VBox(abajo);
+		HBox tercerBoton = new HBox(abajo);
 		tercerBoton.setAlignment(Pos.CENTER);
 		tercerBoton.setSpacing(10);
 		
