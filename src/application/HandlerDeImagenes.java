@@ -11,19 +11,19 @@ public class HandlerDeImagenes {
         switch(ID){
 
             case 0:
-                imagen.setImage(new Image("personaje.png"));
+                imagen.setImage(new Image("img/personaje.png"));
             break;
 
             case 1:
-                imagen.setImage(new Image("arbol.png"));
+                imagen.setImage(new Image("img/arbol.png"));
             break;
 
             case 2:
-                imagen.setImage(new Image("roca.png"));
+                imagen.setImage(new Image("img/roca.png"));
             break;
 
             default:
-                imagen.setImage(new Image("pasto.png"));
+                imagen.setImage(new Image("img/pasto.png"));
             break;
         }
         return imagen;
