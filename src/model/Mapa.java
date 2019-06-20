@@ -36,27 +36,34 @@ public class Mapa {
 			return false;*/
 		Casillero nuevo_casillero = terreno[nueva_posicion.getX()][nueva_posicion.getY()];
 		
+		try {
+	
 		nuevo_casillero.ocupar(jugador);
+		
+		}finally{
+		
 		Casillero viejo_casillero = terreno[posicionJugador.getX()][posicionJugador.getY()];
 		viejo_casillero.desocupar();
 		posicionJugador = nueva_posicion;
 		return true;
+		
+		}
 	}
 	
 	public boolean moverJugadorIzquierda() {
-		int[] nueva_posicion = {posicionJugador[0], posicionJugador[1]-1};
+		Posicion nueva_posicion = posicionJugador.obtenerPosicionIzquierda();
 		return moverJugadorA(nueva_posicion);
 	}
 	public boolean moverJugadorDerecha() {
-		int[] nueva_posicion = {posicionJugador[0], posicionJugador[1]+1};
+		Posicion nueva_posicion = posicionJugador.obtenerPosicionDerecha();
 		return moverJugadorA(nueva_posicion);
 	}
 	public boolean moverJugadorArriba() {
-		int[] nueva_posicion = {posicionJugador[0]-1, posicionJugador[1]};
+		Posicion nueva_posicion = posicionJugador.obtenerPosicionArriba();
 		return moverJugadorA(nueva_posicion);
 	}
 	public boolean moverJugadorAbajo() {
-		int[] nueva_posicion = {posicionJugador[0]+1, posicionJugador[1]};
+		Posicion nueva_posicion = posicionJugador.obtenerPosicionAbajo();
 		return moverJugadorA(nueva_posicion);
 	}
 
