@@ -12,32 +12,17 @@ public class Casillero {
 		
 	}
 	
-	public ObjetoDelMapa obtenerContenido() {
+	public ObjetoDelMapa obtenerContenido() throws NoHayContenidoExcepcion{
 		
-		try {
-			
-			return this.estado.getContenido();
-		
-		}catch(NoHayContenidoExcepcion excepcion) {
-			
-			return;
-			
-		}
+		return this.estado.getContenido();
 		
 	}
 	
-	public void ocupar(ObjetoDelMapa objeto) {
+	public void ocupar(ObjetoDelMapa objeto) throws NoSePuedeOcuparExcepcion {
 		
-		try {
+		EstadoCasillero nuevoEstado = this.estado.ocupar(objeto);
+		this.estado = nuevoEstado;
 		
-			EstadoCasillero nuevoEstado = this.estado.ocupar(objeto);
-			this.estado = nuevoEstado;
-		
-		}catch(NoSePuedeOcuparExcepcion excepcion) {
-		
-			return;
-		
-		}
 	}
 	
 	public void desocupar() {

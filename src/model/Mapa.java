@@ -3,27 +3,28 @@ package model;
 public class Mapa {
 	
 	Casillero[][] terreno = new Casillero[8][8];
-	int[] posicionJugador = new int[2];
+	Posicion posicionJugador;
 	public Personaje jugador = new Personaje();
 	
-	public Mapa(Casillero[][] terreno, int[] posicionJugador) {
+	
+	public Mapa(Casillero[][] terreno, Posicion posicionJugador) {
 	
 		super();
 		this.terreno = terreno;
 		this.posicionJugador = posicionJugador;
-		terreno[posicionJugador[0]][posicionJugador[1]].ocupar(jugador);
+		terreno[posicionJugador.getX()][posicionJugador.getY()].ocupar(jugador);
 		
 	}
 	
-	public int[] posicionJugador() {
+	public Posicion posicionJugador() {
 		return posicionJugador;
 	}
 	
-	public Casillero verPosicion(int[] posicion) {
-		return terreno[posicion[0]][posicion[1]];
+	public Casillero verPosicion(Posicion posicion) {
+		return terreno[posicion.getX()][posicion.getY()];
 	}
 	
-	private boolean moverJugadorA(int[] nueva_posicion) {
+	private boolean moverJugadorA(Posicion nueva_posicion) {
 		/* En teoria esto se deberia validar antes, por afuera del mapa
 		if (nueva_posicion[0] > 7)
 			return false;
@@ -33,10 +34,10 @@ public class Mapa {
 			return false;
 		if (nueva_posicion[1] > 7)
 			return false;*/
-		Casillero nuevo_casillero = terreno[nueva_posicion[0]][nueva_posicion[1]];
-		if (!nuevo_casillero.ocupar(jugador))
-			return false;
-		Casillero viejo_casillero = terreno[posicionJugador[0]][posicionJugador[1]];
+		Casillero nuevo_casillero = terreno[nueva_posicion.getX()][nueva_posicion.getY()];
+		
+		nuevo_casillero.ocupar(jugador);
+		Casillero viejo_casillero = terreno[posicionJugador.getX()][posicionJugador.getY()];
 		viejo_casillero.desocupar();
 		posicionJugador = nueva_posicion;
 		return true;
