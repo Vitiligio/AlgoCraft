@@ -1,6 +1,7 @@
 package model;
+import Excepciones.*;
 
-public class EstadoOcupado extends EstadoCasillero {
+public class EstadoOcupado implements EstadoCasillero {
 	
 	ObjetoDelMapa contenido;
 	
@@ -15,9 +16,9 @@ public class EstadoOcupado extends EstadoCasillero {
 
 	}
 	
-	public EstadoCasillero ocupar(ObjetoDelMapa objeto) {
+	public EstadoOcupado ocupar(ObjetoDelMapa objeto) throws NoSePuedeOcuparExcepcion {
 		
-		return this;
+		throw new NoSePuedeOcuparExcepcion();
 		
 	}
 	

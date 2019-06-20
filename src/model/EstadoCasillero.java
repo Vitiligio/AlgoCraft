@@ -1,9 +1,9 @@
 package model;
+import Excepciones.*;
 
-public abstract class EstadoCasillero {
+public interface EstadoCasillero {
 	
-	public abstract EstadoCasillero ocupar(ObjetoDelMapa objeto);
+	public abstract EstadoOcupado ocupar(ObjetoDelMapa objeto) throws NoSePuedeOcuparExcepcion;
 	public abstract ObjetoDelMapa getContenido();
-	protected abstract boolean puedeOcupar();
 
 }
