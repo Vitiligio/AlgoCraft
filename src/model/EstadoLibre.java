@@ -1,4 +1,5 @@
 package model;
+import Excepciones.*;
 
 public class EstadoLibre implements EstadoCasillero {
 	
@@ -9,9 +10,9 @@ public class EstadoLibre implements EstadoCasillero {
 		
 	}
 	
-	public ObjetoDelMapa getContenido() {
+	public ObjetoDelMapa getContenido() throws NoHayContenidoExcepcion{
 		
-		return null;
+		throw new NoHayContenidoExcepcion();
 		
 	}
 	

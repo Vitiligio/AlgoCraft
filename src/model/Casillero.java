@@ -14,7 +14,15 @@ public class Casillero {
 	
 	public ObjetoDelMapa obtenerContenido() {
 		
-		return this.estado.getContenido();
+		try {
+			
+			return this.estado.getContenido();
+		
+		}catch(NoHayContenidoExcepcion excepcion) {
+			
+			return;
+			
+		}
 		
 	}
 	
