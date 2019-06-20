@@ -27,7 +27,7 @@ public class BotonAbajoEventHandler implements EventHandler<ActionEvent> {
 			contenedor.getChildren().add(grilla);
 		}
 		catch (Exception e) {
-			System.out.println("No te podes mover ahi");
+			System.out.println("No te podes mover ahi.");
 		}
 		
 	}
