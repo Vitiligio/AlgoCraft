@@ -5,6 +5,7 @@ import javafx.scene.layout.GridPane;
 import model.Casillero;
 import model.Mapa;
 import model.ObjetoDelMapa;
+import model.Posicion;
 
 public class GeneradorDeGrilla {
 	public GridPane generarVisualizacionDeMapa(Mapa mapa) {
@@ -13,7 +14,8 @@ public class GeneradorDeGrilla {
 		for (int i = 0; i < 8; i++) {
 			for (int j = 0; j< 8; j++) {
 				int[] coordenada = {i, j}; 
-				Casillero contenido = mapa.verPosicion(coordenada);
+				Posicion posicion = new Posicion(i,j);
+				Casillero contenido = mapa.verPosicion(posicion);
 				ObjetoDelMapa objeto = contenido.obtenerContenido();
 				int indice;
 				if (objeto == null) {
