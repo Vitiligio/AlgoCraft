@@ -21,6 +21,14 @@ public class HandlerDeImagenes {
             case 2:
                 imagen.setImage(new Image("img/roca.png"));
             break;
+            
+            case 3:
+                imagen.setImage(new Image("img/metal.png"));
+            break;
+            
+            case 4:
+                imagen.setImage(new Image("img/diamante.png"));
+            break;
 
             default:
                 imagen.setImage(new Image("img/pasto.png"));
