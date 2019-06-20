@@ -20,6 +20,7 @@ public class MapaFx extends Application {
 	GridPane grilla;
 	Juego juego;
 	Mapa mapa;
+	Scene scene;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -28,6 +29,7 @@ public class MapaFx extends Application {
 	@Override
 	public void start(Stage stage)
 	{
+		
 		juego = new Juego();
 		juego.iniciar();
 		mapa = juego.obtenerMapa();
@@ -75,7 +77,13 @@ public class MapaFx extends Application {
 		contenedorPrincipal.setSpacing(10);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
 		
-		Scene scene = new Scene(contenedorPrincipal);
+		Button jugar = new Button();
+		jugar.setText("Jugar");
+		BotonJugarHandler handler_jugar = new BotonJugarHandler(stage, contenedorPrincipal);
+		jugar.setOnAction(handler_jugar);
+		
+		VBox contenedorInicio = new VBox(jugar);
+		Scene scene = new Scene(contenedorInicio);
 		stage.setScene(scene);
 		stage.show();
 	}	
