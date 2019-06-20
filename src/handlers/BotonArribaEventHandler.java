@@ -19,10 +19,15 @@ public class BotonArribaEventHandler implements EventHandler<ActionEvent> {
 	
 	@Override
 	public void handle(ActionEvent actionEvent) {
-		mapa.moverJugadorArriba();
-		GeneradorDeGrilla generador = new GeneradorDeGrilla();
-		GridPane grilla = generador.generarVisualizacionDeMapa(mapa);
-		contenedor.getChildren().clear();
-		contenedor.getChildren().add(grilla);
+		try {
+			mapa.moverJugadorArriba();
+			GeneradorDeGrilla generador = new GeneradorDeGrilla();
+			GridPane grilla = generador.generarVisualizacionDeMapa(mapa);
+			contenedor.getChildren().clear();
+			contenedor.getChildren().add(grilla);
+		}
+		catch (Exception e) {
+			System.out.println("No te podes mover ahi.");
+		}
 	}
 }

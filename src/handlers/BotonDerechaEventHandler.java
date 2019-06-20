@@ -19,10 +19,16 @@ public class BotonDerechaEventHandler implements EventHandler<ActionEvent> {
 	
 	@Override
 	public void handle(ActionEvent actionEvent) {
-		mapa.moverJugadorDerecha();
-		GeneradorDeGrilla generador = new GeneradorDeGrilla();
-		GridPane grilla = generador.generarVisualizacionDeMapa(mapa);
-		contenedor.getChildren().clear();
-		contenedor.getChildren().add(grilla);
+		try {
+			mapa.moverJugadorDerecha();
+			GeneradorDeGrilla generador = new GeneradorDeGrilla();
+			GridPane grilla = generador.generarVisualizacionDeMapa(mapa);
+			contenedor.getChildren().clear();
+			contenedor.getChildren().add(grilla);
+		}
+
+		catch (Exception e) {
+			System.out.println("No te podes mover ahi");
+		}
 	}
 }

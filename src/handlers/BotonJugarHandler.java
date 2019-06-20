@@ -1,28 +1,26 @@
 package handlers;
 
 import model.*;
-import application.GeneradorDeGrilla;
+import application.EscenaMapa;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
 public class BotonJugarHandler implements EventHandler<ActionEvent> {
 	private Stage stage;
-	private VBox contenedor;
+	private Juego juego;
 	
-	public BotonJugarHandler(Stage stage, VBox contenedor) {
+	public BotonJugarHandler(Stage stage, Juego juego) {
 		this.stage = stage;
-		this.contenedor = contenedor;
+		this.juego = juego;
 	}
 	
 	@Override
 	public void handle(ActionEvent actionEvent) {
-		Scene scene = new Scene(contenedor);
+		EscenaMapa escena = new EscenaMapa();
+		Scene scene = escena.generarEscena(juego);
 		stage.setScene(scene);
 	}
 }
