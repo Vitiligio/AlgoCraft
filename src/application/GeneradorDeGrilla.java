@@ -1,6 +1,6 @@
 package application;
 
-import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import model.Casillero;
 import model.Mapa;
@@ -9,21 +9,21 @@ import model.ObjetoDelMapa;
 public class GeneradorDeGrilla {
 	public GridPane generarVisualizacionDeMapa(Mapa mapa) {
 		GridPane grilla = new GridPane();
+		HandlerDeImagenes handler = new HandlerDeImagenes();
 		for (int i = 0; i < 8; i++) {
 			for (int j = 0; j< 8; j++) {
 				int[] coordenada = {i, j}; 
 				Casillero contenido = mapa.verPosicion(coordenada);
 				ObjetoDelMapa objeto = contenido.obtenerContenido();
-				String indice;
+				int indice;
 				if (objeto == null) {
-					indice = "  ";
+					indice = -1;
 				}
 				else {
-					indice = Integer.toString(objeto.getID());
+					indice = objeto.getID();
 				}
-				Label item = new Label(indice);
-				item.setStyle("-fx-border-color: black;");
-				grilla.add(item, j, i);
+				ImageView image = handler.buscarImagenPorID(indice);
+				grilla.add(image, j, i);
 			}
 		}
 		//int[] posJugador = mapa.posicionJugador();
