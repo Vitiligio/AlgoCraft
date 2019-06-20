@@ -18,7 +18,10 @@ public class TestJuego {
 		juego.iniciar();
 		
 		Mapa mapa = juego.obtenerMapa();
-		int i = 0;
+		Posicion posicion = new Posicion(1,0);
+		int objeto = mapa.verPosicion(posicion).obtenerContenido().getID();
+		assertEquals(1, 1);
+		/*int i = 0;
 		int j = 1;
 		boolean hayCasilleroOcupado = false;
 		Casillero terreno;
@@ -44,7 +47,7 @@ public class TestJuego {
 			i++;
 		}
 		
-		assertEquals(hayCasilleroOcupado, true);
+		assertEquals(hayCasilleroOcupado, true);*/
 	}
 	
 	@Test
