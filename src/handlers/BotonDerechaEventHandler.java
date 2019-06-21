@@ -25,6 +25,7 @@ public class BotonDerechaEventHandler implements EventHandler<ActionEvent> {
 			GridPane grilla = generador.generarVisualizacionDeMapa(mapa);
 			contenedor.getChildren().clear();
 			contenedor.getChildren().add(grilla);
+
 		}
 
 		catch (Exception e) {

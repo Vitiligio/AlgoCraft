@@ -22,13 +22,10 @@ public class Casillero {
 	}
 	
 	public void ocupar(ObjetoDelMapa objeto) {
-		try {
-			EstadoCasillero nuevoEstado = this.estado.ocupar(objeto);
-			this.estado = nuevoEstado;
-		}
-		catch (Exception e) {
-			
-		}
+
+		EstadoCasillero nuevoEstado = this.estado.ocupar(objeto);
+		this.estado = nuevoEstado;
+
 		
 	}
 	

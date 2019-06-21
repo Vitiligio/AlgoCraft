@@ -1,6 +1,6 @@
 package Excepciones;
 
-public class NoSePuedeOcuparExcepcion extends Exception {
+public class NoSePuedeOcuparExcepcion extends RuntimeException {
 	
 	public String string() {
 		

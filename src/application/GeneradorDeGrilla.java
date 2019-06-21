@@ -10,28 +10,41 @@ import model.Posicion;
 public class GeneradorDeGrilla {
 	public GridPane generarVisualizacionDeMapa(Mapa mapa) {
 		GridPane grilla = new GridPane();
-		HandlerDeImagenes handler = new HandlerDeImagenes();
 		for (int i = 0; i < 8; i++) {
-			for (int j = 0; j< 8; j++) {
-				int[] coordenada = {i, j}; 
+			for (int j = 0; j < 8; j++) {
 				Posicion posicion = new Posicion(i,j);
 				Casillero contenido = mapa.verPosicion(posicion);
 				ObjetoDelMapa objeto = contenido.obtenerContenido();
-				int indice;
 				if (objeto == null) {
-					indice = -1;
+					new VistaCasillero(grilla, i, j);
 				}
 				else {
-					indice = objeto.getID();
+					generarVistaSegunID(objeto.getID(), grilla, i, j);
 				}
-				ImageView image = handler.buscarImagenPorID(indice);
-				grilla.add(image, j, i);
 			}
 		}
-		//int[] posJugador = mapa.posicionJugador();
-		//Label jugador = new Label();
-		//jugador.setText(" J");
-		//grilla.add(jugador, posJugador[1], posJugador[0]);
+
 		return grilla;
+	}
+
+	public void generarVistaSegunID(int ID, GridPane grilla, int i, int j){
+
+		switch(ID){
+			case 0:
+				new VistaPersonaje(grilla, i, j);
+				break;
+			case 1:
+				new VistaMadera(grilla, i, j);
+				break;
+			case 2:
+				new VistaPiedra(grilla, i, j);
+				break;
+			case 3:
+				new VistaMetal(grilla, i, j);
+				break;
+			case 4:
+				new VistaDiamante(grilla, i, j);
+				break;
+		}
 	}
 }
