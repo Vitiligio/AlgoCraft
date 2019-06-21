@@ -77,7 +77,7 @@ public class TestMoverJugador {
 		GeneradorDeMapa generador = new GeneradorDeMapa();
 		Posicion posicionJugador = new Posicion(0,0);
 		Mapa mapa = new Mapa(generador.generarMapa(), posicionJugador);
-		Controlador controlador = new ControladorMapa(mapa);
+		ControladorMapa controlador = new ControladorMapa(mapa);
 		controlador.moverAbajo();
 		Posicion nuevaPosicion = mapa.posicionJugador();
 		assertEquals(nuevaPosicion.getY(), posicionJugador.getY());
