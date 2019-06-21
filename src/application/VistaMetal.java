@@ -7,6 +7,6 @@ public class VistaMetal extends Vista{
 
     protected VistaMetal(GridPane grilla, int i, int j) {
         super(grilla, j, i);
-        textura.setImage(new Image("metal.png"));
+        textura.setImage(new Image("img/metal.png"));
     }
 }
