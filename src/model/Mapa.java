@@ -25,7 +25,7 @@ public class Mapa {
 	}
 	
 
-	private void moverJugadorA(Posicion nueva_posicion) {
+	public void moverJugadorA(Posicion nueva_posicion) {
 
 		Casillero nuevo_casillero = terreno[nueva_posicion.getX()][nueva_posicion.getY()];
 		
