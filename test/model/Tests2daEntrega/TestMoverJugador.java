@@ -77,9 +77,10 @@ public class TestMoverJugador {
 		GeneradorDeMapa generador = new GeneradorDeMapa();
 		Posicion posicionJugador = new Posicion(0,0);
 		Mapa mapa = new Mapa(generador.generarMapa(), posicionJugador);
-		mapa.moverJugadorAbajo();/*
+		Controlador controlador = new ControladorMapa(mapa);
+		controlador.moverAbajo();
 		Posicion nuevaPosicion = mapa.posicionJugador();
-		assertEquals(nuevaPosicion.getY(), posicionJugador.getY());*/
+		assertEquals(nuevaPosicion.getY(), posicionJugador.getY());
 	}
 	
 }
