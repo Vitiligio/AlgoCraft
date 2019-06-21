@@ -20,7 +20,8 @@ public class BotonIzquierdaEventHandler implements EventHandler<ActionEvent> {
 	@Override
 	public void handle(ActionEvent actionEvent) {
 		try {
-			mapa.moverJugadorIzquierda();
+			ControladorMapa controlador = new ControladorMapa(mapa);
+			controlador.moverIzquierda();
 			GeneradorDeGrilla generador = new GeneradorDeGrilla();
 			GridPane grilla = generador.generarVisualizacionDeMapa(mapa);
 			contenedor.getChildren().clear();

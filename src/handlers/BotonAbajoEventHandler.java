@@ -20,7 +20,8 @@ public class BotonAbajoEventHandler implements EventHandler<ActionEvent> {
 	@Override
 	public void handle(ActionEvent actionEvent) {
 		try { 
-			mapa.moverJugadorAbajo();
+			ControladorMapa controlador = new ControladorMapa(mapa);
+			controlador.moverAbajo();
 			GeneradorDeGrilla generador = new GeneradorDeGrilla();
 			GridPane grilla = generador.generarVisualizacionDeMapa(mapa);
 			contenedor.getChildren().clear();
