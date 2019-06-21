@@ -24,7 +24,7 @@ public class Mapa {
 		return terreno[posicion.getX()][posicion.getY()];
 	}
 	
-	private boolean moverJugadorA(Posicion nueva_posicion) {
+	public boolean moverJugadorA(Posicion nueva_posicion) {
 		/* En teoria esto se deberia validar antes, por afuera del mapa
 		if (nueva_posicion[0] > 7)
 			return false;
@@ -50,21 +50,5 @@ public class Mapa {
 		}
 	}
 	
-	public boolean moverJugadorIzquierda() {
-		Posicion nueva_posicion = posicionJugador.obtenerPosicionIzquierda();
-		return moverJugadorA(nueva_posicion);
-	}
-	public boolean moverJugadorDerecha() {
-		Posicion nueva_posicion = posicionJugador.obtenerPosicionDerecha();
-		return moverJugadorA(nueva_posicion);
-	}
-	public boolean moverJugadorArriba() {
-		Posicion nueva_posicion = posicionJugador.obtenerPosicionArriba();
-		return moverJugadorA(nueva_posicion);
-	}
-	public boolean moverJugadorAbajo() {
-		Posicion nueva_posicion = posicionJugador.obtenerPosicionAbajo();
-		return moverJugadorA(nueva_posicion);
-	}
 
 }
