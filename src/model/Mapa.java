@@ -24,47 +24,41 @@ public class Mapa {
 		return terreno[posicion.getX()][posicion.getY()];
 	}
 	
-	private boolean moverJugadorA(Posicion nueva_posicion) {
-		/* En teoria esto se deberia validar antes, por afuera del mapa
-		if (nueva_posicion[0] > 7)
-			return false;
-		if (nueva_posicion[0] < 0)
-			return false;
-		if (nueva_posicion[1] < 0)
-			return false;
-		if (nueva_posicion[1] > 7)
-			return false;*/
+	private void moverJugadorA(Posicion nueva_posicion) {
+
 		Casillero nuevo_casillero = terreno[nueva_posicion.getX()][nueva_posicion.getY()];
 		
 		try {
 	
 		nuevo_casillero.ocupar(jugador);
 		
-		}finally{
-		
+		}
+
+		catch (Exception e) {
+			return;
+		}
+
 		Casillero viejo_casillero = terreno[posicionJugador.getX()][posicionJugador.getY()];
 		viejo_casillero.desocupar();
 		posicionJugador = nueva_posicion;
-		return true;
-		
-		}
+
 	}
 	
-	public boolean moverJugadorIzquierda() {
+	public void moverJugadorIzquierda() {
 		Posicion nueva_posicion = posicionJugador.obtenerPosicionIzquierda();
-		return moverJugadorA(nueva_posicion);
+		moverJugadorA(nueva_posicion);
 	}
-	public boolean moverJugadorDerecha() {
+	public void moverJugadorDerecha() {
 		Posicion nueva_posicion = posicionJugador.obtenerPosicionDerecha();
-		return moverJugadorA(nueva_posicion);
+		moverJugadorA(nueva_posicion);
 	}
-	public boolean moverJugadorArriba() {
+	public void moverJugadorArriba() {
 		Posicion nueva_posicion = posicionJugador.obtenerPosicionArriba();
-		return moverJugadorA(nueva_posicion);
+		moverJugadorA(nueva_posicion);
 	}
-	public boolean moverJugadorAbajo() {
+	public void moverJugadorAbajo() {
 		Posicion nueva_posicion = posicionJugador.obtenerPosicionAbajo();
-		return moverJugadorA(nueva_posicion);
+		moverJugadorA(nueva_posicion);
 	}
 
 }
