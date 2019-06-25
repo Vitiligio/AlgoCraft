@@ -1,5 +1,6 @@
 package model;
 
+
 public class CasilleroDeObjetos {
 
     private AgregableAlInventario objeto;
@@ -25,6 +26,7 @@ public class CasilleroDeObjetos {
 
         if(cantidad == 0)
             this.objeto = objeto;
+
 
         aumentarCantidad();
     }

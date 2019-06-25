@@ -1,4 +1,4 @@
-package Excepciones;
+package model.Excepciones;
 
 public class NoSePuedeOcuparExcepcion extends RuntimeException {
 	

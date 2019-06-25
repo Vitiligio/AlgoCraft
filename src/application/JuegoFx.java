@@ -19,10 +19,10 @@ public class JuegoFx extends Application {
 		launch(args);
 	}
 	
-	public Scene menuPrincipal(Stage stage) {
+	public Scene menuPrincipal(Stage stage, HandlerEscenas handlerEscenas) {
 		Button jugar = new Button();
 		jugar.setText("Jugar");
-		BotonJugarHandler handler_jugar = new BotonJugarHandler(stage, juego);
+		BotonJugarHandler handler_jugar = new BotonJugarHandler(stage, juego, handlerEscenas);
 		jugar.setOnAction(handler_jugar);
 		VBox contenedorInicio = new VBox(jugar);
 		Scene scene = new Scene(contenedorInicio);
@@ -36,8 +36,10 @@ public class JuegoFx extends Application {
 		juego = new Juego();
 		juego.iniciar();
 
-		Scene scene = menuPrincipal(stage);
-		stage.setScene(scene);
+		HandlerEscenas handlerEscenas = new HandlerEscenas(stage);
+		Scene scene = menuPrincipal(stage, handlerEscenas);
+
+		handlerEscenas.cambiarEscena(scene);
 		stage.show();
 	}	
 	

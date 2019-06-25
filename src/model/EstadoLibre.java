@@ -1,5 +1,5 @@
 package model;
-import Excepciones.*;
+import model.Excepciones.*;
 
 public class EstadoLibre implements EstadoCasillero {
 	

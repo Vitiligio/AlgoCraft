@@ -64,4 +64,9 @@ public class MesaDeCrafteo {
 
         return contador;
     }
+
+    public CasilleroDeObjetos getCasillero(int i, int j){
+
+        return tabla[i][j];
+    }
 }

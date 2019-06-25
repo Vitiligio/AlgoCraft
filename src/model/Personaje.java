@@ -1,6 +1,8 @@
 package model;
 
 
+import model.Excepciones.CodigoDeHerramientaInvalidoError;
+
 public class Personaje extends ObjetoDelMapa{
 
 	private Inventario inventario;

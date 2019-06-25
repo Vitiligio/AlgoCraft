@@ -1,5 +1,4 @@
 package model;
-import Excepciones.*;
 
 public class Casillero {
 	

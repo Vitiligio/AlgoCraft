@@ -7,15 +7,22 @@ import handlers.BotonIzquierdaEventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import model.Juego;
-import model.Mapa;
+import model.*;
 
 public class EscenaMapa {
 	Mapa mapa;
+	private HandlerEscenas handlerEscenas;
+
+	public EscenaMapa(HandlerEscenas handlerEscenas){
+
+		this.handlerEscenas = handlerEscenas;
+	}
 	
 	private VBox botones (HBox mapaContenedor) {
 		Button izq = new Button();
@@ -66,6 +73,20 @@ public class EscenaMapa {
 		contenedorPrincipal.setSpacing(10);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
 		Scene scene = new Scene(contenedorPrincipal);
+		Scene escenaInventario = new EscenaInventario(handlerEscenas, mapa.jugador.obtenerInventario(), mapa.jugador.obtenerMesaDeCrafteo()).generarEscena(scene);
+
+		scene.addEventFilter(KeyEvent.KEY_PRESSED,
+				event -> {
+					if (event.getCode() == KeyCode.I)
+						handlerEscenas.cambiarEscena(escenaInventario);
+				});
+
+		/*scene.addEventFilter(KeyEvent.KEY_PRESSED,
+				event -> {
+					if (event.getCode() == KeyCode.V)
+						mapa.jugador.minar();
+				});*/
+
 		return scene;
 	}
 }

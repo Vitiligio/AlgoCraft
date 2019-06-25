@@ -38,13 +38,13 @@ public class Inventario {
 				inventario[i].aumentarCantidad();
 				return;
 			}
+		}
 
-			else{
+		for(int i = 0; i < inventario.length; i++){
 
-				if(inventario[i].getIDObjeto() == 0){
-					inventario[i].asignarObjeto(objeto);
-					return;
-				}
+			if(inventario[i].getIDObjeto() == 0){
+				inventario[i].asignarObjeto(objeto);
+				return;
 			}
 		}
 	}
@@ -68,5 +68,10 @@ public class Inventario {
 				inventario[i].disminuirCantidad();
 			}
 		}
+	}
+
+	public CasilleroDeObjetos getCasillero(int i){
+
+		return inventario[i];
 	}
 }

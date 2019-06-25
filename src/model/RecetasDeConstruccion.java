@@ -1,5 +1,7 @@
 package model;
 
+import model.Excepciones.CodigoDeHerramientaInvalidoError;
+
 import java.util.HashMap;
 
 public class RecetasDeConstruccion {
