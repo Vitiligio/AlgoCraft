@@ -2,6 +2,7 @@ package model;
 
 
 import model.Excepciones.CodigoDeHerramientaInvalidoError;
+import model.Excepciones.ItemsInsuficientesExcepcion;
 
 public class Personaje extends ObjetoDelMapa{
 
@@ -22,13 +23,13 @@ public class Personaje extends ObjetoDelMapa{
 
 	}
 
-	public void insertarMaterialEnMesaDeCrafteoEnPosicion(Material material, int fila, int columna){
+	public void insertarMaterialEnMesaDeCrafteoEnPosicion(Material material, int fila, int columna) throws ItemsInsuficientesExcepcion {
 
 		inventario.sacarDelInventario(material);
 		mesaDeCrafteo.insertarMaterialEnPosicion(material, fila, columna);
 	}
 
-	public void construirHerramienta(){
+	public void construirHerramienta() {
 
 		Herramienta herramienta;
 

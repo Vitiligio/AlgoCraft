@@ -73,7 +73,7 @@ public class EscenaMapa {
 		contenedorPrincipal.setSpacing(10);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
 		Scene scene = new Scene(contenedorPrincipal);
-		Scene escenaInventario = new EscenaInventario(handlerEscenas, mapa.jugador.obtenerInventario(), mapa.jugador.obtenerMesaDeCrafteo()).generarEscena(scene);
+		Scene escenaInventario = new EscenaInventario(handlerEscenas, mapa.jugador).generarEscena(scene);
 
 		scene.addEventFilter(KeyEvent.KEY_PRESSED,
 				event -> {
