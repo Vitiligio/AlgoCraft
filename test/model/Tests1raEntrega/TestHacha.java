@@ -60,4 +60,5 @@ public class TestHacha {
 		assertEquals(98,hacha.getDurabilidad(),0);
 	}
 
+	
 }

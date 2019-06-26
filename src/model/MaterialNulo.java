@@ -9,5 +9,7 @@ public class MaterialNulo extends Material {
     }
 
     @Override
-    protected void daniarMetal(Metal metal, int fuerza) { }
+    protected Material daniarMetal(Metal metal, int fuerza) {
+    	return (new MaterialNulo());
+    }
 }

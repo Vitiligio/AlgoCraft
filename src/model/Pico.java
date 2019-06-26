@@ -20,17 +20,16 @@ public class Pico extends Herramienta {
     	this.desgastar();
     }
 
-	public void usarContra(Piedra piedra) {
+	public Material usarContra(Piedra piedra) {
 
-    	piedra.reducirDurabilidad(this.fuerza);
     	this.desgastar();
-		
+		return piedra.reducirDurabilidad(this.fuerza);
 	}
 
-	public void usarContra(Metal metal) {
+	public Material usarContra(Metal metal) {
 
-    	metal.golpeadoPor(this.material, this.fuerza);
-		this.desgastar();
+   		this.desgastar();
+   		return metal.golpeadoPor(this.material, this.fuerza);
 	}
 
 }

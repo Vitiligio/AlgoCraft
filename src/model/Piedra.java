@@ -10,8 +10,8 @@ public class Piedra extends Material {
 	}
 
 	@Override
-	protected void daniarMetal(Metal metal, int fuerza) {
+	protected Material daniarMetal(Metal metal, int fuerza) {
 
-		metal.reducirDurabilidad(fuerza);
+		return metal.reducirDurabilidad(fuerza);
 	}
 }

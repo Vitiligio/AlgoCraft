@@ -9,14 +9,14 @@ public class Metal extends Material {
 		ID = 3;
 	}
 
-	public void golpeadoPor(Material material, int fuerza) {
+	public Material golpeadoPor(Material material, int fuerza) {
 
-		material.daniarMetal(this, fuerza);		//patron double dispatch
+		return material.daniarMetal(this, fuerza);		//patron double dispatch
 	}
 
 	@Override
-	protected void daniarMetal(Metal metal, int fuerza) {
+	protected Material daniarMetal(Metal metal, int fuerza) {
 
-		metal.reducirDurabilidad(fuerza);
+		return (metal.reducirDurabilidad(fuerza));
 	}
 }

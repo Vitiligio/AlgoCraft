@@ -9,5 +9,8 @@ public class Diamante extends Material {
 	}
 
 	@Override
-	protected void daniarMetal(Metal metal, int fuerza) { }
+	protected Material daniarMetal(Metal metal, int fuerza) { 
+		MaterialNulo material = new MaterialNulo();
+		return  material;
+	}
 }

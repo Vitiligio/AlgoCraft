@@ -12,10 +12,10 @@ public class Hacha extends Herramienta {
 		this.durabilidad -= this.tipoDesgaste.calcularDesgaste(this.fuerza);
 	}
 
-	public void usarContra(Madera madera) {
+	public Material usarContra(Madera madera) {
 
 		this.desgastar();
-		madera.reducirDurabilidad(this.fuerza);
+		return madera.reducirDurabilidad(this.fuerza);
 
 	}
 	//asumimos que el hacha no puede desgastar los siguientes materiales, pero el hacha si se desgasta al ser usada contra ellos
