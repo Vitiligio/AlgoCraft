@@ -1,5 +1,7 @@
 package model;
 
+import model.Excepciones.ItemsInsuficientesExcepcion;
+
 public class Inventario {
 
 	private CasilleroDeObjetos[] inventario;
@@ -60,13 +62,17 @@ public class Inventario {
 		return 0;
 	}
 
-	public void sacarDelInventario(AgregableAlInventario objeto) {
-
+	public void sacarDelInventario(AgregableAlInventario objeto) throws ItemsInsuficientesExcepcion {
+		boolean encontrado = false;
 		for(int i = 0; i < inventario.length; i++) {
 
 			if (objeto.getID() == inventario[i].getIDObjeto()) {
 				inventario[i].disminuirCantidad();
+				encontrado = true;
 			}
+		}
+		if (!encontrado) {
+			throw new ItemsInsuficientesExcepcion();
 		}
 	}
 
