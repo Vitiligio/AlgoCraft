@@ -35,9 +35,8 @@ public class Posicion {
 	}
 	
 	public Posicion obtenerPosicionArriba() {
-		
-		int posX = this.getX();
-		int posY = this.getY() - 1;
+		int posX = this.getX()-1;
+		int posY = this.getY();
 		
 		Posicion posicionNueva = new Posicion(posX,posY);
 		return posicionNueva;
@@ -46,8 +45,8 @@ public class Posicion {
 	
 	public Posicion obtenerPosicionAbajo() {
 		
-		int posX = this.getX();
-		int posY = this.getY() + 1;
+		int posX = this.getX()+1;
+		int posY = this.getY();
 		
 		Posicion posicionNueva = new Posicion(posX,posY);
 		return posicionNueva;
@@ -56,8 +55,8 @@ public class Posicion {
 	
 	public Posicion obtenerPosicionIzquierda() {
 		
-		int posX = this.getX() - 1;
-		int posY = this.getY();
+		int posX = this.getX();
+		int posY = this.getY()-1;
 		
 		Posicion posicionNueva = new Posicion(posX,posY);
 		return posicionNueva;
@@ -66,8 +65,8 @@ public class Posicion {
 
 	public Posicion obtenerPosicionDerecha() {
 		
-		int posX = this.getX() + 1;
-		int posY = this.getY();
+		int posX = this.getX();
+		int posY = this.getY()+1;
 		
 		Posicion posicionNueva = new Posicion(posX,posY);
 		return posicionNueva;

@@ -9,6 +9,6 @@ public abstract class Vista {
 
     protected Vista(GridPane grilla, int i, int j){
         textura = new ImageView();
-        grilla.add(textura, j, i);
+        grilla.add(textura, i, j);
     }
 }

@@ -6,7 +6,7 @@ import javafx.scene.layout.GridPane;
 public class VistaPiedra extends Vista {
 
     protected VistaPiedra(GridPane grilla, int i, int j) {
-        super(grilla, j, i);
-        textura.setImage(new Image("roca.png"));
+        super(grilla, i, j);
+        textura.setImage(new Image("img/roca.png"));
     }
 }

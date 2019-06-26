@@ -6,7 +6,7 @@ import javafx.scene.layout.GridPane;
 public class VistaMadera extends Vista {
 
     protected VistaMadera(GridPane grilla, int i, int j) {
-        super(grilla, j, i);
-        textura.setImage(new Image("arbol.png"));
+        super(grilla, i, j);
+        textura.setImage(new Image("img/arbol.png"));
     }
 }

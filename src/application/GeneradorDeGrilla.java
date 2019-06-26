@@ -16,10 +16,10 @@ public class GeneradorDeGrilla {
 				Casillero contenido = mapa.verPosicion(posicion);
 				ObjetoDelMapa objeto = contenido.obtenerContenido();
 				if (objeto == null) {
-					new VistaCasillero(grilla, i, j);
+					new VistaCasillero(grilla, j, i);
 				}
 				else {
-					generarVistaSegunID(objeto.getID(), grilla, i, j);
+					generarVistaSegunID(objeto.getID(), grilla, j, i);
 				}
 			}
 		}

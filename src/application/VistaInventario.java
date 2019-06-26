@@ -27,11 +27,11 @@ public class VistaInventario extends Rectangle {
         switch (ID){
 
             case 0:
-                textura.setImage(new Image("inventario_vacio.png"));
+                textura.setImage(new Image("img/inventario_vacio.png"));
             break;
 
             case 5:
-                textura.setImage(new Image("personaje.png"));
+                textura.setImage(new Image("img/personaje.png"));
             break;
         }
     }
