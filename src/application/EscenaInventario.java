@@ -45,6 +45,7 @@ public class EscenaInventario {
         HBox contenedorInventario = generador_i.mostrarInventario();
         VBox contenedorMesaDeCrafteo = generador.generarMesa();
         VBox contenedorBotones = botonesCrafteo(contenedorMesaDeCrafteo, generador, generador_i, contenedorInventario);
+        HBox crafting = new HBox(contenedorMesaDeCrafteo,contenedorBotones);
         
         Text texto = new Text("Objeto Equipado:");
         ImageView textura = new ImageView();
@@ -55,11 +56,15 @@ public class EscenaInventario {
         
         VBox objetoEquipado = new VBox(texto,imagenObjetoEquipado);
 
+        Label titulo = new Label("MESA DE CRAFTEO");//no logro hacer que se vea
+        HBox tituloBox = new HBox(titulo);
+        pane.getChildren().add(tituloBox);
         pane.getChildren().add(contenedorInventario);
-        contenedorMesaDeCrafteo.setTranslateY(100);
-        pane.getChildren().add(contenedorMesaDeCrafteo);
-        contenedorBotones.setTranslateY(300);
-        pane.getChildren().add(contenedorBotones);
+        pane.setStyle("-fx-background-color: #B45C00");
+        crafting.setTranslateY(100);
+        contenedorBotones.setTranslateX(60);
+        pane.getChildren().add(crafting);
+        //pane.getChildren().add(contenedorBotones);
         objetoEquipado.setTranslateY(45);
         pane.getChildren().add(objetoEquipado);
         scene.addEventFilter(KeyEvent.KEY_PRESSED,
