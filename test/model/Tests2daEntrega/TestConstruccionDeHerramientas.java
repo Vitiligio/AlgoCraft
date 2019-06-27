@@ -2,10 +2,7 @@ package model.Tests2daEntrega;
 
 import model.*;
 import model.Excepciones.CodigoDeHerramientaInvalidoError;
-<<<<<<< HEAD
-=======
 import model.Excepciones.ItemsInsuficientesExcepcion;
->>>>>>> a39d4e594169475a83914d71a0b096f4dcb97a2b
 
 import org.junit.Rule;
 import org.junit.Test;
