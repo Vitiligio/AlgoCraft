@@ -2,11 +2,13 @@ package model.Tests2daEntrega;
 
 import static org.junit.Assert.assertEquals;
 
+import model.Excepciones.CodigoDeHerramientaInvalidoError;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import model.*;
+import org.junit.rules.ExpectedException;
 
 public class TestMoverJugador {
 	
@@ -22,8 +24,9 @@ public class TestMoverJugador {
 		
 		controlador.moverDerecha();
 		Posicion nuevaPosicion = mapa.posicionJugador();
-		
+
 		assertEquals(nuevaPosicion.getY(), posicionEsperada.getY());
+		assertEquals(nuevaPosicion.getX(), posicionEsperada.getX());
 	}
 	
 	@Rule
@@ -41,8 +44,10 @@ public class TestMoverJugador {
 		
 		controlador.moverIzquierda();
 		Posicion nuevaPosicion = mapa.posicionJugador();
-		
+
 		assertEquals(nuevaPosicion.getY(), posicionEsperada.getY());
+		assertEquals(nuevaPosicion.getX(), posicionEsperada.getX());
+
 	}
 	
 	@Test
@@ -57,7 +62,8 @@ public class TestMoverJugador {
 		
 		controlador.moverArriba();
 		Posicion nuevaPosicion = mapa.posicionJugador();
-		
+
+		assertEquals(nuevaPosicion.getY(), posicionEsperada.getY());
 		assertEquals(nuevaPosicion.getX(), posicionEsperada.getX());
 	}
 	
@@ -73,11 +79,12 @@ public class TestMoverJugador {
 		
 		controlador.moverAbajo();
 		Posicion nuevaPosicion = mapa.posicionJugador();
-		
+
+		assertEquals(nuevaPosicion.getY(), posicionEsperada.getY());
 		assertEquals(nuevaPosicion.getX(), posicionEsperada.getX());
 	}
 	
-	@Test 
+	@Test
 	public void testNoSePuedeMoverJugadorAbajoOcupado() {
 		GeneradorDeMapa generador = new GeneradorDeMapa();
 		Posicion posicionJugador = new Posicion(0,0);
@@ -86,6 +93,7 @@ public class TestMoverJugador {
 		controlador.moverAbajo();
 		Posicion nuevaPosicion = mapa.posicionJugador();
 		assertEquals(nuevaPosicion.getY(), posicionJugador.getY());
+
 	}
 	
 }

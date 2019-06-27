@@ -7,6 +7,6 @@ public class VistaPiedra extends Vista {
 
     protected VistaPiedra(GridPane grilla, int i, int j) {
         super(grilla, i, j);
-        textura.setImage(new Image("img/roca.png"));
+        textura.setImage(new Image("file:img/roca.png"));
     }
 }

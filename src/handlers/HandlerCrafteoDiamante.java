@@ -30,12 +30,14 @@ public class HandlerCrafteoDiamante implements EventHandler<ActionEvent> {
 		try {
 			Diamante unDiamante = new Diamante();
 			personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(unDiamante, pos[0], pos[1]);
-	        Image imagen = new Image("img/diamante.png");
-	        ImageView img = new ImageView(imagen);
-			boton.setGraphic(img);
 		}
 		catch(Exception ItemsInsuficientesExcepcion) {
 			mensaje_error.setText("No tienes suficientes items");
+			return;
 		}
+		Image imagen = new Image("file:img/inventario_diamante.png");
+		ImageView img = new ImageView(imagen);
+		boton.setGraphic(img);
+		mensaje_error.setText("");
 	}
 }

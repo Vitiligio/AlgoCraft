@@ -12,10 +12,9 @@ public class HandlerMouseInventario implements EventHandler<MouseEvent> {
     private Label label;
     private CasilleroDeObjetos casillero;
 
-    public HandlerMouseInventario(Pane pane, CasilleroDeObjetos casillero){
+    public HandlerMouseInventario(Label label, CasilleroDeObjetos casillero){
 
-        this.pane = pane;
-        this.label = new Label();
+        this.label = label;
         this.casillero = casillero;
     }
 
@@ -25,12 +24,11 @@ public class HandlerMouseInventario implements EventHandler<MouseEvent> {
         if(mouseEvent.getEventType().equals(MouseEvent.MOUSE_ENTERED)){
             label.setText("Cantidad: " + Integer.toString(casillero.getCantidadObjeto()));
             label.setTranslateY(100);
-            pane.getChildren().add(label);
         }
 
         else{
             if(mouseEvent.getEventType().equals(MouseEvent.MOUSE_EXITED)){
-                pane.getChildren().remove(label);
+                label.setText("");
             }
         }
     }

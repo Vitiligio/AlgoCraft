@@ -27,12 +27,14 @@ public class HandlerCrafteoMetal implements EventHandler<ActionEvent> {
 		try {
 			Metal unMetal = new Metal();
 			personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(unMetal, pos[0], pos[1]);
-	        Image imagen = new Image("img/metal.png");
-	        ImageView img = new ImageView(imagen);
-			boton.setGraphic(img);
 		}
 		catch(Exception ItemsInsuficientesExcepcion) {
 			mensaje_error.setText("No tienes suficientes items");
+			return;
 		}
+		Image imagen = new Image("file:img/inventario_metal.png");
+		ImageView img = new ImageView(imagen);
+		boton.setGraphic(img);
+		mensaje_error.setText("");
 	}
 }

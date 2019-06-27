@@ -28,12 +28,14 @@ public class HandlerCrafteoMadera implements EventHandler<ActionEvent> {
 		try { 
 			Madera unaMadera = new Madera();
 			personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(unaMadera, pos[0], pos[1]);
-	        Image maderas = new Image("img/arbol.png");
-	        ImageView img_madera = new ImageView(maderas);
-			boton.setGraphic(img_madera);
 		}
 		catch(Exception ItemsInsuficientesExcepcion) {
 			mensaje_error.setText("No tienes suficientes items");
+			return;
 		}
+		Image maderas = new Image("file:img/inventario_madera.png");
+		ImageView img_madera = new ImageView(maderas);
+		boton.setGraphic(img_madera);
+		mensaje_error.setText("");
 	}
 }

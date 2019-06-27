@@ -58,13 +58,13 @@ public class GeneradorDeMesa {
                 boton4.setOnAction(handler_diamante);
                 boton.getItems().addAll(boton1, boton2, boton3, boton4);
                 
-                Image maderas = new Image("img/arbol.png");
+                Image maderas = new Image("file:img/inventario_madera.png");
                 ImageView img_madera = new ImageView(maderas);
-                Image piedras = new Image("img/roca.png");
+                Image piedras = new Image("file:img/inventario_piedra.png");
                 ImageView img_piedra = new ImageView(piedras);
-                Image metales = new Image("img/metal.png");
+                Image metales = new Image("file:img/inventario_metal.png");
                 ImageView img_metal = new ImageView(metales);
-                Image dimaantes = new Image("img/diamante.png");
+                Image dimaantes = new Image("file:img/inventario_diamante.png");
                 ImageView img_diamante = new ImageView(dimaantes);
                 boton1.setGraphic(img_madera);
                 boton2.setGraphic(img_piedra);

@@ -9,6 +9,6 @@ public class VistaCasillero extends Vista{
     public VistaCasillero(GridPane grilla, int i, int j){
 
         super(grilla, i, j);
-        textura.setImage(new Image("img/pasto.png"));
+        textura.setImage(new Image("file:img/pasto.png"));
     }
 }

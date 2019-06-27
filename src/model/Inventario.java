@@ -62,7 +62,7 @@ public class Inventario {
 		return 0;
 	}
 
-	public void sacarDelInventario(AgregableAlInventario objeto) throws ItemsInsuficientesExcepcion {
+	public void sacarDelInventario(AgregableAlInventario objeto) {
 		boolean encontrado = false;
 		for(int i = 0; i < inventario.length; i++) {
 
