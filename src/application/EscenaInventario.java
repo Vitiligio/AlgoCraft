@@ -1,6 +1,7 @@
 package application;
 
 import handlers.*;
+import javafx.scene.text.Text;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,6 +15,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import model.CasilleroDeObjetos;
 import model.Inventario;
 import model.MesaDeCrafteo;
 import model.Personaje;
@@ -43,13 +45,23 @@ public class EscenaInventario {
         HBox contenedorInventario = generador_i.mostrarInventario();
         VBox contenedorMesaDeCrafteo = generador.generarMesa();
         VBox contenedorBotones = botonesCrafteo(contenedorMesaDeCrafteo, generador, generador_i, contenedorInventario);
+        
+        Text texto = new Text("Objeto Equipado:");
+        ImageView textura = new ImageView();
+        CasilleroDeObjetos casillero = new CasilleroDeObjetos();
+        casillero.asignarObjeto(inventario.getObjetoEquipado());
+        VistaInventario vInventario = new VistaInventario(casillero);
+        ImageView imagenObjetoEquipado = vInventario.getTextura();
+        
+        VBox objetoEquipado = new VBox(texto,imagenObjetoEquipado);
 
         pane.getChildren().add(contenedorInventario);
         contenedorMesaDeCrafteo.setTranslateY(100);
         pane.getChildren().add(contenedorMesaDeCrafteo);
         contenedorBotones.setTranslateY(300);
         pane.getChildren().add(contenedorBotones);
-
+        objetoEquipado.setTranslateY(45);
+        pane.getChildren().add(objetoEquipado);
         scene.addEventFilter(KeyEvent.KEY_PRESSED,
                 event -> {
                     if (event.getCode() == KeyCode.I)
