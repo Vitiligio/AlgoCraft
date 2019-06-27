@@ -35,26 +35,18 @@ public class EscenaInventario {
         this.personaje = personaje;
     }
 
-    public Scene generarEscena(Scene escenaMapa){
+    public Scene generarEscena(Scene escenaMapa, Label l){
 
         Pane pane = new Pane();
         Scene scene = new Scene(pane, 400, 400);
         GeneradorDeMesa generador = new GeneradorDeMesa(personaje);
         GeneradorInventario generador_i = new GeneradorInventario(inventario);
+        generador_i.setl(l);
 
         HBox contenedorInventario = generador_i.mostrarInventario();
         VBox contenedorMesaDeCrafteo = generador.generarMesa();
         VBox contenedorBotones = botonesCrafteo(contenedorMesaDeCrafteo, generador, generador_i, contenedorInventario);
         HBox crafting = new HBox(contenedorMesaDeCrafteo,contenedorBotones);
-        
-        Text texto = new Text("Objeto Equipado:");
-        ImageView textura = new ImageView();
-        CasilleroDeObjetos casillero = new CasilleroDeObjetos();
-        casillero.asignarObjeto(inventario.getObjetoEquipado());
-        VistaInventario vInventario = new VistaInventario(casillero);
-        ImageView imagenObjetoEquipado = vInventario.getTextura();
-        
-        VBox objetoEquipado = new VBox(texto,imagenObjetoEquipado);
 
         Text titulo = new Text("Mesa de crafteo");//no logro hacer que se vea
         HBox tituloBox = new HBox(titulo);
@@ -67,8 +59,6 @@ public class EscenaInventario {
         contenedorBotones.setTranslateX(60);
         pane.getChildren().add(crafting);
         //pane.getChildren().add(contenedorBotones);
-        objetoEquipado.setTranslateY(45);
-        pane.getChildren().add(objetoEquipado);
         scene.addEventFilter(KeyEvent.KEY_PRESSED,
                 event -> {
                     if (event.getCode() == KeyCode.I)

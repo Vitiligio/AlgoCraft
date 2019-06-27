@@ -11,6 +11,7 @@ import handlers.BotonIzquierdaEventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
@@ -134,9 +135,8 @@ public class EscenaMapa {
 	public Scene generarEscena(Juego juego) {
 		mapa = juego.obtenerMapa();
 		this.generadorEscenaInventario = new EscenaInventario(handlerEscenas, mapa.jugador);
-		Madera madera = new Madera();
-		Piedra p = new Piedra();
-		
+		Label l = new Label("Hacha De Madera");
+
 		GeneradorDeGrilla generador = new GeneradorDeGrilla();
 		GridPane grilla = generador.generarVisualizacionDeMapa(mapa);
 		
@@ -150,17 +150,20 @@ public class EscenaMapa {
 		VBox botones_herr = botones_herr(mapaContenedor);
 		HBox contiene_botones = new HBox(botones, botones_herr);
 		contiene_botones.setSpacing(50);
+
+		HBox h = new HBox(l);
 		
-		VBox contenedorPrincipal = new VBox(mapaContenedor, contiene_botones);
+		VBox contenedorPrincipal = new VBox(mapaContenedor, contiene_botones, h);
 		contenedorPrincipal.setSpacing(10);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
-		Scene scene = new Scene(contenedorPrincipal, 900, 560);
-		escenaInventario = generadorEscenaInventario.generarEscena(scene);
-		
+
+		Scene scene = new Scene(contenedorPrincipal);
+		escenaInventario = generadorEscenaInventario.generarEscena(scene, l);
+
 		scene.addEventFilter(KeyEvent.KEY_PRESSED,
 				event -> {
 					if (event.getCode() == KeyCode.I)
-						escenaInventario = generadorEscenaInventario.generarEscena(scene);
+						escenaInventario = generadorEscenaInventario.generarEscena(scene, l);
 						handlerEscenas.cambiarEscena(escenaInventario);
 				});
 
