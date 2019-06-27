@@ -118,6 +118,9 @@ public class EscenaMapa {
 		HBox tercerBoton = new HBox(abajo);
 		tercerBoton.setAlignment(Pos.CENTER);
 		
+		Text iParaInventario = new Text("i: Inventario");
+		HBox iParaInventarioBox = new HBox(iParaInventario);
+		
 		
 /*		HBox arrBoton = new HBox(accion_arr);
 		arrBoton.setAlignment(Pos.CENTER);
@@ -128,7 +131,7 @@ public class EscenaMapa {
 		HBox abjBoton = new HBox(accion_abj);
 		abjBoton.setAlignment(Pos.CENTER);
 		*/
-		VBox botones = new VBox(tipo_mover,primerBoton, segundoBoton, tercerBoton);
+		VBox botones = new VBox(tipo_mover,primerBoton, segundoBoton, tercerBoton, iParaInventarioBox);
 		return botones;
 	}
 	
@@ -145,28 +148,89 @@ public class EscenaMapa {
 		
 		HBox mapaContenedor = new HBox(grilla);
 		mapaContenedor.setAlignment(Pos.CENTER);
-		
+		/*
 		VBox botones = botones(mapaContenedor);
 		VBox botones_herr = botones_herr(mapaContenedor);
 		HBox contiene_botones = new HBox(botones, botones_herr);
-		contiene_botones.setSpacing(50);
-
-		HBox h = new HBox(l);
+		contiene_botones.setSpacing(50);*/
 		
-		VBox contenedorPrincipal = new VBox(mapaContenedor, contiene_botones, h);
-		contenedorPrincipal.setSpacing(10);
+
+		Text iParaInventario = new Text("i: Inventario");
+
+		HBox h = new HBox(iParaInventario, l);
+		h.setSpacing(10);
+		
+		VBox contenedorPrincipal = new VBox(mapaContenedor, h);
+		contenedorPrincipal.setSpacing(5);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
 
 		Scene scene = new Scene(contenedorPrincipal);
 		escenaInventario = generadorEscenaInventario.generarEscena(scene, l);
 
+
 		scene.addEventFilter(KeyEvent.KEY_PRESSED,
 				event -> {
-					if (event.getCode() == KeyCode.I)
+					try {
+					ControladorMapa controlador = new ControladorMapa(mapa);
+					if (event.getCode() == KeyCode.I) 
+					{
 						escenaInventario = generadorEscenaInventario.generarEscena(scene, l);
 						handlerEscenas.cambiarEscena(escenaInventario);
+					}
+					if (event.getCode() == KeyCode.UP)
+					{
+						controlador.moverArriba();
+						regenerarMapa(mapa, mapaContenedor);
+					}
+
+					if (event.getCode() == KeyCode.DOWN)
+					{
+						controlador.moverAbajo();
+						regenerarMapa(mapa, mapaContenedor);
+					}
+					if (event.getCode() == KeyCode.RIGHT)
+					{
+						controlador.moverDerecha();
+						regenerarMapa(mapa, mapaContenedor);
+					}
+					if (event.getCode() == KeyCode.LEFT)
+					{
+						controlador.moverIzquierda();
+						regenerarMapa(mapa, mapaContenedor);
+					}
+					if (event.getCode() == KeyCode.W)
+					{
+						controlador.accionArriba();
+						regenerarMapa(mapa, mapaContenedor);
+					}
+					if (event.getCode() == KeyCode.A)
+					{
+						controlador.accionIzquierda();
+						regenerarMapa(mapa, mapaContenedor);
+					}
+					if (event.getCode() == KeyCode.S)
+					{
+						controlador.accionAbajo();
+						regenerarMapa(mapa, mapaContenedor);
+					}
+					if (event.getCode() == KeyCode.D)
+					{
+						controlador.accionDerecha();
+						regenerarMapa(mapa, mapaContenedor);
+					}}
+					catch (Exception e) {
+						
+					}
 				});
 
 		return scene;
+	}
+	
+	private void regenerarMapa(Mapa mapa, HBox mapaContenedor) {
+		ControladorMapa controlador = new ControladorMapa(mapa);
+		GeneradorDeGrilla generador = new GeneradorDeGrilla();
+		GridPane nueva_grilla = generador.generarVisualizacionDeMapa(mapa);
+		mapaContenedor.getChildren().clear();
+		mapaContenedor.getChildren().add(nueva_grilla);
 	}
 }

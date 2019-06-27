@@ -2,9 +2,9 @@ package model;
 
 public class GeneradorDeMapa {
 	public Casillero[][] generarMapa() {
-		Casillero[][] casilleros = new Casillero[9][16];
-		for (int i = 0; i< 9; i++)
-		for (int j = 0; j < 16; j++) {
+		Casillero[][] casilleros = new Casillero[16][22];
+		for (int i = 0; i< 16; i++)
+		for (int j = 0; j < 22; j++) {
 			casilleros[i][j] = new Casillero();
 		}
 		try {
@@ -122,6 +122,24 @@ public class GeneradorDeMapa {
 			
 			Diamante diamante3 = new Diamante();
 			casilleros[2][8].ocupar(diamante3);
+			
+			Madera madera7 = new Madera();
+			casilleros[10][18].ocupar(madera7);
+			
+			Madera madera20 = new Madera();
+			casilleros[11][20].ocupar(madera20);
+			
+			Madera madera21 = new Madera();
+			casilleros[13][21].ocupar(madera21);
+			
+			Madera madera22 = new Madera();
+			casilleros[14][20].ocupar(madera22);
+			
+			Madera madera23 = new Madera();
+			casilleros[15][18].ocupar(madera23);
+			
+			Madera madera24 = new Madera();
+			casilleros[15][20].ocupar(madera24);
 		}
 		catch (Exception e) {
 			

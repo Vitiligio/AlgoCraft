@@ -10,8 +10,8 @@ import model.Posicion;
 public class GeneradorDeGrilla {
 	public GridPane generarVisualizacionDeMapa(Mapa mapa) {
 		GridPane grilla = new GridPane();
-		for (int i = 0; i < 9; i++) {
-			for (int j = 0; j < 16; j++) {
+		for (int i = 0; i < 16; i++) {
+			for (int j = 0; j < 22; j++) {
 				Posicion posicion = new Posicion(i,j);
 				Casillero contenido = mapa.verPosicion(posicion);
 				ObjetoDelMapa objeto = contenido.obtenerContenido();
