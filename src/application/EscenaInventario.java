@@ -1,6 +1,7 @@
 package application;
 
 import handlers.*;
+import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -12,9 +13,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import model.CasilleroDeObjetos;
 import model.Inventario;
 import model.MesaDeCrafteo;
@@ -54,7 +52,7 @@ public class EscenaInventario {
         tituloBox.setTranslateY(80);
         pane.getChildren().add(tituloBox);
         pane.getChildren().add(contenedorInventario);
-        pane.setStyle("-fx-background-color: #B45C00");
+        //pane.setStyle("-fx-background-color: #B45C00");
         crafting.setTranslateY(100);
         contenedorBotones.setTranslateX(60);
         pane.getChildren().add(crafting);
@@ -64,6 +62,8 @@ public class EscenaInventario {
                     if (event.getCode() == KeyCode.I)
                         handlerEscenas.cambiarEscena(escenaMapa);
                 });
+
+        pane.setBackground(new Background(new BackgroundImage(new Image("file:img/arbol.png"), BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT)));
 
         return scene;
     }
