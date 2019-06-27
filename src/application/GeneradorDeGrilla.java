@@ -45,6 +45,9 @@ public class GeneradorDeGrilla {
 			case 4:
 				new VistaDiamante(grilla, i, j);
 				break;
+	/*		case 5:
+				new VistaCasillero(grilla, i, j);
+				break;      */
 		}
 	}
 }

@@ -51,6 +51,10 @@ public class Mapa {
 		Casillero nuevo_casillero = terreno[destino.getX()][destino.getY()];
 		Material material = (Material) nuevo_casillero.obtenerContenido();
 		this.jugador.usarHerramientaEquipada(material);
+		
+		if (material.getEstado()) {
+			nuevo_casillero.desocupar();
+		}
 	}
 
 }

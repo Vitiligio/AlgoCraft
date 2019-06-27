@@ -3,6 +3,7 @@ package model;
 public abstract class Material extends ObjetoDelMapa implements AgregableAlInventario{
 
 	protected int durabilidad;
+	protected boolean roto;
 	//El material devuelve el material nulo hasta que se rompe y ahi devuelve el material que es.
 	public Material reducirDurabilidad(int cantidad) {
 		
@@ -13,6 +14,8 @@ public abstract class Material extends ObjetoDelMapa implements AgregableAlInven
 		}
 		
 		else {
+	//		this.ID = 5;
+			this.roto = true;
 			material = this;
 		}
 		
@@ -25,6 +28,7 @@ public abstract class Material extends ObjetoDelMapa implements AgregableAlInven
 	}
 
     public int getID() { return ID; }
+    public boolean getEstado() { return roto; }
 
     protected abstract Material daniarMetal(Metal metal, int fuerza);
     
