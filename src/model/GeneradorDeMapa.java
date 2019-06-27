@@ -107,9 +107,19 @@ public class GeneradorDeMapa {
 			casilleros[8][8].ocupar(metal5);
 			
 			Metal metal6 = new Metal();
-			casilleros[0][5].ocupar(metal6);
+			casilleros[3][17].ocupar(metal6);
 			
+			Metal metal7 = new Metal();
+			casilleros[3][19].ocupar(metal7);
 			
+			Metal metal8 = new Metal();
+			casilleros[4][18].ocupar(metal8);
+			
+			Metal metal9 = new Metal();
+			casilleros[10][15].ocupar(metal9);
+			
+			Metal metal10 = new Metal();
+			casilleros[14][13].ocupar(metal10);			
 			
 			Diamante diamante = new Diamante();
 			casilleros[5][2].ocupar(diamante);
@@ -140,7 +150,65 @@ public class GeneradorDeMapa {
 			
 			Madera madera24 = new Madera();
 			casilleros[15][20].ocupar(madera24);
-		}
+			
+			Madera madera25 = new Madera();
+			casilleros[10][0].ocupar(madera25);
+			Madera madera26 = new Madera();
+			casilleros[12][0].ocupar(madera26);
+			Madera madera27 = new Madera();
+			casilleros[13][0].ocupar(madera27);
+			Madera madera28 = new Madera();
+			casilleros[14][0].ocupar(madera28);
+			Madera madera29 = new Madera();
+			casilleros[10][2].ocupar(madera29);
+
+			Madera madera30 = new Madera();
+			casilleros[10][1].ocupar(madera30);
+			Madera madera31 = new Madera();
+			casilleros[14][2].ocupar(madera31);
+			Madera madera32 = new Madera();
+			casilleros[15][3].ocupar(madera32);
+			Madera madera33 = new Madera();
+			casilleros[12][4].ocupar(madera33);
+			Madera madera34 = new Madera();
+			casilleros[11][5].ocupar(madera34);
+			Madera madera35 = new Madera();
+			casilleros[10][6].ocupar(madera35);
+			
+
+			Madera madera36 = new Madera();
+			casilleros[10][9].ocupar(madera36);
+			Madera madera37 = new Madera();
+			casilleros[14][7].ocupar(madera37);
+			Madera madera38 = new Madera();
+			casilleros[15][15].ocupar(madera38);
+			Madera madera39 = new Madera();
+			casilleros[12][14].ocupar(madera39);
+			Madera madera40 = new Madera();
+			casilleros[11][10].ocupar(madera40);
+			Madera madera41 = new Madera();
+			casilleros[10][17].ocupar(madera41);
+
+			Madera madera42 = new Madera();
+			casilleros[15][5].ocupar(madera42);
+			Madera madera43 = new Madera();
+			casilleros[10][8].ocupar(madera43);
+			Madera madera44 = new Madera();
+			casilleros[10][9].ocupar(madera44);
+			Madera madera45 = new Madera();
+			casilleros[10][13].ocupar(madera45);
+
+			Metal metal11 = new Metal();
+			casilleros[10][17].ocupar(metal11);		
+			Metal metal12 = new Metal();
+			casilleros[13][10].ocupar(metal12);		
+			Metal metal13 = new Metal();
+			casilleros[12][14].ocupar(metal13);		
+			Metal metal14 = new Metal();
+			casilleros[12][18].ocupar(metal14);		
+			Metal metal15 = new Metal();
+			casilleros[9][21].ocupar(metal15);		
+			}
 		catch (Exception e) {
 			
 		}
