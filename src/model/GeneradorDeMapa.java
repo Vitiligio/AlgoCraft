@@ -207,7 +207,11 @@ public class GeneradorDeMapa {
 			Metal metal14 = new Metal();
 			casilleros[12][18].ocupar(metal14);		
 			Metal metal15 = new Metal();
-			casilleros[9][21].ocupar(metal15);		
+			casilleros[9][21].ocupar(metal15);	
+			
+
+			Diamante diamante4 = new Diamante();
+			casilleros[2][8].ocupar(diamante4);
 			}
 		catch (Exception e) {
 			
