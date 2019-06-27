@@ -3,20 +3,25 @@ package application;
 import handlers.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+<<<<<<< HEAD
 import model.CasilleroDeObjetos;
+=======
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+>>>>>>> 1b66846252a7c4159860b3f0d30b79e11bb149f4
 import model.Inventario;
 import model.MesaDeCrafteo;
 import model.Personaje;
+
 
 public class EscenaInventario {
 
@@ -46,7 +51,8 @@ public class EscenaInventario {
         VBox contenedorBotones = botonesCrafteo(contenedorMesaDeCrafteo, generador, generador_i, contenedorInventario);
         HBox crafting = new HBox(contenedorMesaDeCrafteo,contenedorBotones);
 
-        Text titulo = new Text("Mesa de crafteo");//no logro hacer que se vea
+        Text titulo = new Text("Mesa de crafteo");
+        titulo.setFont(Font.font ("Verdana",FontWeight.BOLD, 20));
         HBox tituloBox = new HBox(titulo);
         titulo.setStyle("-fx-color: #ffffff");
         tituloBox.setTranslateY(80);
