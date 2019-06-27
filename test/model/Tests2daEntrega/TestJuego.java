@@ -82,7 +82,7 @@ public class TestJuego {
 
 	}
 	
-	@Test
+/*	@Test
 	public void testJuegoIniciaConMetalEnElCasilleroCorrespondiente() {
 		
 		Juego juego = new Juego();
@@ -95,9 +95,9 @@ public class TestJuego {
 		ObjetoDelMapa material = terreno.obtenerContenido();
 		
 		assertEquals(material.getID(), 3);
-	}
+	} */
 	
-	@Test
+	/*@Test
 	public void testJuegoIniciaConDiamanteEnElCasilleroCorrespondiente() {
 		
 		Juego juego = new Juego();
@@ -111,7 +111,7 @@ public class TestJuego {
 		
 		assertEquals(material.getID(), 4);
 
-	}
+	} */
 	
 	
 	@Test
