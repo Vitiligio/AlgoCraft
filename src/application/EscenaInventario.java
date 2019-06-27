@@ -2,6 +2,8 @@ package application;
 
 import handlers.*;
 import javafx.scene.text.Text;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,6 +16,7 @@ import javafx.scene.layout.VBox;
 import model.Inventario;
 import model.MesaDeCrafteo;
 import model.Personaje;
+
 
 public class EscenaInventario {
 
@@ -43,7 +46,8 @@ public class EscenaInventario {
         VBox contenedorBotones = botonesCrafteo(contenedorMesaDeCrafteo, generador, generador_i, contenedorInventario);
         HBox crafting = new HBox(contenedorMesaDeCrafteo,contenedorBotones);
 
-        Text titulo = new Text("Mesa de crafteo");//no logro hacer que se vea
+        Text titulo = new Text("Mesa de crafteo");
+        titulo.setFont(Font.font ("Verdana",FontWeight.BOLD, 20));
         HBox tituloBox = new HBox(titulo);
         titulo.setStyle("-fx-color: #ffffff");
         tituloBox.setTranslateY(80);
