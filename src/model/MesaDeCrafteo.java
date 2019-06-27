@@ -1,5 +1,7 @@
 package model;
 
+import model.Excepciones.CodigoDeHerramientaInvalidoError;
+
 public class MesaDeCrafteo {
 
     private CasilleroDeObjetos [][] tabla;
@@ -42,7 +44,7 @@ public class MesaDeCrafteo {
         tabla[fila][columna].asignarObjeto(material);
     }
 
-    public Herramienta construirHerramienta(){
+    public Herramienta construirHerramienta() {
 
         String codigo = generarCodigo();
         return recetas.obtenerHerramienta(codigo);

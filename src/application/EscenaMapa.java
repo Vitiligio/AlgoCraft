@@ -17,6 +17,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import model.*;
 
 public class EscenaMapa {
@@ -27,6 +28,39 @@ public class EscenaMapa {
 	public EscenaMapa(HandlerEscenas handlerEscenas){
 
 		this.handlerEscenas = handlerEscenas;
+	}
+	
+	private VBox botones_herr (HBox mapaContenedor) {
+		Text tipo_herramienta = new Text("Herramienta");
+		Button accion_izq = new Button();
+		BotonAccionIzquierdaEventHandler acc_izq_event = new BotonAccionIzquierdaEventHandler(mapa, mapaContenedor);
+		accion_izq.setOnAction(acc_izq_event);
+		accion_izq.setText("<");
+		
+		Button accion_der = new Button();
+		BotonAccionDerechaEventHandler acc_der_event = new BotonAccionDerechaEventHandler(mapa, mapaContenedor);
+		accion_der.setOnAction(acc_der_event);
+		accion_der.setText(">");
+		
+		Button accion_arr = new Button();
+		BotonAccionArribaEventHandler acc_arr_event = new BotonAccionArribaEventHandler(mapa, mapaContenedor);
+		accion_arr.setOnAction(acc_arr_event);
+		accion_arr.setText("^");
+		
+		Button accion_abj = new Button();
+		BotonAccionAbajoEventHandler acc_abj_event = new BotonAccionAbajoEventHandler(mapa, mapaContenedor);
+		accion_abj.setOnAction(acc_abj_event);
+		accion_abj.setText("v");
+		HBox arrBoton = new HBox(accion_arr);
+		arrBoton.setAlignment(Pos.CENTER);
+		
+		HBox izqBoton = new HBox(accion_izq, accion_der);
+		izqBoton.setAlignment(Pos.CENTER);
+		
+		HBox abjBoton = new HBox(accion_abj);
+		abjBoton.setAlignment(Pos.CENTER);
+		VBox botones = new VBox(tipo_herramienta, arrBoton, izqBoton, abjBoton);
+		return botones;
 	}
 	
 	private VBox botones (HBox mapaContenedor) {
@@ -40,6 +74,8 @@ public class EscenaMapa {
 		arriba.setOnAction(arr_event);
 		arriba.setText("^");
 		
+		Text tipo_mover = new Text("Movimiento");
+		
 		Button derecha = new Button();
 		BotonDerechaEventHandler der_event = new BotonDerechaEventHandler(mapa, mapaContenedor);
 		derecha.setOnAction(der_event);
@@ -49,11 +85,12 @@ public class EscenaMapa {
 		BotonAbajoEventHandler abj_event = new BotonAbajoEventHandler(mapa, mapaContenedor);
 		abajo.setOnAction(abj_event);
 		abajo.setText("v");
-		
+/*		
 		Button accion_izq = new Button();
 		BotonAccionIzquierdaEventHandler acc_izq_event = new BotonAccionIzquierdaEventHandler(mapa, mapaContenedor);
 		accion_izq.setOnAction(acc_izq_event);
 		accion_izq.setText("L");
+		
 		
 		Button accion_der = new Button();
 		BotonAccionDerechaEventHandler acc_der_event = new BotonAccionDerechaEventHandler(mapa, mapaContenedor);
@@ -68,7 +105,7 @@ public class EscenaMapa {
 		Button accion_abj = new Button();
 		BotonAccionAbajoEventHandler acc_abj_event = new BotonAccionAbajoEventHandler(mapa, mapaContenedor);
 		accion_abj.setOnAction(acc_abj_event);
-		accion_abj.setText("Abj");
+		accion_abj.setText("Abj");*/
 		
 		HBox primerBoton = new HBox(arriba);
 		primerBoton.setAlignment(Pos.CENTER);
@@ -79,19 +116,17 @@ public class EscenaMapa {
 		HBox tercerBoton = new HBox(abajo);
 		tercerBoton.setAlignment(Pos.CENTER);
 		
-		HBox izqBoton = new HBox(accion_izq);
-		izqBoton.setAlignment(Pos.CENTER);
 		
-		HBox derBoton = new HBox(accion_der);
-		derBoton.setAlignment(Pos.CENTER);
-		
-		HBox arrBoton = new HBox(accion_arr);
+/*		HBox arrBoton = new HBox(accion_arr);
 		arrBoton.setAlignment(Pos.CENTER);
+		
+		HBox izqBoton = new HBox(accion_izq, accion_der);
+		izqBoton.setAlignment(Pos.CENTER);
 		
 		HBox abjBoton = new HBox(accion_abj);
 		abjBoton.setAlignment(Pos.CENTER);
-		
-		VBox botones = new VBox(primerBoton, segundoBoton, tercerBoton, izqBoton, derBoton, arrBoton, abjBoton);
+		*/
+		VBox botones = new VBox(tipo_mover,primerBoton, segundoBoton, tercerBoton);
 		return botones;
 	}
 	
@@ -111,8 +146,11 @@ public class EscenaMapa {
 		mapaContenedor.setAlignment(Pos.CENTER);
 		
 		VBox botones = botones(mapaContenedor);
+		VBox botones_herr = botones_herr(mapaContenedor);
+		HBox contiene_botones = new HBox(botones, botones_herr);
+		contiene_botones.setSpacing(50);
 		
-		VBox contenedorPrincipal = new VBox(mapaContenedor, botones);
+		VBox contenedorPrincipal = new VBox(mapaContenedor, contiene_botones);
 		contenedorPrincipal.setSpacing(10);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
 		Scene scene = new Scene(contenedorPrincipal);

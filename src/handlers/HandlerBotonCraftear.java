@@ -32,17 +32,17 @@ public class HandlerBotonCraftear implements EventHandler<ActionEvent> {
 	public void handle(ActionEvent actionEvent) {
 		try {
 			personaje.construirHerramienta();
+			respuesta.setText("");
 		}
-		catch (CodigoDeHerramientaInvalidoError e) {
+		catch (Exception CodigoDeHerramientaInvalidoError) {
 			respuesta.setText("Error.");
-			return;
 		}
-		mesa.reiniciar();
-		respuesta.setText("");
+		personaje.reiniciarMesa();
 		GeneradorDeMesa generadorMesa = new GeneradorDeMesa(personaje);
 		contenedorMesa.getChildren().clear();
 		contenedorMesa.getChildren().add(generadorMesa.generarMesa());
 		contenedorInventario.getChildren().clear();
 		contenedorInventario.getChildren().add(new GeneradorInventario(personaje.obtenerInventario()).mostrarInventario());
+		
 	}
 }

@@ -33,15 +33,14 @@ public class Personaje extends ObjetoDelMapa{
 
 		Herramienta herramienta;
 
-		try{
-			herramienta = mesaDeCrafteo.construirHerramienta();
-		}
-		catch (CodigoDeHerramientaInvalidoError excepcion){
-			throw new CodigoDeHerramientaInvalidoError();
-		}
+		herramienta = mesaDeCrafteo.construirHerramienta();
 
 		inventario.agregarAlInventario(herramienta);
 		mesaDeCrafteo.disminuirCantidadEnTodasLasPosiciones();
+	}
+	
+	public void reiniciarMesa() {
+		mesaDeCrafteo = new MesaDeCrafteo();
 	}
 
 	public void agregarAlInventario(AgregableAlInventario objeto){

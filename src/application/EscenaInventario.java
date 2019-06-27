@@ -56,12 +56,14 @@ public class EscenaInventario {
         
         VBox objetoEquipado = new VBox(texto,imagenObjetoEquipado);
 
-        Label titulo = new Label("MESA DE CRAFTEO");//no logro hacer que se vea
+        Text titulo = new Text("Mesa de crafteo");//no logro hacer que se vea
         HBox tituloBox = new HBox(titulo);
+        titulo.setStyle("-fx-color: #ffffff");
+        tituloBox.setTranslateY(100);
         pane.getChildren().add(tituloBox);
         pane.getChildren().add(contenedorInventario);
         pane.setStyle("-fx-background-color: #B45C00");
-        crafting.setTranslateY(100);
+        crafting.setTranslateY(125);
         contenedorBotones.setTranslateX(60);
         pane.getChildren().add(crafting);
         //pane.getChildren().add(contenedorBotones);
@@ -75,23 +77,6 @@ public class EscenaInventario {
 
         return scene;
     }
-
- /*   private HBox mostrarInventario(Pane pane){
-
-        HBox contenedorInventario = new HBox();
-
-        for(int i = 0; i < 10; i++){
-
-            VistaInventario vistaInventario = new VistaInventario(inventario.getCasillero(i));
-            HandlerMouseInventario handler = new HandlerMouseInventario(pane, inventario.getCasillero(i));
-            ImageView imagen = vistaInventario.getTextura();
-            contenedorInventario.getChildren().add(imagen);
-            imagen.setOnMouseEntered(handler);
-            imagen.setOnMouseExited(handler);
-        }
-
-        return contenedorInventario;
-    }*/
     
     private VBox botonesCrafteo(VBox contenedorMesa, GeneradorDeMesa generadorMesa, GeneradorInventario generadorInventario, HBox contenedorInventario) {
         Button boton_craftear = new Button("Craftear");

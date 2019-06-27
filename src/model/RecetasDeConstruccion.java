@@ -33,11 +33,11 @@ public class RecetasDeConstruccion {
         recetas.put(PATRON_PICO_FINO, new PicoFino(1000, 20, new DesgasteFino()));
     }
 
-    public Herramienta obtenerHerramienta(String codigo) {
+    public Herramienta obtenerHerramienta(String codigo)  {
 
         Herramienta herramienta;
         herramienta = recetas.get(codigo);
-
+        System.out.println(herramienta);
         if (herramienta == null)
             throw new CodigoDeHerramientaInvalidoError();
 
