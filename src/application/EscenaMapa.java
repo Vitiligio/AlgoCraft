@@ -24,6 +24,7 @@ public class EscenaMapa {
 	Mapa mapa;
 	private HandlerEscenas handlerEscenas;
 	private EscenaInventario generadorEscenaInventario;
+	Scene escenaInventario;
 
 	public EscenaMapa(HandlerEscenas handlerEscenas){
 
@@ -154,26 +155,13 @@ public class EscenaMapa {
 		contenedorPrincipal.setSpacing(10);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
 		Scene scene = new Scene(contenedorPrincipal);
-		Scene escenaInventario = generadorEscenaInventario.generarEscena(scene);
+		escenaInventario = generadorEscenaInventario.generarEscena(scene);
 
 		scene.addEventFilter(KeyEvent.KEY_PRESSED,
 				event -> {
 					if (event.getCode() == KeyCode.I)
+						escenaInventario = generadorEscenaInventario.generarEscena(scene);
 						handlerEscenas.cambiarEscena(escenaInventario);
-				});
-
-		scene.addEventFilter(KeyEvent.KEY_PRESSED,
-				event -> {
-					if (event.getCode() == KeyCode.V)
-						mapa.jugador.obtenerInventario().agregarAlInventario(madera);
-						generadorEscenaInventario.generarEscena(scene);
-				});
-
-		scene.addEventFilter(KeyEvent.KEY_PRESSED,
-				event -> {
-					if (event.getCode() == KeyCode.C)
-						mapa.jugador.obtenerInventario().agregarAlInventario(p);
-						generadorEscenaInventario.generarEscena(scene);
 				});
 
 		return scene;
