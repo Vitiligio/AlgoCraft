@@ -10,6 +10,7 @@ public class MaterialNulo extends Material {
 
     @Override
     protected Material daniarMetal(Metal metal, int fuerza) {
-    	return (new MaterialNulo());
+    	MaterialNulo material = new MaterialNulo();
+		return  material;
     }
 }
