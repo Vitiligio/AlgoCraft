@@ -1,6 +1,8 @@
 package model.Tests2daEntrega;
 
 import model.*;
+import model.Excepciones.CodigoDeHerramientaInvalidoError;
+import model.Excepciones.ItemsInsuficientesExcepcion;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -299,7 +301,7 @@ public class TestConstruccionDeHerramientas {
     }
 
     @Test
-    public void TestConstruyoHerramientaYDisminuyenLosMateriales(){
+    public void TestConstruyoHerramientaYDisminuyenLosMateriales() throws ItemsInsuficientesExcepcion{
 
         Personaje personaje = new Personaje();
         Inventario inventario = personaje.obtenerInventario();
@@ -330,7 +332,7 @@ public class TestConstruccionDeHerramientas {
     }
 
     @Test
-    public void TestNoConstruyoHerramientaYNoDisminuyenLosMateriales(){
+    public void TestNoConstruyoHerramientaYNoDisminuyenLosMateriales() throws ItemsInsuficientesExcepcion{
 
         Personaje personaje = new Personaje();
         Inventario inventario = personaje.obtenerInventario();

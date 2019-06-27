@@ -41,7 +41,6 @@ public class CasilleroDeObjetos {
 
         if(cantidad == 0)
         {
-            System.out.println("NO TENESS");
             throw new ItemsInsuficientesExcepcion();
         }
         if (cantidad > 0)
