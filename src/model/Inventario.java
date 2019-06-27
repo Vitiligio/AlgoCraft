@@ -32,6 +32,11 @@ public class Inventario {
 
 	}
 
+	public void equipar(AgregableAlInventario herramienta){
+
+		this.objetoEquipado = (Herramienta) herramienta;
+	}
+
 	public void agregarAlInventario(AgregableAlInventario objeto){
 
 		if (objeto.getID() == 0) return;

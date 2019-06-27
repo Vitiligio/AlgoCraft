@@ -37,6 +37,11 @@ public class CasilleroDeObjetos {
         return cantidad;
     }
 
+    public AgregableAlInventario getObjeto(){
+
+        return objeto;
+    }
+
     public void disminuirCantidad() {
 
         if (cantidad > 0)

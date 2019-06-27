@@ -22,11 +22,12 @@ public class GeneradorInventario {
         for(int i = 0; i < 10; i++){
 
             VistaInventario vistaInventario = new VistaInventario(inventario.getCasillero(i));
-            HandlerMouseInventario handler = new HandlerMouseInventario(label, inventario.getCasillero(i));
+            HandlerMouseInventario handler = new HandlerMouseInventario(label, inventario.getCasillero(i), inventario);
             ImageView imagen = vistaInventario.getTextura();
             contenedorInventario.getChildren().add(imagen);
             imagen.setOnMouseEntered(handler);
             imagen.setOnMouseExited(handler);
+            imagen.setOnMousePressed(handler);
         }
 
         contenedorInventario.getChildren().add(label);
