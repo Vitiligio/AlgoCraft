@@ -30,12 +30,7 @@ public abstract class Herramienta implements AgregableAlInventario{
 
 	abstract protected void desgastar();
 
-	public Material usarContra(Material material) {
-		
-		this.desgastar();
-		return material.reducirDurabilidad(this.fuerza);
-		
-	}
+	public abstract Material usarContra(Material material);
 
 	//getters para hacer las pruebas
 	public float getDurabilidad() {
@@ -51,5 +46,8 @@ public abstract class Herramienta implements AgregableAlInventario{
 	}
 
 	public int getID() { return ID; }
+
+	
+
 
 }

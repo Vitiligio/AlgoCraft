@@ -37,4 +37,28 @@ public class Hacha extends Herramienta {
 		this.desgastar();
 		return new MaterialNulo();
 	}
+
+	@Override
+	public Material usarContra(Material material) {
+		
+		if (material.getID() == 1) {
+			return this.usarContra((Madera) material);
+		}
+		
+		else if (material.getID() == 2) {
+			return this.usarContra((Piedra) material);
+		}
+		
+		else if (material.getID() == 3) {
+			return this.usarContra((Metal) material);
+		}
+		
+		else if (material.getID() == 4) {
+			return this.usarContra((Diamante) material);
+		}
+		
+		else {
+			return new MaterialNulo();
+		}
+	}
 }
