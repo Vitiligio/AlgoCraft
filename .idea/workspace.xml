@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c033a04-18fa-4058-a71f-3e50a83e3c43" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/inventario_vacio.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/inventario_vacio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/EscenaInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/EscenaInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/EscenaMapa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/EscenaMapa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/GeneradorDeMesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/GeneradorDeMesa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/GeneradorInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/GeneradorInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/VistaCasillero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/VistaCasillero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/VistaDiamante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/VistaDiamante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/VistaInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/VistaInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/VistaMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/VistaMadera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/VistaMetal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/VistaMetal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/VistaPersonaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/VistaPersonaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/VistaPiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/VistaPiedra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/HandlerBotonCraftear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/HandlerBotonCraftear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/HandlerCrafteoDiamante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/HandlerCrafteoDiamante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/HandlerCrafteoMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/HandlerCrafteoMadera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/HandlerCrafteoMetal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/HandlerCrafteoMetal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/HandlerCrafteoPiedra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/HandlerCrafteoPiedra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/HandlerMouseInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/HandlerMouseInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/inventario_vacio.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/inventario_vacio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CasilleroDeObjetos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CasilleroDeObjetos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Excepciones/ItemsInsuficientesExcepcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Excepciones/ItemsInsuficientesExcepcion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Inventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MesaDeCrafteo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MesaDeCrafteo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Personaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Personaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/Tests2daEntrega/TestConstruccionDeHerramientas.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/Tests2daEntrega/TestConstruccionDeHerramientas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/Tests2daEntrega/TestMoverJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/Tests2daEntrega/TestMoverJugador.java" afterDir="false" />
-    </list>
+    <list default="true" id="0c033a04-18fa-4058-a71f-3e50a83e3c43" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,20 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/model/Tests2daEntrega/MesaDeCrafteoTest.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Metal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Pico.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,11 +48,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/handlers/HandlerCrafteoDiamante.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
               <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/CasilleroDeObjetos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -111,6 +78,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/MesaDeCrafteo.java">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/Personaje.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-158">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -154,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="1299" />
@@ -363,7 +339,7 @@
       <workItem from="1560202555050" duration="2805000" />
       <workItem from="1561064662981" duration="52000" />
       <workItem from="1561245005605" duration="683000" />
-      <workItem from="1561589687462" duration="708000" />
+      <workItem from="1561589687462" duration="752000" />
     </task>
     <servers />
   </component>
@@ -400,10 +376,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24378000" />
+    <option name="totallyTimeSpent" value="24422000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="7" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -507,13 +483,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestPico.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Personaje.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/model/Tests1raEntrega/TestMetal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -633,9 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/MesaDeCrafteo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/handlers/BotonDerechaEventHandler.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -646,6 +612,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/CasilleroDeObjetos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/MesaDeCrafteo.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Personaje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>

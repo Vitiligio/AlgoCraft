@@ -39,13 +39,6 @@ public class CasilleroDeObjetos {
 
     public void disminuirCantidad() {
 
-<<<<<<< HEAD
-=======
-        if(cantidad == 0)
-        {
-            throw new ItemsInsuficientesExcepcion();
-        }
->>>>>>> a39d4e594169475a83914d71a0b096f4dcb97a2b
         if (cantidad > 0)
             cantidad--;
 
