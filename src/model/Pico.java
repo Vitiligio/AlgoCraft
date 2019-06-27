@@ -32,6 +32,12 @@ public class Pico extends Herramienta {
    		this.desgastar();
    		return metal.golpeadoPor(this.material, this.fuerza);
 	}
+	
+	public Material usarContra(Diamante diamante) {
+
+   		this.desgastar();
+   		return new MaterialNulo();
+	}
 
 	@Override
 	public Material usarContra(Material material) {
