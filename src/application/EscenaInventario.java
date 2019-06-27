@@ -55,7 +55,7 @@ public class EscenaInventario {
         pane.getChildren().add(tituloBox);
         pane.getChildren().add(contenedorInventario);
         pane.setStyle("-fx-background-color: #B45C00");
-        crafting.setTranslateY(125);
+        crafting.setTranslateY(100);
         contenedorBotones.setTranslateX(60);
         pane.getChildren().add(crafting);
         //pane.getChildren().add(contenedorBotones);
