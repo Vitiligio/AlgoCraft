@@ -153,7 +153,7 @@ public class EscenaMapa {
 		VBox contenedorPrincipal = new VBox(mapaContenedor, contiene_botones);
 		contenedorPrincipal.setSpacing(10);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
-		Scene scene = new Scene(contenedorPrincipal);
+		Scene scene = new Scene(contenedorPrincipal, 900, 560);
 		Scene escenaInventario = generadorEscenaInventario.generarEscena(scene);
 
 		scene.addEventFilter(KeyEvent.KEY_PRESSED,

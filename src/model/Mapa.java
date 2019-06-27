@@ -2,7 +2,7 @@ package model;
 
 public class Mapa {
 	
-	Casillero[][] terreno = new Casillero[8][8];
+	Casillero[][] terreno = new Casillero[9][16];
 	Posicion posicionJugador;
 	public Personaje jugador = new Personaje();
 	
