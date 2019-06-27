@@ -28,12 +28,14 @@ public class HandlerCrafteoPiedra implements EventHandler<ActionEvent> {
 		try { 
 			Piedra unaPiedra = new Piedra();
 			personaje.insertarMaterialEnMesaDeCrafteoEnPosicion(unaPiedra, pos[0], pos[1]);
-			Image piedra = new Image("img/roca.png");
-        	ImageView img_piedra = new ImageView(piedra);
-        	boton.setGraphic(img_piedra);
 		}
 		catch(Exception ItemsInsuficientesExcepcion) {
 			mensaje_error.setText("No tienes suficientes items");
+			return;
 		}
+		Image piedra = new Image("file:img/inventario_piedra.png");
+		ImageView img_piedra = new ImageView(piedra);
+		boton.setGraphic(img_piedra);
+		mensaje_error.setText("");
 	}
 }

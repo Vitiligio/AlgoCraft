@@ -23,7 +23,7 @@ public class Personaje extends ObjetoDelMapa{
 
 	}
 
-	public void insertarMaterialEnMesaDeCrafteoEnPosicion(Material material, int fila, int columna) throws ItemsInsuficientesExcepcion {
+	public void insertarMaterialEnMesaDeCrafteoEnPosicion(Material material, int fila, int columna) {
 
 		inventario.sacarDelInventario(material);
 		mesaDeCrafteo.insertarMaterialEnPosicion(material, fila, columna);
@@ -37,7 +37,7 @@ public class Personaje extends ObjetoDelMapa{
 			herramienta = mesaDeCrafteo.construirHerramienta();
 		}
 		catch (CodigoDeHerramientaInvalidoError excepcion){
-			return;
+			throw new CodigoDeHerramientaInvalidoError();
 		}
 
 		inventario.agregarAlInventario(herramienta);

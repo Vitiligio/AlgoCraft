@@ -7,6 +7,6 @@ public class VistaPersonaje extends Vista {
 
     protected VistaPersonaje(GridPane grilla, int i, int j) {
         super(grilla, i, j);
-        textura.setImage(new Image("img/personaje.png"));
+        textura.setImage(new Image("file:img/personaje.png"));
     }
 }

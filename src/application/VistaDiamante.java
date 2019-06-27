@@ -8,6 +8,6 @@ public class VistaDiamante extends Vista {
     protected VistaDiamante(GridPane grilla, int i, int j) {
 
         super(grilla, i, j);
-        textura.setImage(new Image("img/diamante.png"));
+        textura.setImage(new Image("file:img/diamante.png"));
     }
 }

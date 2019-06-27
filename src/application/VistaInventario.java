@@ -8,12 +8,10 @@ import model.CasilleroDeObjetos;
 public class VistaInventario extends Rectangle {
 
     private ImageView textura;
-    private CasilleroDeObjetos casillero;
 
     public VistaInventario(CasilleroDeObjetos casillero){
 
         textura = new ImageView();
-        this.casillero = casillero;
         setTextura(casillero.getIDObjeto());
     }
 
@@ -27,12 +25,52 @@ public class VistaInventario extends Rectangle {
         switch (ID){
 
             case 0:
-                textura.setImage(new Image("img/inventario_vacio.png"));
+                textura.setImage(new Image("file:img/inventario_vacio.png"));
             break;
 
-            case 5:
-                textura.setImage(new Image("img/personaje.png"));
+            case 1:
+                textura.setImage(new Image("file:img/inventario_madera.png"));
             break;
+
+            case 2:
+                textura.setImage(new Image("file:img/inventario_piedra.png"));
+                break;
+
+            case 3:
+                textura.setImage(new Image("file:img/inventario_metal.png"));
+                break;
+
+            case 4:
+                textura.setImage(new Image("file:img/inventario_diamante.png"));
+                break;
+
+            case 5:
+                textura.setImage(new Image("file:img/inventario_hacha_madera.png"));
+            break;
+
+            case 6:
+                textura.setImage(new Image("file:img/inventario_hacha_piedra.png"));
+                break;
+
+            case 7:
+                textura.setImage(new Image("file:img/inventario_hacha_metal.png"));
+                break;
+
+            case 8:
+                textura.setImage(new Image("file:img/inventario_pico_madera.png"));
+            break;
+
+            case 9:
+                textura.setImage(new Image("file:img/inventario_pico_piedra.png"));
+                break;
+
+            case 10:
+                textura.setImage(new Image("file:img/inventario_pico_metal.png"));
+                break;
+
+            case 11:
+                textura.setImage(new Image("file:img/inventario_pico_fino.png"));
+                break;
         }
     }
 

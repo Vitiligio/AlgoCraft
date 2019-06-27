@@ -18,6 +18,7 @@ import model.*;
 public class EscenaMapa {
 	Mapa mapa;
 	private HandlerEscenas handlerEscenas;
+	private EscenaInventario generadorEscenaInventario;
 
 	public EscenaMapa(HandlerEscenas handlerEscenas){
 
@@ -57,6 +58,9 @@ public class EscenaMapa {
 	
 	public Scene generarEscena(Juego juego) {
 		mapa = juego.obtenerMapa();
+		this.generadorEscenaInventario = new EscenaInventario(handlerEscenas, mapa.jugador);
+		Madera madera = new Madera();
+		Piedra p = new Piedra();
 		
 		GeneradorDeGrilla generador = new GeneradorDeGrilla();
 		GridPane grilla = generador.generarVisualizacionDeMapa(mapa);
@@ -73,7 +77,7 @@ public class EscenaMapa {
 		contenedorPrincipal.setSpacing(10);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
 		Scene scene = new Scene(contenedorPrincipal);
-		Scene escenaInventario = new EscenaInventario(handlerEscenas, mapa.jugador).generarEscena(scene);
+		Scene escenaInventario = generadorEscenaInventario.generarEscena(scene);
 
 		scene.addEventFilter(KeyEvent.KEY_PRESSED,
 				event -> {
@@ -81,11 +85,19 @@ public class EscenaMapa {
 						handlerEscenas.cambiarEscena(escenaInventario);
 				});
 
-		/*scene.addEventFilter(KeyEvent.KEY_PRESSED,
+		scene.addEventFilter(KeyEvent.KEY_PRESSED,
 				event -> {
 					if (event.getCode() == KeyCode.V)
-						mapa.jugador.minar();
-				});*/
+						mapa.jugador.obtenerInventario().agregarAlInventario(madera);
+						generadorEscenaInventario.generarEscena(scene);
+				});
+
+		scene.addEventFilter(KeyEvent.KEY_PRESSED,
+				event -> {
+					if (event.getCode() == KeyCode.C)
+						mapa.jugador.obtenerInventario().agregarAlInventario(p);
+						generadorEscenaInventario.generarEscena(scene);
+				});
 
 		return scene;
 	}

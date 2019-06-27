@@ -37,16 +37,13 @@ public class CasilleroDeObjetos {
         return cantidad;
     }
 
-    public void disminuirCantidad() throws ItemsInsuficientesExcepcion {
+    public void disminuirCantidad() {
+
+        if (cantidad > 0)
+            cantidad--;
 
         if(cantidad == 0)
-        {
-            System.out.println("NO TENESS");
-            throw new ItemsInsuficientesExcepcion();
-        }
-        if (cantidad > 0)
-        	cantidad--;
-        if (cantidad == 0)
             objeto = new MaterialNulo();
+
     }
 }

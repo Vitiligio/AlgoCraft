@@ -38,7 +38,7 @@ public class EscenaInventario {
         Pane pane = new Pane();
         Scene scene = new Scene(pane, 400, 400);
         GeneradorDeMesa generador = new GeneradorDeMesa(personaje);
-        GeneradorInventario generador_i = new GeneradorInventario(pane, inventario);
+        GeneradorInventario generador_i = new GeneradorInventario(inventario);
 
         HBox contenedorInventario = generador_i.mostrarInventario();
         VBox contenedorMesaDeCrafteo = generador.generarMesa();

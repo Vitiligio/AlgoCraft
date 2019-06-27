@@ -7,6 +7,6 @@ public class VistaMadera extends Vista {
 
     protected VistaMadera(GridPane grilla, int i, int j) {
         super(grilla, i, j);
-        textura.setImage(new Image("img/arbol.png"));
+        textura.setImage(new Image("file:img/arbol.png"));
     }
 }

@@ -2,9 +2,12 @@ package model.Tests2daEntrega;
 
 import static org.junit.Assert.assertEquals;
 
+import model.Excepciones.CodigoDeHerramientaInvalidoError;
+import org.junit.Rule;
 import org.junit.Test;
 
 import model.*;
+import org.junit.rules.ExpectedException;
 
 public class TestMoverJugador {
 	
@@ -20,15 +23,16 @@ public class TestMoverJugador {
 		
 		controlador.moverDerecha();
 		Posicion nuevaPosicion = mapa.posicionJugador();
-		
-		assertEquals(nuevaPosicion, posicionEsperada);
+
+		assertEquals(nuevaPosicion.getY(), posicionEsperada.getY());
+		assertEquals(nuevaPosicion.getX(), posicionEsperada.getX());
 	}
 	
 	@Test
 	public void testSePuedeMoverJugadorAIzquierda() {
 		
 		GeneradorDeMapa generador = new GeneradorDeMapa();
-		Posicion posicionJugador = new Posicion(0,0);
+		Posicion posicionJugador = new Posicion(0,1);
 		Mapa mapa = new Mapa(generador.generarMapa(), posicionJugador);
 		ControladorMapa controlador = new ControladorMapa(mapa);
 		
@@ -36,15 +40,16 @@ public class TestMoverJugador {
 		
 		controlador.moverIzquierda();
 		Posicion nuevaPosicion = mapa.posicionJugador();
-		
-		assertEquals(nuevaPosicion, posicionEsperada);
+
+		assertEquals(nuevaPosicion.getY(), posicionEsperada.getY());
+		assertEquals(nuevaPosicion.getX(), posicionEsperada.getX());
 	}
 	
 	@Test
 	public void testSePuedeMoverJugadorAArriba() {
 		
 		GeneradorDeMapa generador = new GeneradorDeMapa();
-		Posicion posicionJugador = new Posicion(1,0);//Para que no este en el limite del mapa
+		Posicion posicionJugador = new Posicion(1,1);//Para que no este en el limite del mapa
 		Mapa mapa = new Mapa(generador.generarMapa(), posicionJugador);
 		ControladorMapa controlador = new ControladorMapa(mapa);
 		
@@ -53,14 +58,15 @@ public class TestMoverJugador {
 		controlador.moverArriba();
 		Posicion nuevaPosicion = mapa.posicionJugador();
 		
-		assertEquals(nuevaPosicion, posicionEsperada);
+		assertEquals(nuevaPosicion.getY(), posicionEsperada.getY());
+		assertEquals(nuevaPosicion.getX(), posicionEsperada.getX());
 	}
 	
 	@Test
 	public void testSePuedeMoverJugadorAAbajo() {
 		
 		GeneradorDeMapa generador = new GeneradorDeMapa();
-		Posicion posicionJugador = new Posicion(0,0);
+		Posicion posicionJugador = new Posicion(2,0);
 		Mapa mapa = new Mapa(generador.generarMapa(), posicionJugador);
 		ControladorMapa controlador = new ControladorMapa(mapa);
 		
@@ -68,11 +74,12 @@ public class TestMoverJugador {
 		
 		controlador.moverAbajo();
 		Posicion nuevaPosicion = mapa.posicionJugador();
-		
-		assertEquals(nuevaPosicion, posicionEsperada);
+
+		assertEquals(nuevaPosicion.getY(), posicionEsperada.getY());
+		assertEquals(nuevaPosicion.getX(), posicionEsperada.getX());
 	}
 	
-	@Test (expected = ArrayIndexOutOfBoundsException.class)
+	@Test
 	public void testNoSePuedeMoverJugadorAbajoOcupado() {
 		GeneradorDeMapa generador = new GeneradorDeMapa();
 		Posicion posicionJugador = new Posicion(0,0);
@@ -81,6 +88,7 @@ public class TestMoverJugador {
 		controlador.moverAbajo();
 		Posicion nuevaPosicion = mapa.posicionJugador();
 		assertEquals(nuevaPosicion.getY(), posicionJugador.getY());
+
 	}
 	
 }

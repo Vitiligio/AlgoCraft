@@ -7,6 +7,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import model.Excepciones.CodigoDeHerramientaInvalidoError;
 import model.MesaDeCrafteo;
 import model.Personaje;
 
@@ -32,16 +33,16 @@ public class HandlerBotonCraftear implements EventHandler<ActionEvent> {
 		try {
 			personaje.construirHerramienta();
 		}
-		catch (Exception e) {
+		catch (CodigoDeHerramientaInvalidoError e) {
 			respuesta.setText("Error.");
+			return;
 		}
-		finally {
-			mesa.reiniciar();
-			GeneradorDeMesa generadorMesa = new GeneradorDeMesa(personaje);
-			contenedorMesa.getChildren().clear();
-			contenedorMesa.getChildren().add(generadorMesa.generarMesa());
-			contenedorInventario.getChildren().clear();
-			contenedorInventario.getChildren().add(generadorInventario.mostrarInventario());
-		}
+		mesa.reiniciar();
+		respuesta.setText("");
+		GeneradorDeMesa generadorMesa = new GeneradorDeMesa(personaje);
+		contenedorMesa.getChildren().clear();
+		contenedorMesa.getChildren().add(generadorMesa.generarMesa());
+		contenedorInventario.getChildren().clear();
+		contenedorInventario.getChildren().add(new GeneradorInventario(personaje.obtenerInventario()).mostrarInventario());
 	}
 }

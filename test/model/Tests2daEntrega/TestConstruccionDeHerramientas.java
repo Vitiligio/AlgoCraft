@@ -1,6 +1,7 @@
 package model.Tests2daEntrega;
 
 import model.*;
+import model.Excepciones.CodigoDeHerramientaInvalidoError;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -356,7 +357,11 @@ public class TestConstruccionDeHerramientas {
         assertEquals(0, inventario.getCantidad(madera));
         assertEquals(5, mesaDeCrafteo.cantidadTotal());
 
-        personaje.construirHerramienta();
+        try {
+            personaje.construirHerramienta();
+        }
+        catch(CodigoDeHerramientaInvalidoError excepcion){ }
+
         assertEquals(5, mesaDeCrafteo.cantidadTotal());
         assertEquals(0, inventario.getCantidad(pico));
     }

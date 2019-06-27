@@ -1,6 +1,6 @@
 package model.Excepciones;
 
-public class ItemsInsuficientesExcepcion extends Exception {
+public class ItemsInsuficientesExcepcion extends RuntimeException {
 	
 	public String string() {
 		

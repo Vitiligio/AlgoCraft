@@ -19,15 +19,8 @@ public class MesaDeCrafteo {
     }
     
     public void reiniciar() {
-        tabla = new CasilleroDeObjetos [3][3];
 
-        for(int i = 0; i < 3; i++){
-            for(int j = 0; j < 3; j++){
-                tabla[i][j] = new CasilleroDeObjetos();
-            }
-        }
-
-        recetas = new RecetasDeConstruccion();
+       new MesaDeCrafteo();
     }
 
     public String generarCodigo(){
