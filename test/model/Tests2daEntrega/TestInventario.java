@@ -1,6 +1,8 @@
 package model.Tests2daEntrega;
 
 import model.*;
+import model.Excepciones.ItemsInsuficientesExcepcion;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -87,7 +89,7 @@ public class TestInventario {
     }
 
     @Test
-    public void TestSaco2InstanciasDeAlgunObjetoDelInventarioYDisminuyeSuNumeroEn2(){
+    public void TestSaco2InstanciasDeAlgunObjetoDelInventarioYDisminuyeSuNumeroEn2() throws ItemsInsuficientesExcepcion{
 
         Inventario inventario = new Inventario();
         Piedra piedra0 = new Piedra();
@@ -118,7 +120,7 @@ public class TestInventario {
     }
 
     @Test
-    public void TestSacoDelInventarioYPuedoVolverAAgregar(){
+    public void TestSacoDelInventarioYPuedoVolverAAgregar() throws ItemsInsuficientesExcepcion{
 
         Inventario inventario = new Inventario();
         Herramienta herramienta = inventario.getObjetoEquipado();
