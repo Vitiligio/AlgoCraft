@@ -37,7 +37,6 @@ public class RecetasDeConstruccion {
 
         Herramienta herramienta;
         herramienta = recetas.get(codigo);
-        System.out.println(herramienta);
         if (herramienta == null)
             throw new CodigoDeHerramientaInvalidoError();
 
