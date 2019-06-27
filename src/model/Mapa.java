@@ -36,6 +36,7 @@ public class Mapa {
 		}
 
 		catch (Exception e) {
+			
 			return;
 		}
 
@@ -43,6 +44,13 @@ public class Mapa {
 		viejo_casillero.desocupar();
 		posicionJugador = nueva_posicion;
 
+	}
+
+	public void accionA(Posicion destino) {
+		
+		Casillero nuevo_casillero = terreno[destino.getX()][destino.getY()];
+		Material material = (Material) nuevo_casillero.obtenerContenido();
+		this.jugador.usarHerramientaEquipada(material);
 	}
 
 }

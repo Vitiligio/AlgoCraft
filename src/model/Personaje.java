@@ -48,6 +48,12 @@ public class Personaje extends ObjetoDelMapa{
 
 		inventario.agregarAlInventario(objeto);
 	}
+	
+	public void usarHerramientaEquipada(Material material) {
+		
+		Herramienta herramienta = this.inventario.getObjetoEquipado(); 
+		this.agregarAlInventario(herramienta.usarContra(material));
+	}
 
 	public Inventario obtenerInventario(){ return inventario; }
 	public MesaDeCrafteo obtenerMesaDeCrafteo(){ return mesaDeCrafteo; }

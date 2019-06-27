@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import model.DesgasteLineal;
 import model.Hacha;
+import model.Herramienta;
 import model.Madera;
 import model.Material;
 

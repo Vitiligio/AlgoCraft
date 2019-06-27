@@ -282,7 +282,7 @@ public class TestConstruccionDeHerramientas {
         RecetasDeConstruccion recetas = new RecetasDeConstruccion();
         String codigo = "123123123";
 
-       // thrown.expect(CodigoDeHerramientaInvalidoError.class);
+        thrown.expect(CodigoDeHerramientaInvalidoError.class);
         Herramienta herramienta = recetas.obtenerHerramienta(codigo);
     }
 
