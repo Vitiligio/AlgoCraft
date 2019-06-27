@@ -1,6 +1,10 @@
 package application;
 
 import handlers.BotonAbajoEventHandler;
+import handlers.BotonAccionAbajoEventHandler;
+import handlers.BotonAccionArribaEventHandler;
+import handlers.BotonAccionDerechaEventHandler;
+import handlers.BotonAccionIzquierdaEventHandler;
 import handlers.BotonArribaEventHandler;
 import handlers.BotonDerechaEventHandler;
 import handlers.BotonIzquierdaEventHandler;
@@ -27,32 +31,67 @@ public class EscenaMapa {
 	
 	private VBox botones (HBox mapaContenedor) {
 		Button izq = new Button();
-		izq.setText("←");
+		izq.setText("<");
 		BotonIzquierdaEventHandler izq_event = new BotonIzquierdaEventHandler(mapa, mapaContenedor);
 		izq.setOnAction(izq_event);
 		
 		Button arriba = new Button();
 		BotonArribaEventHandler arr_event = new BotonArribaEventHandler(mapa, mapaContenedor);
 		arriba.setOnAction(arr_event);
-		arriba.setText("↑");
+		arriba.setText("^");
 		
 		Button derecha = new Button();
 		BotonDerechaEventHandler der_event = new BotonDerechaEventHandler(mapa, mapaContenedor);
 		derecha.setOnAction(der_event);
-		derecha.setText("→");
+		derecha.setText(">");
 		
 		Button abajo = new Button();
 		BotonAbajoEventHandler abj_event = new BotonAbajoEventHandler(mapa, mapaContenedor);
 		abajo.setOnAction(abj_event);
-		abajo.setText("↓");
+		abajo.setText("v");
+		
+		Button accion_izq = new Button();
+		BotonAccionIzquierdaEventHandler acc_izq_event = new BotonAccionIzquierdaEventHandler(mapa, mapaContenedor);
+		accion_izq.setOnAction(acc_izq_event);
+		accion_izq.setText("L");
+		
+		Button accion_der = new Button();
+		BotonAccionDerechaEventHandler acc_der_event = new BotonAccionDerechaEventHandler(mapa, mapaContenedor);
+		accion_der.setOnAction(acc_der_event);
+		accion_der.setText("D");
+		
+		Button accion_arr = new Button();
+		BotonAccionArribaEventHandler acc_arr_event = new BotonAccionArribaEventHandler(mapa, mapaContenedor);
+		accion_arr.setOnAction(acc_arr_event);
+		accion_arr.setText("A");
+		
+		Button accion_abj = new Button();
+		BotonAccionAbajoEventHandler acc_abj_event = new BotonAccionAbajoEventHandler(mapa, mapaContenedor);
+		accion_abj.setOnAction(acc_abj_event);
+		accion_abj.setText("Abj");
 		
 		HBox primerBoton = new HBox(arriba);
 		primerBoton.setAlignment(Pos.CENTER);
+		
 		HBox segundoBoton = new HBox(izq, derecha);
 		segundoBoton.setAlignment(Pos.CENTER);
+		
 		HBox tercerBoton = new HBox(abajo);
 		tercerBoton.setAlignment(Pos.CENTER);
-		VBox botones = new VBox(primerBoton, segundoBoton, tercerBoton);
+		
+		HBox izqBoton = new HBox(accion_izq);
+		izqBoton.setAlignment(Pos.CENTER);
+		
+		HBox derBoton = new HBox(accion_der);
+		derBoton.setAlignment(Pos.CENTER);
+		
+		HBox arrBoton = new HBox(accion_arr);
+		arrBoton.setAlignment(Pos.CENTER);
+		
+		HBox abjBoton = new HBox(accion_abj);
+		abjBoton.setAlignment(Pos.CENTER);
+		
+		VBox botones = new VBox(primerBoton, segundoBoton, tercerBoton, izqBoton, derBoton, arrBoton, abjBoton);
 		return botones;
 	}
 	

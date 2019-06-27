@@ -15,9 +15,10 @@ public class Pico extends Herramienta {
 	}
     
 
-    public void usarContra(Madera madera) {
+    public Material usarContra(Madera madera) {
     	
     	this.desgastar();
+    	return madera.reducirDurabilidad(this.fuerza);
     }
 
 	public Material usarContra(Piedra piedra) {

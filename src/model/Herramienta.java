@@ -30,9 +30,10 @@ public abstract class Herramienta implements AgregableAlInventario{
 
 	abstract protected void desgastar();
 
-	public void usarContra(Material material) {
+	public Material usarContra(Material material) {
 		
 		this.desgastar();
+		return material.reducirDurabilidad(this.fuerza);
 		
 	}
 

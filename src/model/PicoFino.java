@@ -10,20 +10,20 @@ public class PicoFino extends Herramienta {
 	
 	public void usarContra(Madera madera) {}
 	
-	public void usarContra(Piedra piedra) {
+	public Material usarContra(Piedra piedra) {
 		
-		piedra.reducirDurabilidad(this.fuerza);
+		return piedra.reducirDurabilidad(this.fuerza);
 	}
 	
-	public void usarContra(Metal metal) {
+	public Material usarContra(Metal metal) {
 		
-		metal.reducirDurabilidad(this.fuerza);
+		return metal.reducirDurabilidad(this.fuerza);
 	}
 	
-	public void usarContra(Diamante diamante) {
+	public Material usarContra(Diamante diamante) {
 		
 		this.desgastar();
-		diamante.reducirDurabilidad(this.fuerza);
+		return diamante.reducirDurabilidad(this.fuerza);
 	}	
 	
 	protected void desgastar() {

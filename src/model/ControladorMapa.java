@@ -37,5 +37,33 @@ public class ControladorMapa {
 		mapa.moverJugadorA(destino);
 		
 	}
+
+	public void accionArriba() {
+		
+		Posicion destino = mapa.posicionJugador().obtenerPosicionArriba();
+		mapa.accionA(destino);
+		
+	}
+	
+	public void accionAbajo() {
+		
+		Posicion destino = mapa.posicionJugador().obtenerPosicionAbajo();
+		mapa.accionA(destino);
+		
+	}
+	
+	public void accionDerecha() {
+		
+		Posicion destino = mapa.posicionJugador().obtenerPosicionDerecha();
+		mapa.accionA(destino);
+		
+	}
+
+	public void accionIzquierda() {
+		
+		Posicion destino = mapa.posicionJugador().obtenerPosicionIzquierda();
+		mapa.accionA(destino);
+		
+	} 
 	
 }

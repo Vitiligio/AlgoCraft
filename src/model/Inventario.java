@@ -34,6 +34,8 @@ public class Inventario {
 
 	public void agregarAlInventario(AgregableAlInventario objeto){
 
+		if (objeto.getID() == 0) return;
+		
 		for(int i = 0; i < inventario.length; i++){
 
 			if(objeto.getID() == inventario[i].getIDObjeto()){
