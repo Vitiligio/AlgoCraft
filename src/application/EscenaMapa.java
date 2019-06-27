@@ -155,13 +155,13 @@ public class EscenaMapa {
 		contiene_botones.setSpacing(50);*/
 		
 
-		Text iParaInventario = new Text("i: Inventario");
+		Text iParaInventario = new Text("I: Inventario  WASD: Golpear");
 
 		HBox h = new HBox(iParaInventario, l);
-		h.setSpacing(10);
+		h.setStyle("-fx-background-color:#000000");
+		h.setSpacing(400);
 		
 		VBox contenedorPrincipal = new VBox(mapaContenedor, h);
-		contenedorPrincipal.setSpacing(5);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
 
 		Scene scene = new Scene(contenedorPrincipal);

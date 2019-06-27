@@ -83,11 +83,12 @@ public class GeneradorDeMapa {
 			Piedra piedra2 = new Piedra();
 			casilleros[5][8].ocupar(piedra2);
 			
-			Piedra piedra3 = new Piedra();
-			casilleros[6][7].ocupar(piedra3);
+			Piedra piedra4 = new Piedra();
+			casilleros[9][7].ocupar(piedra4);
 			
-			
-			
+
+			Piedra piedra5 = new Piedra();
+			casilleros[12][17].ocupar(piedra5);
 			Metal metal = new Metal();
 			casilleros[0][15].ocupar(metal);
 			
@@ -211,7 +212,13 @@ public class GeneradorDeMapa {
 			
 
 			Diamante diamante4 = new Diamante();
-			casilleros[2][8].ocupar(diamante4);
+			casilleros[15][21].ocupar(diamante4);
+			Diamante diamante7 = new Diamante();
+			casilleros[10][21].ocupar(diamante7);
+			Diamante diamante6 = new Diamante();
+			casilleros[14][13].ocupar(diamante6);
+			Diamante diamante5 = new Diamante();
+			casilleros[11][21].ocupar(diamante5);
 			}
 		catch (Exception e) {
 			
