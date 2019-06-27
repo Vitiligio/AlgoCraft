@@ -51,8 +51,8 @@ public class Personaje extends ObjetoDelMapa{
 	
 	public void usarHerramientaEquipada(Material material) {
 		
-		Herramienta herramienta = this.inventario.getObjetoEquipado(); 
-		this.agregarAlInventario(herramienta.usarContra(material));
+		Material picado = this.inventario.getObjetoEquipado().usarContra(material);
+		this.agregarAlInventario(picado);
 	}
 
 	public Inventario obtenerInventario(){ return inventario; }
