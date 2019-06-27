@@ -9,6 +9,7 @@ import model.Inventario;
 
 public class GeneradorInventario {
 	Inventario inventario;
+	Label l;
 	
 	public GeneradorInventario(Inventario inventario) {
 		this.inventario = inventario;
@@ -22,7 +23,7 @@ public class GeneradorInventario {
         for(int i = 0; i < 10; i++){
 
             VistaInventario vistaInventario = new VistaInventario(inventario.getCasillero(i));
-            HandlerMouseInventario handler = new HandlerMouseInventario(label, inventario.getCasillero(i), inventario);
+            HandlerMouseInventario handler = new HandlerMouseInventario(label, inventario.getCasillero(i), inventario, l);
             ImageView imagen = vistaInventario.getTextura();
             contenedorInventario.getChildren().add(imagen);
             imagen.setOnMouseEntered(handler);
@@ -32,5 +33,10 @@ public class GeneradorInventario {
 
         contenedorInventario.getChildren().add(label);
         return contenedorInventario;
+    }
+
+    public void setl(Label l){
+
+	    this.l = l;
     }
 }
