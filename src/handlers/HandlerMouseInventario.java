@@ -40,7 +40,10 @@ public class HandlerMouseInventario implements EventHandler<MouseEvent> {
                 if(mouseEvent.getEventType().equals(MouseEvent.MOUSE_PRESSED)){
                     if(casillero.getIDObjeto() > 4){
                         inventario.equipar(casillero.getObjeto());
-                        l.setText(nombreHerramienta(casillero.getIDObjeto()));
+                        try {
+                            l.setText(nombreHerramienta(casillero.getIDObjeto()));
+                        }
+                        catch(Exception e){ }
                     }
                 }
             }

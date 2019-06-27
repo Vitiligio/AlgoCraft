@@ -46,7 +46,7 @@ public class EscenaInventario {
         Text titulo = new Text("Mesa de crafteo");//no logro hacer que se vea
         HBox tituloBox = new HBox(titulo);
         titulo.setStyle("-fx-color: #ffffff");
-        tituloBox.setTranslateY(100);
+        tituloBox.setTranslateY(80);
         pane.getChildren().add(tituloBox);
         pane.getChildren().add(contenedorInventario);
         pane.setStyle("-fx-background-color: #B45C00");
