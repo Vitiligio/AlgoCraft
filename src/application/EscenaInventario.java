@@ -38,7 +38,7 @@ public class EscenaInventario {
     public Scene generarEscena(Scene escenaMapa, Label l){
 
         Pane pane = new Pane();
-        Scene scene = new Scene(pane, 400, 400);
+        Scene scene = new Scene(pane, 330, 280);
         GeneradorDeMesa generador = new GeneradorDeMesa(personaje);
         GeneradorInventario generador_i = new GeneradorInventario(inventario);
         generador_i.setl(l);
