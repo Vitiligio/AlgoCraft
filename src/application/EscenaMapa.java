@@ -18,6 +18,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import model.*;
 
@@ -156,7 +157,8 @@ public class EscenaMapa {
 		
 
 		Text iParaInventario = new Text("I: Inventario  WASD: Golpear");
-
+		iParaInventario.setFill(Color.ANTIQUEWHITE);
+		l.setStyle("-fx-text-fill: white");
 		HBox h = new HBox(iParaInventario, l);
 		h.setStyle("-fx-background-color:#000000");
 		h.setSpacing(400);
