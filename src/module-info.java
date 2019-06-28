@@ -4,5 +4,5 @@ module alksdlksad {
     requires javafx.fxml;
     requires javafx.media;
 
-    opens application;
+    opens vista;
 }

@@ -56,5 +56,13 @@ public class Personaje extends ObjetoDelMapa{
 
 	public Inventario obtenerInventario(){ return inventario; }
 	public MesaDeCrafteo obtenerMesaDeCrafteo(){ return mesaDeCrafteo; }
-	
+
+    public void vaciarMesa() {
+
+		for(int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				inventario.agregarAlInventario(mesaDeCrafteo.getCasillero(i, j).getObjeto());
+			}
+		}
+    }
 }
