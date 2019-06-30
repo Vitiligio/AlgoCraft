@@ -18,7 +18,9 @@ public class EscenaMapa {
 	Mapa mapa;
 	private HandlerEscenas handlerEscenas;
 	private EscenaInventario generadorEscenaInventario;
+	private EscenaHelp generadorEscenaHelp;
 	Scene escenaInventario;
+	Scene escenaHelp;
 
 	public EscenaMapa(HandlerEscenas handlerEscenas){
 
@@ -28,6 +30,7 @@ public class EscenaMapa {
 	public Scene generarEscena(Juego juego) {
 		mapa = juego.obtenerMapa();
 		this.generadorEscenaInventario = new EscenaInventario(handlerEscenas, mapa.jugador);
+		this.generadorEscenaHelp = new EscenaHelp(handlerEscenas);
 		Label l = new Label("Hacha De Madera");
 
 		GeneradorDeGrilla generador = new GeneradorDeGrilla();
@@ -51,6 +54,9 @@ public class EscenaMapa {
 
 		Scene scene = new Scene(contenedorPrincipal);
 		escenaInventario = generadorEscenaInventario.generarEscena(scene, l);
+		
+		Scene scene2 = new Scene(contenedorPrincipal);
+		escenaHelp = generadorEscenaHelp.generarEscena(scene, l);
 
 
 		AudioClip note = new AudioClip("file:img/hit.wav");
@@ -62,6 +68,10 @@ public class EscenaMapa {
 					{
 						escenaInventario = generadorEscenaInventario.generarEscena(scene, l);
 						handlerEscenas.cambiarEscena(escenaInventario);
+					}
+					if (event.getCode() == KeyCode.H) {
+						escenaHelp = generadorEscenaHelp.generarEscena(scene,l);
+						handlerEscenas.cambiarEscena(escenaHelp);
 					}
 					if (event.getCode() == KeyCode.UP)
 					{
