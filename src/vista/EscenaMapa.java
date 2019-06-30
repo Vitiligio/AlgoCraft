@@ -9,6 +9,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import model.*;
@@ -52,6 +53,7 @@ public class EscenaMapa {
 		escenaInventario = generadorEscenaInventario.generarEscena(scene, l);
 
 
+		AudioClip note = new AudioClip("file:img/hit.wav");
 		scene.addEventFilter(KeyEvent.KEY_PRESSED,
 				event -> {
 					try {
@@ -85,21 +87,25 @@ public class EscenaMapa {
 					if (event.getCode() == KeyCode.W)
 					{
 						controlador.accionArriba();
+						note.play();
 						regenerarMapa(mapa, mapaContenedor);
 					}
 					if (event.getCode() == KeyCode.A)
 					{
 						controlador.accionIzquierda();
+						note.play();
 						regenerarMapa(mapa, mapaContenedor);
 					}
 					if (event.getCode() == KeyCode.S)
 					{
 						controlador.accionAbajo();
+						note.play();
 						regenerarMapa(mapa, mapaContenedor);
 					}
 					if (event.getCode() == KeyCode.D)
 					{
 						controlador.accionDerecha();
+						note.play();
 						regenerarMapa(mapa, mapaContenedor);
 					}}
 					catch (Exception e) {

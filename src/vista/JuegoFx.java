@@ -58,7 +58,7 @@ public class JuegoFx extends Application {
 		juego = new Juego();
 		juego.iniciar();
 
-		Media media = new Media(new File("img/Bossa-nova-beat-music-loop.mp3").toURI().toString());
+		Media media = new Media(new File("img/Bossa-nova-beat-music-loop.wav").toURI().toString());
 		player = new MediaPlayer(media);
 		player.setOnEndOfMedia(new Runnable() {
 			public void run() {
