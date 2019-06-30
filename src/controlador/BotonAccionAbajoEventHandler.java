@@ -2,10 +2,16 @@ package controlador;
 
 import model.*;
 import vista.GeneradorDeGrilla;
+
+import java.io.File;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 
 
 public class BotonAccionAbajoEventHandler implements EventHandler<ActionEvent> {
@@ -26,6 +32,10 @@ public class BotonAccionAbajoEventHandler implements EventHandler<ActionEvent> {
 			GridPane grilla = generador.generarVisualizacionDeMapa(mapa);
 			contenedor.getChildren().clear();
 			contenedor.getChildren().add(grilla);
+			MediaPlayer player;
+			Media media = new Media(new File("img/hit.mp3").toURI().toString());
+			player = new MediaPlayer(media);
+			player.play();
 		}
 		catch (Exception e) {
 			System.out.println("No podes tocar eso");
