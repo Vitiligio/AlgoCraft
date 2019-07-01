@@ -27,7 +27,7 @@ public class EscenaHelp {
     
     public Scene generarEscena(Scene escenaMapa, Label l){
 
-    	Image imagen = new Image("file:img/menu.png");
+    	Image imagen = new Image("file:img/help.png");
 		ImageView iv = new ImageView(imagen);
 		
 		StackPane pane = new StackPane();
@@ -36,15 +36,14 @@ public class EscenaHelp {
 		
 		VBox contenedorInicio = new VBox(pane);
 		
-		Scene scene = new Scene(contenedorInicio,900,560);
+		Scene scene = new Scene(contenedorInicio,850,450);
 
-		/*scene.addEventFilter(KeyEvent.KEY_PRESSED, event->{
-			if(event.getCode() == KeyCode.ENTER) {
-				
-				handlerEscenas.cambiarEscena(escenaMapa);
-				
-			}
-		});*/
+		scene.addEventFilter(KeyEvent.KEY_PRESSED,
+                event -> {
+                    if (event.getCode() == KeyCode.H)
+                        handlerEscenas.cambiarEscena(escenaMapa);
+                });
+
 		return scene;
     }
 }

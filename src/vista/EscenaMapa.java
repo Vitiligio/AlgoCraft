@@ -42,20 +42,20 @@ public class EscenaMapa {
 		HBox mapaContenedor = new HBox(grilla);
 		mapaContenedor.setAlignment(Pos.CENTER);
 		
-		Text iParaInventario = new Text("I: Inventario  WASD: Golpear");
+		Text iParaInventario = new Text("AYUDA? Presiona H");
 		iParaInventario.setFill(Color.ANTIQUEWHITE);
 		l.setStyle("-fx-text-fill: white");
 		HBox h = new HBox(iParaInventario, l);
 		h.setStyle("-fx-background-color:#000000");
 		h.setSpacing(400);
 		
-		VBox contenedorPrincipal = new VBox(mapaContenedor, h);
+		VBox contenedorPrincipal = new VBox(h,mapaContenedor);
 		contenedorPrincipal.setAlignment(Pos.BASELINE_CENTER);
 
 		Scene scene = new Scene(contenedorPrincipal);
 		escenaInventario = generadorEscenaInventario.generarEscena(scene, l);
 		
-		Scene scene2 = new Scene(contenedorPrincipal);
+		//Scene scene = new Scene(contenedorPrincipal);
 		escenaHelp = generadorEscenaHelp.generarEscena(scene, l);
 
 
